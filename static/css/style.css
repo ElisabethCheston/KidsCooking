@@ -1,3 +1,57 @@
-body {
-    background-color: red;
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@400;500;600&family=Oswald:wght@300;400;500;600&family=Schoolbell&display=swap');
+
+
+nav {
+    height: 40px;
+    background-color: transparent;
+    padding-left: 2%;
+    padding-right: 2%;
+    box-sizing: none;
+    box-shadow: none;
 }
+/* Top navbar */
+.headnav {
+    background-color: rgba(197, 192, 192, 0.95)!important;
+}
+.sidenav-trigger {
+    color: rgba(0, 0, 0, 0.959);
+    height: 50px;
+}
+.wrapp {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.navbar-light {
+    border-top: 2px solid rgba(0, 0, 0, 0.7);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+    border-left: none;
+    border-right: none;
+}
+
+/* Text style */
+
+.headlinks {
+    padding: 4px;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 700;
+}
+.headlinks:hover {
+    font-stretch: wider;
+    text-decoration: underline;
+}
+.text-shadow {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Logo style */
+.logo-text {
+    font-family: "Atma";
+    font-size: 60px;
+    color: rgba(204, 14, 230, 0.877);
+    font-weight: 800;
+}
+.logo-with {
+    font-family: "Oswald";
+    font-size: medium;
+}
+
