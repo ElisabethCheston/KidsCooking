@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Atma:wght@400;500;600&family=Oswald:wght@300;400;500;600&family=Schoolbell&display=swap');
 
-
+/* LAYOUT */
 nav {
     height: 40px;
     background-color: transparent;
@@ -29,7 +29,6 @@ nav {
 }
 
 /* Text style */
-
 .headlinks {
     padding: 4px;
     color: rgba(0, 0, 0, 0.7);
@@ -54,4 +53,3 @@ nav {
     font-family: "Oswald";
     font-size: medium;
 }
-
