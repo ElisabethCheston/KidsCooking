@@ -93,10 +93,13 @@ If you like to delete your account, you should see a “Delete Profile” button
 
 ## 1.4 Skeleton Plane
 
-### The structure of the website:  
+### The structure of the website:   
 
-### The database structure:  
- 
+<img width="687" alt="skeletoncooking" src="https://user-images.githubusercontent.com/70586630/113631652-0c2e6900-966a-11eb-85c7-89f3bedb2d38.png">
+
+### The database structure:   
+<img width="585" alt="databaseCooking" src="https://user-images.githubusercontent.com/70586630/113631615-0042a700-966a-11eb-928b-f24183569cf8.png">  
+  
  ### Recipe categories:    
 
 
