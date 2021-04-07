@@ -117,18 +117,39 @@ If you like to delete your account, you should see a “Delete Profile” button
 ## 1.5	Surface Plane
 
 ### Wireframes
-   
-[firstpage.pdf](https://github.com/ElisabethCheston/KidsCooking/files/6270536/firstpage.pdf)
 
-[login.pdf](https://github.com/ElisabethCheston/KidsCooking/files/6270543/login.pdf)
+**First Page**
+  
+![First Page](https://user-images.githubusercontent.com/70586630/113860954-f1154380-97a6-11eb-95b8-2935392ec0fd.png)
+  
+  **Login**
+    
+![Login](https://user-images.githubusercontent.com/70586630/113860258-1b1a3600-97a6-11eb-85ae-7a2c5c8fddad.png)
+  
+  **Register**
+    
+![Register](https://user-images.githubusercontent.com/70586630/113860237-16ee1880-97a6-11eb-896a-a710acaedac6.png)
+  
+  **Profile**
+    
+![Login Profile](https://user-images.githubusercontent.com/70586630/113854470-2f0e6980-979f-11eb-8e27-c8c4cd0354ee.png)
+  
+  **Categories**  
+    
+![Recipes](https://user-images.githubusercontent.com/70586630/113854480-3170c380-979f-11eb-92e6-8f88c72a4056.png)
 
-[selection.pdf](https://github.com/ElisabethCheston/KidsCooking/files/6270548/selection.pdf)
+  **Recipes**  
+    
+![Selections](https://user-images.githubusercontent.com/70586630/113854473-2fa70000-979f-11eb-8309-64c91c93d75d.png)
+  
+  **Create Recipes**
+    
+![CreateRecipes](https://user-images.githubusercontent.com/70586630/113854487-333a8700-979f-11eb-8aa5-d119752091f6.png)
+  
+  **Recipe Layout**
+    
+![RecipeLayout](https://user-images.githubusercontent.com/70586630/113854492-35044a80-979f-11eb-9da2-093cf861bc45.png)
 
-[recipes.pdf](https://github.com/ElisabethCheston/KidsCooking/files/6270550/recipes.pdf)
-
-[createrecipe.pdf](https://github.com/ElisabethCheston/KidsCooking/files/6270551/createrecipe.pdf)
-
-[recipelayout.pdf](https://github.com/ElisabethCheston/KidsCooking/files/6270552/recipelayout.pdf)
 
 
 ## Features
