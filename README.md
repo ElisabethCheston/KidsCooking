@@ -99,7 +99,7 @@ If you like to delete your account, you should see a “Delete Profile” button
 
 ### The database structure:   
 <img width="585" alt="databaseCooking" src="https://user-images.githubusercontent.com/70586630/113631615-0042a700-966a-11eb-928b-f24183569cf8.png">  
-  
+
  ### Recipe categories:    
 
 
@@ -117,12 +117,18 @@ If you like to delete your account, you should see a “Delete Profile” button
 ## 1.5	Surface Plane
 
 ### Wireframes
-	First Page  
-	Login Profile  
-	Selections  
-	Recipes  
-	Create Recipes  
-	Recipe Layout  
+   
+[firstpage.pdf](https://github.com/ElisabethCheston/KidsCooking/files/6270536/firstpage.pdf)
+
+[login.pdf](https://github.com/ElisabethCheston/KidsCooking/files/6270543/login.pdf)
+
+[selection.pdf](https://github.com/ElisabethCheston/KidsCooking/files/6270548/selection.pdf)
+
+[recipes.pdf](https://github.com/ElisabethCheston/KidsCooking/files/6270550/recipes.pdf)
+
+[createrecipe.pdf](https://github.com/ElisabethCheston/KidsCooking/files/6270551/createrecipe.pdf)
+
+[recipelayout.pdf](https://github.com/ElisabethCheston/KidsCooking/files/6270552/recipelayout.pdf)
 
 
 ## Features
