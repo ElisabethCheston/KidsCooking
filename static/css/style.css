@@ -27,6 +27,22 @@ nav {
     border-left: none;
     border-right: none;
 }
+.sidenav {
+    width: 30%;
+    background-color: rgba(250, 250, 250, 0.7);
+}
+.container {
+  position: relative;
+  width: 100vw;
+  height: 10%;
+  text-align: center;
+  color: white;
+}
+.logo {
+    width: 80vw;
+    position: center;
+    padding-bottom: 50px;
+}
 
 /* Text style */
 .headlinks {
@@ -45,11 +61,22 @@ nav {
 /* Logo style */
 .logo-text {
     font-family: "Atma";
-    font-size: 60px;
+    font-size: 40px;
     color: rgba(204, 14, 230, 0.877);
     font-weight: 800;
+
 }
+
 .logo-with {
     font-family: "Oswald";
-    font-size: medium;
+    color: rgba(178, 252, 59, 0.9);
+    font-size: 20px;
+    background: transparent;
+}
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

@@ -39,34 +39,41 @@
             </div>
         </nav>
 
-        <!-- Webpage Logo -->
-        <div class="logo center">
-            <a class="logo-text text-shadow">Cooking</a>
-            <a class="logo-with">WITH</a>
-            <a class="logo-text text-shadow">Kids</a>
-        </div>
+        <div class="container">
+        <img class="responsive-img" src="static/images/bgvar.jpeg" alt="test">
+            <div class="col4 logocontainer centered">
+                <a class="logo" href="">
+                    <img src="static/images/logohor.png" class="logo img-fluid">    
+                </a>
+            </div>
 
+<!-- <a class="logo-text text-shadow">Cooking</a>
+        <a class="logo-with">WITH</a>
+        <a class="logo-text text-shadow">Kids</a>
+        </div> -->
+        
         <!-- Toggler -->
         <div class="wrapp">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="toggle nav-wrapper valign-wrapper right-align">
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
-                <ul class="text-shadow right-align hide-on-med-and-down">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="toggle nav-wrapper valign-wrapper right-align">
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+                    <ul class="text-shadow right-align hide-on-med-and-down">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="{{ url_for('get_recipes') }}">Inspration</a></li>
+                        <li><a href="#">Nutrition</a></li>
+                        <li><a href="#">All Recipies</a></li>
+                    </ul>
+                </div>
+                <!-- Mobile layout -->
+                <ul class="sidenav right-align" id="mobile-demo">
                     <li><a href="#">Home</a></li>
-                    <li><a href="{{ url_for('get_recipes') }}">Inspration</a></li>
+                    <li><a href="{{ url_for('get_recipes') }}">Inspiration</a></li>
                     <li><a href="#">Nutrition</a></li>
                     <li><a href="#">All Recipies</a></li>
                 </ul>
-            </div>
-            <!-- Mobile layout -->
-            <ul class="sidenav right-align" id="mobile-demo">
-                <li><a href="#">Home</a></li>
-                <li><a href="{{ url_for('get_recipes') }}">Inspiration</a></li>
-                <li><a href="#">Nutrition</a></li>
-                <li><a href="#">All Recipies</a></li>
-            </ul>
-        </nav>
+            </nav>
         </div>
+        
     </header>
 
     <div class="container">
