@@ -101,7 +101,12 @@ If you like to delete your account, you should see a “Delete Profile” button
 <img width="585" alt="databaseCooking" src="https://user-images.githubusercontent.com/70586630/113631615-0042a700-966a-11eb-928b-f24183569cf8.png">  
 
  ### Recipe categories:    
-
+•	Snacks  
+•	Lunch  
+•	Dinner  
+•	Healthy  
+•	Sweets  
+•	Party  
 
 ### Recipe information:   
 •	Cooking Time  
@@ -309,7 +314,8 @@ Clone to GitHub Desktop:
 ### Media
 
 **Recipes**
-Unregistered Users
+  
+Unregistered Users  
 *	Animal sandwiches
 *	Pancake Animals
 *	Bento Box
@@ -319,13 +325,16 @@ Unregistered Users
 *	Snack Square
 *	Pasta Salad
 *	Chicken Broccoli Pasta
+  
 Registered User
 * Flying Sausers
 *	Crunchy Granola Sticks
-*	Frozen Banana Treat
-Images
-**Recipe Images**
-Unregistered Users
+*	Frozen Banana Treat  
+  
+Images  
+  
+**Recipe Images**  
+Unregistered Users  
 *	Animal sandwiches
 *	Pancake Animals
 *	Bento Box
@@ -334,8 +343,9 @@ Unregistered Users
 *	Power Snack
 *	Snack Square
 *	Pasta Salad
-*	Chicken Broccoli Pasta
-Registered User
+*	Chicken Broccoli Pasta  
+  
+Registered User  
 *	Flying Sausers
 *	Crunchy Granola Sticks
 *	Frozen Banana Treat
