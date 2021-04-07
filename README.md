@@ -166,42 +166,42 @@ If you like to delete your account, you should see a “Delete Profile” button
 ## Technologies Used
 
 **Text Editor:**
-  * GitPod – the editor to build, commit, and push data to GitHub.  
+  * [GitPod](https://gitpod.com/) – the editor to build, commit, and push data to GitHub.  
   
 **Control System:**
-  * GitHub – used to host the project.  
+  * [GitHub](https://github.com/) – used to host the project.  
   
 **Database:**
-  * MongoDB – cloud based service used for managing the database. 
+  * [MongoDB](https://mongodb.com/) – cloud based service used for managing the database. 
    
 **Platform Host:**
-  * Heroku – Cloud based platform for deployment of app.  
+  * [Heroku](https://heroku.com/) – Cloud based platform for deployment of app.  
   
 **Key Generator:**
-  * RandomKeygen – used to create user key for website.  
+  * [RandomKeygen](https://randomkeygen.com/) – used to create user key for website.  
   
 **Languages:**
-  * HTML – for the basic structure of the project.
-  * CSS –for the overall style of website.
-  * JavaScript - 
-  *	jQuery – used as the main JavaScript function.
-  *	Python – for the backend of project.  
+  * [HTML](https://sv.wikipedia.org/wiki/HTML) – for the basic structure of the project.
+  * [CSS](https://sv.wikipedia.org/wiki/Cascading_Style_Sheets) –for the overall style of website.
+  * [JavaScript](https://developer.mozilla.org/sv-SE/docs/Web/JavaScript) - used to activate fuctions
+  *	[jQuery](https://jquery.com/) – used as the main JavaScript function.
+  *	[Python](https://www.python.org/) – for the backend of project.  
   
 **Frameworks:**
-  * Materialize – For Navbar
-  *	Flask –  
-  *	Werkzeug -  
+  * [Materialize](https://materializecss.com/about.html) – For Navbar
+  *	[Flask](https://flask.palletsprojects.com/en/1.1.x/) –  
+  *	[Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/) -  
   
 **Style:**
-  *	Google Fonts – For using and Oswald and Atma fonts on website.
-  *	Balsamiq Wireframes – used for the websites wireframes. 
+  *	[Google Fonts](https://fonts.google.com/) – For using and Oswald and Atma fonts on website.
+  *	[Balsamiq Wireframes](https://balsamiq.com/wireframes/) – used for the websites wireframes. 
    
 **Validations:**
-  *	W3C CSS Validator
-  *	W3C HTML Validator
-  *	Chrome DevTools
-  *	Jshint
-  *	PEP8 – for validate the Python code.  
+  *	[W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - Validate CSS
+  *	[W3C HTML Validator](https://validator.w3.org/) - Validate HTML
+  *	[Chrome DevTools](https://developer.chrome.com/docs/devtools/) - Errors in console
+  *	Jshint](https://jshint.com/) - Validate JavaScript
+  *	[PEP8](https://www.datacamp.com/community/tutorials/pep8-tutorial-python-code?utm_source=adwords_ppc&utm_campaignid=898687156&utm_adgroupid=48947256715&utm_device=c&utm_keyword=&utm_matchtype=b&utm_network=g&utm_adpostion=&utm_creative=229765585183&utm_targetid=aud-392016246653:dsa-429603003980&utm_loc_interest_ms=&utm_loc_physical_ms=1012697&gclid=Cj0KCQjwsLWDBhCmARIsAPSL3_2C6LOJLPqHUShlkvBE9h1MLyob2wlSsid-Apq1nfjIaiqkO6zEWvkaAoPvEALw_wcB) – for validate the Python code.  
   
 ## Testing
 
