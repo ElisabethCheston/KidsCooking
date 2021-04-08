@@ -125,7 +125,9 @@ If you like to delete your account, you should see a “Delete Profile” button
 
 **First Page**
   
-![First Page](https://user-images.githubusercontent.com/70586630/113860954-f1154380-97a6-11eb-95b8-2935392ec0fd.png)
+![First Page](https://user-images.githubusercontent.com/70586630/114098018-14341600-98c1-11eb-9321-68d70739fe19.png)
+
+
   
   **Login**
     
@@ -137,23 +139,26 @@ If you like to delete your account, you should see a “Delete Profile” button
   
   **Profile**
     
-![Login Profile](https://user-images.githubusercontent.com/70586630/113854470-2f0e6980-979f-11eb-8e27-c8c4cd0354ee.png)
+![Login Profile](https://user-images.githubusercontent.com/70586630/114097989-0bdbdb00-98c1-11eb-939b-2b30fd646076.png)
+
   
   **Categories**  
     
-![Recipes](https://user-images.githubusercontent.com/70586630/113854480-3170c380-979f-11eb-92e6-8f88c72a4056.png)
+![Recipes](https://user-images.githubusercontent.com/70586630/114098035-1b5b2400-98c1-11eb-9c5b-f260d7260bd7.png)
 
   **Recipes**  
     
-![Selections](https://user-images.githubusercontent.com/70586630/113854473-2fa70000-979f-11eb-8309-64c91c93d75d.png)
+![Selections](https://user-images.githubusercontent.com/70586630/114097857-e9e25880-98c0-11eb-8f8c-fa01bb3507f7.png)
+
   
   **Create Recipes**
-    
-![CreateRecipes](https://user-images.githubusercontent.com/70586630/113854487-333a8700-979f-11eb-8aa5-d119752091f6.png)
+![Create Recipes](https://user-images.githubusercontent.com/70586630/114097880-efd83980-98c0-11eb-92b0-5069224fb0d7.png)
+
   
   **Recipe Layout**
     
-![Recipe Layout](https://user-images.githubusercontent.com/70586630/114090500-d088de80-98b7-11eb-86b9-0ea5be4cd2eb.png)
+![Recipe Layout](https://user-images.githubusercontent.com/70586630/114097909-f8307480-98c0-11eb-95cb-487061f8daa3.png)
+
 
 
 
@@ -164,25 +169,23 @@ If you like to delete your account, you should see a “Delete Profile” button
 
 **Top Navbar:** Navbar with links aligned to the right for recipes, login, register. As a user you will have access to links create recipes and delete recipes.  
   
-**Bottom Navbar:** Toggler with categories inspiration, nutrition, logout.  
+**Bottom Navbar:** Toggler with categories inspiration, nutrition.  
   
 **Register Form:** User create a username and password that has to be retyped for verification.  
   
-**Login Form:** With username and password.  
+**Login Form:** With username and password.   
   
-**Responsive Pages:**  
+**Links:** Responsive links to recipes, forms, profile, add recipes, categories and contact.  
   
-**Links:** Responsive links to recipes.  
-  
-**Style Layout:**  
-  
-**Recipe Form:**  
+**Recipe Form:**  Includes input fields for name, ingredients, instruction, and additional notes. A dropdown menu for cooking time, difficulty options, categories, portions, cooking material, and if the recipe is free from any allergic effects.
   
 **Images:** All images are taken from internet and box sized to fit the recipes pages.  
   
 **Flash messages:** Vertification to users when creating, editing or deleting post or deleting account.  
   
-**Buttons:** For editing, deleting, creating accounts and recipes.  
+**Buttons:** In the top right coner of every recipe that profile user has created is an option to edit the recipe or delete it. When register an account or login there is a comfirmation button at the end. And in the top right corner there is a x-mark if user want to close the window without register or login.  
+
+**Footer** Repitition links at the bottom from the navbars, copyright information, and a back to top button.
   
 
 ### Features Left to Implement
