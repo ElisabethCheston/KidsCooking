@@ -153,7 +153,8 @@ If you like to delete your account, you should see a “Delete Profile” button
   
   **Recipe Layout**
     
-![RecipeLayout](https://user-images.githubusercontent.com/70586630/113854492-35044a80-979f-11eb-9da2-093cf861bc45.png)
+![Recipe Layout](https://user-images.githubusercontent.com/70586630/114090500-d088de80-98b7-11eb-86b9-0ea5be4cd2eb.png)
+
 
 
 
@@ -354,5 +355,3 @@ Registered User
 •	I received inspiration for this project from X
 
 ### LINKS:
-
-![image](https://user-images.githubusercontent.com/70586630/113582793-1a0fca00-9629-11eb-8d84-3f38a36a00c3.png)
