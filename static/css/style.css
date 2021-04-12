@@ -71,10 +71,13 @@ nav {
     font-size: large;
 
 }
-.submit {
-    color: rgba(178, 252, 59, 0.9);
-}
 
+button {
+    background-color: rgba(178, 252, 59, 0.9)!important;
+}
+.flashes h4 {
+    line-height: 2;
+}
 .logo-with {
     font-family: "Oswald";
     color: rgba(178, 252, 59, 0.9);
