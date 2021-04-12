@@ -64,7 +64,15 @@ nav {
     font-size: 40px;
     color: rgba(204, 14, 230, 0.877);
     font-weight: 800;
+}
+.fas,
+.btn-large {
+    color: rgba(204, 14, 230, 0.877);
+    font-size: large;
 
+}
+.submit {
+    color: rgba(178, 252, 59, 0.9);
 }
 
 .logo-with {
