@@ -100,27 +100,33 @@ If you like to delete your account, you should see a “Delete Profile” button
 ### The database structure:   
  
 
-![Database](https://user-images.githubusercontent.com/70586630/114391610-fd7b1100-9b97-11eb-9e09-6957d0c69322.png)
+<img width="687" alt="skeletoncooking" src="https://user-images.githubusercontent.com/70586630/114391610-fd7b1100-9b97-11eb-9e09-6957d0c69322.png">
 
 
  ### Recipe categories:    
-•	Snacks  
-•	Lunch  
-•	Dinner  
-•	Healthy  
-•	Sweets  
-•	Party  
+*	Snacks  
+*	Lunch  
+*	Dinner  
+*	Healthy  
+*	Sweets  
+*	Party  
 
 ### Recipe information:   
-•	Cooking Time  
-•	Portion size  
-•	Difficult level  
-•	Cooking materials needed  
-•	Name of the recipe  
-•	Ingredients need  
-•	Easy cooking instructions  
-•	Gluten free, egg free, nut free, dairy free  
-•	Tips on things to think about or to improve the recipe  
+*	Cooking Time  
+*	Portion size  
+*	Difficult level  
+*	Cooking materials needed  
+*	Name of the recipe  
+*	Ingredients need  
+*	Easy cooking instructions  
+*	Allergies   
+    * Wheat free, 
+    * Gluten free,  
+    * Egg free,  
+    * Nut free,  
+    * Dairy free,  
+    * Soyabeans free,  
+*	Tips on things to think about or to improve the recipe  
 
 ## 1.5	Surface Plane
 
@@ -150,14 +156,13 @@ If you like to delete your account, you should see a “Delete Profile” button
     
 ![Recipes](https://user-images.githubusercontent.com/70586630/114396056-64e78f80-9b9d-11eb-920d-35f5040c8af8.png)
   
-  **Create Recipes**
-    
-![Create Recipes](https://user-images.githubusercontent.com/70586630/114395423-a297e880-9b9c-11eb-98e5-9be56e771538.png)
+  **Create Recipes**  
+  
+![Create Recipes](https://user-images.githubusercontent.com/70586630/114414107-d54adc80-9bae-11eb-9263-74960065b3cf.png)
   
   **Recipe Layout**  
     
-![Recipe Layout](https://user-images.githubusercontent.com/70586630/114395321-7f6d3900-9b9c-11eb-9a5f-a13520418b09.png)
-
+![Recipe Layout](https://user-images.githubusercontent.com/70586630/114414084-d0862880-9bae-11eb-931d-0a5c9293ed91.png)
 
 
 ## Features
