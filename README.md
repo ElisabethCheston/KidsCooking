@@ -6,7 +6,7 @@ Encourage your kids to become more active in the kitchen and give them a basic k
 ## 1.	The UX Framework (Strategy Plane)
 
 ### Introduction
-The idea of this website is to create meals and snacks by follow easy instructions. Target audience is primary the younger generation. For all recipes recommended for kids 13 years old or younger will be displayed for free. To see more advanced recipes and create own recipe posts you have to become a registered user. 
+The idea of this website is to create meals and snacks by follow easy instructions. Target audience is primary the younger generation. Recipes can are displayed on website for free. An options to become a user to create users own recipes to share with other users.
 ### Goal
 Build a recipe webpage with HTML, CSS, JavaScript, Python, MongoDB, Flask technologies where users can manipulate CRUD functions (create, read, update and delete). The user will also be able to store data.  
 ## 1.2 User Stories (Scope Plane)
@@ -15,21 +15,21 @@ The type of users for the website are kid (13 years old or younger), guest user,
   
 **Kids goals**  
 As a kid I want:  
-*	recipes to be easy to find on the website, so I won’t lose interest.
+*	the recipes to be easy to find on the website, so I won’t lose interest.
 *	the recipes to be easy to follow and be understandable, so I won’t be discouraged to make things in the kitchen.
 *	the webpage to have an appealing layout with fun picture, so I would be inspired to try the recipes.
 
 **Guest user goals**  
 As a guest user I want:  
-*	Navigation to be easy on the website, so I won’t be discouraged to use the website.
-*	Have the option to register as a user, if I like the page and want to see more.
-*	Information on purpose of website and how it’s used, so I would know what it’s about.
-*	All links to work without error, so I wont chose to search of other pages.
+*	navigation to be easy on the website, so I won’t be discouraged to use the website.
+*	have the option to register as a user, if I like the page and want to see more.
+*	information on purpose of website and how it’s used, so I would know what it’s about.
+*	all links to work without error, so I wont chose to search of other pages.
 
 **Parent goals:**  
 As a parent I want:  
-* The recipes to state any common allergies, to prevent breakouts.
-* The recipes to inform if help with stove or oven is needed, so my child know when to ask for help if needed.
+* the recipes to state any common allergies, to prevent breakouts.
+* the recipes to inform if help with stove or oven is needed, so my child know when to ask for help if needed.
 * the only communication possible is through posts that are public, to prevent unsupervised contact with predators or bad influences.
 
 **Registered user goals**  
@@ -74,10 +74,10 @@ For the first time user, the option to “Register” or “Sign In” on the fi
 When you’re a logged in user you will see a button in the top navbar called “Categories”. When clicked a dropdown list shows of all category options shows. Once I select one of them a list with all of those recipes should show in the main window.
 
 #### Create Recipe Posts  
-As a registered user you should see a button called “Create Recipes” in your profile. Once clicked it should clear how to fill in the fields. Once submitted you should reseve a message that the post won’t be available to public until it’s been reviewed by admin.
+As a registered user you should see a button called “Create Recipes” in your profile. Once clicked it should clear how to fill in the fields. 
 
 #### Edit Recipe Post  
-By clicking on the "Edit" button on your recipe you should be able to open up the edit form and save the changes. Again, once submitted you should reseve a message that the post won’t be available to public until it’s been reviewed by admin.
+By clicking on the "Edit" button on your recipe you should be able to open up the edit form and save the changes. 
 
 #### Delete Post  
 If you want to delete a post, it should be easily done by clicking on “Delete Recipe” button on the page of your recipe. You will get a confirmation message that the post has been deleted.
@@ -98,7 +98,10 @@ If you like to delete your account, you should see a “Delete Profile” button
 <img width="687" alt="skeletoncooking" src="https://user-images.githubusercontent.com/70586630/113631652-0c2e6900-966a-11eb-85c7-89f3bedb2d38.png">
 
 ### The database structure:   
-<img width="585" alt="databaseCooking" src="https://user-images.githubusercontent.com/70586630/113631615-0042a700-966a-11eb-928b-f24183569cf8.png">  
+ 
+
+![Database](https://user-images.githubusercontent.com/70586630/114391610-fd7b1100-9b97-11eb-9e09-6957d0c69322.png)
+
 
  ### Recipe categories:    
 •	Snacks  
@@ -123,43 +126,37 @@ If you like to delete your account, you should see a “Delete Profile” button
 
 ### Wireframes
 
-**First Page**
+**First Page** 
   
-![First Page](https://user-images.githubusercontent.com/70586630/114098018-14341600-98c1-11eb-9321-68d70739fe19.png)
-
-
+![First Page](https://user-images.githubusercontent.com/70586630/114395902-35388780-9b9d-11eb-8fd5-7bf96acf0ff0.png)
   
   **Login**
     
 ![Login](https://user-images.githubusercontent.com/70586630/113860258-1b1a3600-97a6-11eb-85ae-7a2c5c8fddad.png)
   
-  **Register**
+  **Register**  
     
-![Register](https://user-images.githubusercontent.com/70586630/113860237-16ee1880-97a6-11eb-896a-a710acaedac6.png)
+![Register](https://user-images.githubusercontent.com/70586630/114396595-05d64a80-9b9e-11eb-95df-5ab74a1d15b3.png)
   
-  **Profile**
+  **Profile**  
     
-![Login Profile](https://user-images.githubusercontent.com/70586630/114097989-0bdbdb00-98c1-11eb-939b-2b30fd646076.png)
-
+![Login Profile](https://user-images.githubusercontent.com/70586630/114395977-4bdede80-9b9d-11eb-87ec-04aafea8b911.png)
   
   **Categories**  
     
-![Recipes](https://user-images.githubusercontent.com/70586630/114098035-1b5b2400-98c1-11eb-9c5b-f260d7260bd7.png)
+![categories](https://user-images.githubusercontent.com/70586630/114396036-5e591800-9b9d-11eb-8e6c-02fb0e875792.png)
 
   **Recipes**  
     
-![Selections](https://user-images.githubusercontent.com/70586630/114097857-e9e25880-98c0-11eb-8f8c-fa01bb3507f7.png)
-
+![Recipes](https://user-images.githubusercontent.com/70586630/114396056-64e78f80-9b9d-11eb-920d-35f5040c8af8.png)
   
   **Create Recipes**
-![Create Recipes](https://user-images.githubusercontent.com/70586630/114097880-efd83980-98c0-11eb-92b0-5069224fb0d7.png)
-
-  
-  **Recipe Layout**
     
-![Recipe Layout](https://user-images.githubusercontent.com/70586630/114097909-f8307480-98c0-11eb-95cb-487061f8daa3.png)
-
-
+![Create Recipes](https://user-images.githubusercontent.com/70586630/114395423-a297e880-9b9c-11eb-98e5-9be56e771538.png)
+  
+  **Recipe Layout**  
+    
+![Recipe Layout](https://user-images.githubusercontent.com/70586630/114395321-7f6d3900-9b9c-11eb-9a5f-a13520418b09.png)
 
 
 
