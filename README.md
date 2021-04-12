@@ -120,12 +120,11 @@ If you like to delete your account, you should see a “Delete Profile” button
 *	Ingredients need  
 *	Easy cooking instructions  
 *	Allergies   
-    * Wheat free, 
-    * Gluten free,  
-    * Egg free,  
-    * Nut free,  
-    * Dairy free,  
-    * Soyabeans free,  
+    * Wheat free 
+    * Gluten free  
+    * Egg free  
+    * Nut free  
+    * Dairy free   
 *	Tips on things to think about or to improve the recipe  
 
 ## 1.5	Surface Plane
