@@ -11,7 +11,7 @@ nav {
 }
 /* Top navbar */
 .headnav {
-    background-color: rgba(197, 192, 192, 0.95)!important;
+    background-color: rgba(212, 211, 211, 0.95)!important;
 }
 .sidenav-trigger {
     color: rgba(0, 0, 0, 0.959);
@@ -33,43 +33,43 @@ nav {
 }
 .container {
   position: relative;
-  width: 100vw;
+  width: 60vw;
   height: 10%;
   text-align: center;
   color: white;
 }
+/* Logo Size */
 .logo {
     width: 80vw;
     position: center;
     padding-bottom: 50px;
 }
 
-/* Text style */
+/* TEXT STYLE */
+
+.text-shadow {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* top navbar links */
 .headlinks {
-    padding: 4px;
-    color: rgba(0, 0, 0, 0.7);
+    font-family: "Oswald";
+    font-size: 16px;
+    padding: 5px 20px 5px 0;
+    background-color: transparent;
+    color: rgba(143, 1, 138, 0.99);
     font-weight: 700;
 }
 .headlinks:hover {
     font-stretch: wider;
     text-decoration: underline;
 }
-.text-shadow {
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
 
-/* Logo style */
-.logo-text {
-    font-family: "Atma";
-    font-size: 40px;
-    color: rgba(204, 14, 230, 0.877);
-    font-weight: 800;
-}
-.fas,
+/* Icon & Button Style */
+
 .btn-large {
-    color: rgba(204, 14, 230, 0.877);
+    color: rgba(143, 1, 138, 0.99);
     font-size: large;
-
 }
 
 button {
@@ -78,12 +78,7 @@ button {
 .flashes h4 {
     line-height: 2;
 }
-.logo-with {
-    font-family: "Oswald";
-    color: rgba(178, 252, 59, 0.9);
-    font-size: 20px;
-    background: transparent;
-}
+
 /* Centered text */
 .centered {
   position: absolute;
