@@ -17,10 +17,12 @@ nav {
     color: rgba(0, 0, 0, 0.959);
     height: 50px;
 }
+/*
 .wrapp {
     padding-left: 2%;
     padding-right: 2%;
 }
+*/
 .navbar-light {
     border-top: 2px solid rgba(0, 0, 0, 0.7);
     border-bottom: 2px solid rgba(0, 0, 0, 0.7);
@@ -33,7 +35,7 @@ nav {
 }
 .container {
   position: relative;
-  width: 60vw;
+  width: 90vw;
   height: 10%;
   text-align: center;
   color: white;
