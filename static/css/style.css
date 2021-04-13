@@ -66,6 +66,10 @@ nav {
     font-stretch: wider;
     text-decoration: underline;
 }
+.page-footer {
+    background-color: transparent;
+    font-weight: 600;
+}
 
 /* Icon & Button Style */
 
