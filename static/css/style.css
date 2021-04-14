@@ -37,8 +37,8 @@ nav {
   position: relative;
   width: 90vw;
   height: 10%;
-  text-align: center;
-  color: white;
+  text-align: left;
+  color: black;
 }
 /* Logo Size */
 .logo {
@@ -68,7 +68,7 @@ nav {
 }
 .page-footer {
     background-color: transparent;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 /* Icon & Button Style */
