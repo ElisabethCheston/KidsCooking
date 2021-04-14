@@ -27,7 +27,7 @@
                 <div class="nav-wrapper valign-wrapper col s12 right">
                     <!-- User logged in out -->
                     <div class="right text-shadow purple-text accent-3">
-                        <a href="#!" class="small-link headlinks">PROFILE</a>
+                        <a href="{{ url_for('profile', username=session['user']) }}" class="small-link headlinks">PROFILE</a>
                         <a href="#" class="small-link headlinks">LOG OUT</a>
                         <a href="{{ url_for('login') }}" class="small-link headlinks">LOG IN</a>
                         <a href="{{ url_for('register') }}" class="small-link headlinks">REGISTER</a>
@@ -62,7 +62,7 @@
                         <li><a href="#!" class="small-link headlinks">INPIRATION</a></li>
 
                         <li><a href="#!" class="small-link headlinks">CATEGORIES</a></li>
-                        <li><a href="#!" class="small-link headlinks">PROFILE</a></li>
+                        <li><a href="{{ url_for('profile', username=session['user']) }}" class="small-link headlinks">PROFILE</a></li>
                         <li><a href="#!" class="small-link headlinks">ADD RECIPIE</a></li>
                         <li><a href="#!" class="small-link headlinks">INPIRATION</a></li>
                     </ul>
@@ -78,7 +78,7 @@
                     <li><a href="#!" class="small-link headlinks">INPIRATION</a></li>
 
                     <li><a href="#!" class="small-link headlinks">CATEGORIES</a></li>
-                    <li><a href="#!" class="small-link headlinks">PROFILE</a></li>
+                    <li><a href="{{ url_for('profile', username=session['user']) }}" class="small-link headlinks">PROFILE</a></li>
                     <li><a href="#!" class="small-link headlinks">ADD RECIPIE</a></li>
                     <li><a href="#!" class="small-link headlinks">INPIRATION</a></li>
                 </ul>
@@ -111,7 +111,7 @@
             <div class="row col l4 offset-l2 s12 ">
                 <ul class="left">
                     <li><a class="lime-text left-align" href="#!">HOME</a></li>
-                    <li><a class="lime-text left-align" href="#!">PROFILE</a></li>
+                    <li><a class="lime-text left-align" href="{{ url_for('profile', username=session['user']) }}">PROFILE</a></li>
                 </ul>
                 <ul class="right">
                     <li><a class="lime-text right-align" href="{{ url_for('get_recipes') }}">CATEGORIES</a></li>
