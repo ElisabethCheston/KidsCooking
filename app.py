@@ -17,18 +17,14 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
-# ------- Recipes --------
-
-
+# ---- Recipes ----
 @app.route("/")
 @app.route("/get_recipes")
 def get_recipes():
     recipes = mongo.db.recipes.find()
     return render_template("recipes.html", recipes=recipes)
 
-# ------- Registration --------
-
-
+# ---- Registration ----
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -51,9 +47,8 @@ def register():
         flash("Registration Successful!")
     return render_template("register.html")
 
-# ------- Login --------
 
-
+# ---- Login ----
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -83,13 +78,26 @@ def login():
 
     return render_template("login.html")
 
-# ------- Profile --------
+
+# ---- Profile ----
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    return render_template("profile.html", username=username)    
+    # if user cookie is true return to profile
+    if session["user"]:
+        return render_template("profile.html", username=username)    
+    # if user cookie is untrue return to login
+    return redirect(url_for("login"))
+
+
+# ---- Logout ----
+    @app.route("/logout")
+    def logout():
+        # remove user from session cookies
+        flash("You have been looged out")
+        return redirect(url_for("login"))
 
 
 if __name__ == "__main__":
