@@ -23,7 +23,7 @@
     <header>
 
         <!-- Top Navbar (1st navbar) -->
-        <nav class="headnav">
+        <nav class="headnav" id="#top">
                 <div class="nav-wrapper valign-wrapper col s12 right">
                     <!-- User logged in out -->
                     <div class="right text-shadow purple-text accent-3">
@@ -103,10 +103,11 @@
     <!-- Page content -->
     <main class="container">
         {% block content %}
+
         {% endblock %}
     </main>
 
-    <footer class="page-footer text-shadow purple">
+    <footer class="page-footer footer-fixed text-shadow purple">
         <div class="container purple">
             <div class="row col l4 offset-l2 s12 ">
                 <ul class="left">
@@ -125,6 +126,11 @@
             <a class="lime-text center-align" href="#!"></a>
         </div>
     </footer>
+
+    <!-- Back to top -->
+    <a href="#top" class="to-top right" title="Back to top" style="display: inline;">
+        <i class="fas fa-chevron-up right-align" aria-hidden="true"></i>
+    </a>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
