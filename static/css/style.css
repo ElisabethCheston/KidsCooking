@@ -4,8 +4,6 @@
 nav {
     height: 40px;
     background-color: transparent;
-    padding-left: 2%;
-    padding-right: 2%;
     box-sizing: none;
     box-shadow: none;
 }
@@ -17,12 +15,11 @@ nav {
     color: rgba(0, 0, 0, 0.959);
     height: 50px;
 }
-/*
-.wrapp {
-    padding-left: 2%;
-    padding-right: 2%;
+.wrapp,
+.nav-wrapper {
+    padding-left: 3%;
+    padding-right: 3%;
 }
-*/
 .navbar-light {
     border-top: 2px solid rgba(0, 0, 0, 0.7);
     border-bottom: 2px solid rgba(0, 0, 0, 0.7);
@@ -35,9 +32,11 @@ nav {
 }
 .container {
   position: relative;
-  width: 90vw;
-  height: 10%;
+  width: 100vw;
+  height: 0%;
   text-align: left;
+  padding-left: 3%;
+  padding-right: 3%;
   color: black;
 }
 /* Logo Size */
@@ -45,6 +44,13 @@ nav {
     width: 80vw;
     position: center;
     padding-bottom: 50px;
+}
+
+/* IMG STYLE */
+
+/* background img */
+.responsive-img {
+    padding-top: 6px;
 }
 
 /* TEXT STYLE */
@@ -57,9 +63,9 @@ nav {
 .headlinks {
     font-family: "Oswald";
     font-size: 16px;
-    padding: 5px 20px 5px 0;
+    padding: 3px 0 3px 20px;
     background-color: transparent;
-    color: rgba(143, 1, 138, 0.99);
+    color: #9c27b0;
     font-weight: 700;
 }
 .headlinks:hover {
@@ -74,7 +80,7 @@ nav {
 /* Icon & Button Style */
 
 .btn-large {
-    color: rgba(143, 1, 138, 0.99);
+    color:#9c27b0;
     font-size: large;
 }
 

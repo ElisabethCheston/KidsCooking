@@ -17,7 +17,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
-
+# ------- Recipes --------
 @app.route("/")
 @app.route("/get_recipes")
 def get_recipes():
@@ -47,7 +47,7 @@ def register():
         flash("Registration Successful!")
     return render_template("register.html")
 
-
+# ------- Login --------
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":

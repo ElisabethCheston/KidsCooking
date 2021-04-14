@@ -22,25 +22,23 @@
     <!-- Navbar layout -->
     <header>
 
-            <!-- Top Navbar (1st navbar) -->
+        <!-- Top Navbar (1st navbar) -->
         <nav class="headnav">
-            <div class="nav-wrapper valign-wrapper right">
-                <div class="col s12 right">
+                <div class="nav-wrapper valign-wrapper col s12 right">
                     <!-- User logged in out -->
                     <div class="right text-shadow purple-text accent-3">
-                    <a href="#!" class="small-link headlinks">PROFILE</a>
-                    <a href="#" class="small-link headlinks">LOG OUT</a>
-                    <a href="{{ url_for('login') }}" class="small-link headlinks">LOG IN</a>
-                    <a href="{{ url_for('register') }}" class="small-link headlinks">REGISTER</a>
+                        <a href="#!" class="small-link headlinks">PROFILE</a>
+                        <a href="#" class="small-link headlinks">LOG OUT</a>
+                        <a href="{{ url_for('login') }}" class="small-link headlinks">LOG IN</a>
+                        <a href="{{ url_for('register') }}" class="small-link headlinks">REGISTER</a>
                     </div>
                 </div>
-            </div>
         </nav>
-        
-    <!-- Background images -->
+
+        <!-- Background images -->
         <div class="container">
-            <!-- <img class="responsive-img" src="static/images/bgvar.jpeg" alt="test"> -->
-    <!-- Logo -->
+            <img class="responsive-img" src="static/images/bgvar.jpeg" alt="test">
+            <!-- Logo -->
             <div class="col4 logocontainer centered">
                 <a class="logo" href="">
                     <img src="static/images/logohor.png" class="logo img-fluid">
@@ -48,28 +46,13 @@
             </div>
         </div>
 
-            <!-- Toggler (2nd navbar) -->
-            <div class="wrapp">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <div class="toggle nav-wrapper valign-wrapper right-align">
-                        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars small purple-text accent-3"></i></a>
-                        <ul class="text-shadow right-align hide-on-med-and-down">
-                            <li><a href="{{ url_for('get_recipes') }}" class="small-link headlinks">SNACKS</a></li>
-                            <li><a href="#!" class="small-link headlinks">LUNCH</a></li>
-                            <li><a href="#!" class="small-link headlinks">DINNER</a></li>
-                            <li><a href="#!" class="small-link headlinks">SWEETS</a></li>
-                            <li><a href="#!" class="small-link headlinks">HEALTHY</a></li>
-                            <li><a href="#!" class="small-link headlinks">PARTY</a></li>
-                            <li><a href="#!" class="small-link headlinks">INPIRATION</a></li>
-
-                            <li><a href="#!" class="small-link headlinks">CATEGORIES</a></li>
-                            <li><a href="#!" class="small-link headlinks">PROFILE</a></li>
-                            <li><a href="#!" class="small-link headlinks">ADD RECIPIE</a></li>
-                            <li><a href="#!" class="small-link headlinks">INPIRATION</a></li>
-                        </ul>
-                    </div>
-                    <!-- Mobile layout -->
-                    <ul class="sidenav right-align" id="mobile-demo">
+        <!-- Toggler (2nd navbar) -->
+        <div class="wrapp">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="toggle nav-wrapper valign-wrapper right-align">
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i
+                            class="fas fa-bars small purple-text accent-3"></i></a>
+                    <ul class="text-shadow right-align hide-on-med-and-down">
                         <li><a href="{{ url_for('get_recipes') }}" class="small-link headlinks">SNACKS</a></li>
                         <li><a href="#!" class="small-link headlinks">LUNCH</a></li>
                         <li><a href="#!" class="small-link headlinks">DINNER</a></li>
@@ -83,54 +66,65 @@
                         <li><a href="#!" class="small-link headlinks">ADD RECIPIE</a></li>
                         <li><a href="#!" class="small-link headlinks">INPIRATION</a></li>
                     </ul>
-                </nav>
-            </div>
+                </div>
+                <!-- Mobile layout -->
+                <ul class="sidenav right-align" id="mobile-demo">
+                    <li><a href="{{ url_for('get_recipes') }}" class="small-link headlinks">SNACKS</a></li>
+                    <li><a href="#!" class="small-link headlinks">LUNCH</a></li>
+                    <li><a href="#!" class="small-link headlinks">DINNER</a></li>
+                    <li><a href="#!" class="small-link headlinks">SWEETS</a></li>
+                    <li><a href="#!" class="small-link headlinks">HEALTHY</a></li>
+                    <li><a href="#!" class="small-link headlinks">PARTY</a></li>
+                    <li><a href="#!" class="small-link headlinks">INPIRATION</a></li>
+
+                    <li><a href="#!" class="small-link headlinks">CATEGORIES</a></li>
+                    <li><a href="#!" class="small-link headlinks">PROFILE</a></li>
+                    <li><a href="#!" class="small-link headlinks">ADD RECIPIE</a></li>
+                    <li><a href="#!" class="small-link headlinks">INPIRATION</a></li>
+                </ul>
+            </nav>
+        </div>
 
     </header>
-    
+
     <section>
-        <!-- flash messages -->
+        <!-- Flash Messages -->
         {% with messages = get_flashed_messages() %}
         {% if messages %}
         {% for message in messages %}
         <div class="row flashes">
-            <h4 class="purple accent-3 center-align">{{ message }}</h4>
+            <h4 class="purple-text accent-3 center-align">{{ message }}</h4>
         </div>
         {% endfor %}
         {% endif %}
         {% endwith %}
     </section>
 
+    <!-- Page content -->
     <main class="container">
         {% block content %}
-
         {% endblock %}
     </main>
 
-    <footer class="page-footer text-shadow purple accent-3">
-        <div class="container purple accent-3">
-          <div class="row">
-            <div class="col l6 s12 purple accent-3">
-            </div>
+    <footer class="page-footer text-shadow purple">
+        <div class="container purple">
             <div class="row col l4 offset-l2 s12 ">
-              <ul class="left">
-                <li><a class="lime-text left-align" href="#!">HOME</a></li>
-                <li><a class="lime-text left-align" href="#!">PROFILE</a></li>
-              </ul>
-              <ul class="right">
-                <li><a class="lime-text right-align" href="{{ url_for('get_recipes') }}">CATEGORIES</a></li>
-                <li><a class="lime-text right-align" href="#!">CONTACT</a></li>
-              </ul>
+                <ul class="left">
+                    <li><a class="lime-text left-align" href="#!">HOME</a></li>
+                    <li><a class="lime-text left-align" href="#!">PROFILE</a></li>
+                </ul>
+                <ul class="right">
+                    <li><a class="lime-text right-align" href="{{ url_for('get_recipes') }}">CATEGORIES</a></li>
+                    <li><a class="lime-text right-align" href="#!">CONTACT</a></li>
+                </ul>
             </div>
-          </div>
         </div>
-        <div class="footer-copyright purple accent-3">
-            <div class="container lime-text">
-              Elisabeth Cheston © 2021 
-            <a class="lime-text centered" href="#!"></a>
-            </div>
-          </div>
-      </footer>
+
+        <div class="center-align lime-text accent-3">
+            Elisabeth Cheston © 2021
+            <a class="lime-text center-align" href="#!"></a>
+        </div>
+    </footer>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -144,4 +138,5 @@
 
 
 </body>
+
 </html>
