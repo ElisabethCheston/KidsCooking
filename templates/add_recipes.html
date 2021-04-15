@@ -4,5 +4,193 @@
 
 <h3 class="center-align purple-text">Add Recipe</h3>
 
+<form class="col s12" method="POST" action="{{ url_for('add_recipes') }}">
+    <div class="row">
+        <div class="col s12 l4">
+
+            <!-- Recipe Title -->
+            <div class="input-field form-field text-field">
+                <input placeholder="Recipe Name" id="title" name="title" type="text" class="validate" minlength="5"
+                    maxlength="50" pattern="(?:\s*[a-zA-Z]+){1,6}" required>
+                <label for="title">Recipe Name</label>
+            </div>
+
+            <!-- Recipe Category -->
+            <div class="input-field form-field">
+                <select id="recipe_category" name="recipe_category" class="validate" required>
+                    <option value="" disabled selected>Choose Recipe Category</option>
+                    {% for category in categories %}
+                    <option value="{{ category.recipes }}">{{ category.recipes }}</option>
+                    {% endfor %}
+                </select>
+                <label for="recipe_category">Recipe Category</label>
+            </div>
+
+        </div>
+            <!-- Cooking Time -->
+        <div class="input-field col s12">
+            <select>
+                <option value="" disabled selected>Time:</option>
+                <option value="1"> 5</option>
+                <option value="2"> 10</option>
+                <option value="3"> 15</option>
+                <option value="4"> 20</option>
+                <option value="5"> 25</option>
+                <option value="6"> 30</option>
+                <option value="7"> 35</option>
+                <option value="8"> 40</option>
+                <option value="9"> 45</option>
+                <option value="10"> 50</option>
+                <option value="11"> 55</option>
+                <option value="12"> 60</option>
+                <option value="13"> 65</option>
+            </select>
+            <label>Time: </label>
+        </div>
+
+        <div class="input-field col s12">
+            <select>
+                <option value="" disabled selected>Category:</option>
+                <option value="1">Snacks</option>
+                <option value="2">Lunch</option>
+                <option value="3">Dinner</option>
+                <option value="4">Sweets</option>
+                <option value="5">Healthy</option>
+                <option value="6">Party</option>
+            </select>
+            <label>Category: </label>
+        </div>
+
+        <div class="input-field col s12">
+            <select>
+                <option value="" disabled selected>Difficult Level</option>
+                <option value="1">Easy </option>
+                <option value="2">Medium </option>
+                <option value="3">Hard </option>
+            </select>
+            <label>Difficult Level: </label>
+        </div>
+
+        <div class="input-field col s12">
+            <select>
+                <option value="" disabled selected>Portions:</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">4</option>
+                <option value="4">6</option>
+                <option value="5">8</option>
+            </select>
+            <label>Portions: </label>
+        </div>
+
+        <div class="input-field col s12">
+            <select multiple>
+                <option value="" disabled selected>Choose Material:</option>
+                <option value="1">Oven</option>
+                <option value="2">Stove</option>
+                <option value="3">Knife</option>
+                <option value="4">Microwave</option>
+                <option value="5">Knife</option>
+            </select>
+            <label>Choose Material: </label>
+        </div>
+
+    </div>
+    <!-- Allergies Checkboxes -->
+    <div class="row form-field">
+
+        <!-- Gluten Checkboxes -->
+        <div id="gluten-switch" class="col s12 switch">
+            <i class="fas fa-leaf prefix leaf"></i><span class="veg-text"> gluten Free</span>
+            <label for="gluten">
+                <span class="switch-text">No</span>
+                <input type="checkbox" id="gluten" name="gluten">
+                <span class="lever"></span>
+                <span class="switch-text">Yes</span>
+            </label>
+        </div>
+
+        <!-- Egg Checkbox -->
+        <div id="egg-switch" class="col s12 switch">
+            <i class="fas fa-seedling prefix leaf"></i><span class="egg-text"> Egg Free</span>
+            <label for="egg">
+                <span class="switch-text">No</span>
+                <input type="checkbox" id="egg" name="egg">
+                <span class="lever"></span>
+                <span class="switch-text">Yes</span>
+            </label>
+        </div>
+
+        <!-- Nuts Checkbox -->
+        <div id="nuts-switch" class="col s12 switch">
+            <i class="fas fa-seedling prefix leaf"></i><span class="nuts-text"> Nuts Free</span>
+            <label for="nuts">
+                <span class="switch-text">No</span>
+                <input type="checkbox" id="nuts" name="nuts">
+                <span class="lever"></span>
+                <span class="switch-text">Yes</span>
+            </label>
+        </div>
+
+        <!-- Lactose Checkbox -->
+        <div id="lactose-switch" class="col s12 switch">
+            <i class="fas fa-seedling prefix leaf"></i><span class="lactose-text"> lactose Free</span>
+            <label for="lactose">
+                <span class="switch-text">No</span>
+                <input type="checkbox" id="lactose" name="lactose">
+                <span class="lever"></span>
+                <span class="switch-text">Yes</span>
+            </label>
+        </div>
+
+    </div>
+    <div>
+
+    <div class="input-field form-field text-field">
+        <!-- Image URL Input -->
+        <i class="fas fa-camera prefix" aria-hidden="true"></i>
+        <input placeholder="Image URL" id="image_url" name="image_url" type="url" onchange="addImage();"
+            pattern="https://.*" class="validate">
+        <label for="image_url">Recipe Image</label>
+    </div>
+    <div class="col s12 m12 l4">
+
+        <!-- Recipe Description Field -->
+        <div class="input-field form-field text-field">
+            <i class="fas fa-file-alt prefix" aria-hidden="true"></i>
+            <textarea id="description" name="description" class="materialize-textarea validate"
+                placeholder="Recipe Description" minlength="10" maxlength="200" pattern="(?:\s*[a-zA-Z]+.)"
+                required></textarea>
+            <label for="description">Recipe Description</label>
+        </div>
+        <!-- Recipe Ingredients Input -->
+        <div class="input-field text-field">
+            <i class="fas fa-list-ul prefix" aria-hidden="true"></i>
+            <textarea id="ingredients" name="ingredients" class="materialize-textarea validate tooltipped"
+                data-position="bottom" data-tooltip="Please add each ingredient on a new line!"
+                placeholder="Recipe Ingredients" minlength="4" required></textarea>
+            <label for="ingredients">Recipe Ingredients</label>
+            <a class=""></a>
+        </div>
+    </div>
+
+    </div>
+
+    </div>
+    <!-- Recipe Submit Button -->
+    <div class="row">
+        <div id="cancel-button" class="col s6 right-align">
+            <a id="cancel-add" href="{{ url_for('get_recipes') }}" class="btn red darken-4 tooltipped"
+                data-position="bottom" data-tooltip="This will take you back to the recipes page">
+                Cancel <i class="fas fa-times-circle" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="col s6 left-align">
+            <button type="submit" data-target="added" class="btn waves-effect center-align light-green darken-4">Save
+                <i class="fas fa-check-circle" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+</form>
 
 {% endblock %}

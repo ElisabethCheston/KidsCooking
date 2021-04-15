@@ -136,10 +136,23 @@ main {
 /* Icon & Button Style */
 .btn-large {
     color:#9c27b0;
+    background-color: rgba(250, 250, 250, 0.4);
     font-size: large;
 }
 button {
     background-color: rgba(178, 252, 59, 0.9)!important;
+}
+
+/* CATEGORIES */
+
+.category-link {
+    color:#9c27b0;
+    font-size: larger;
+    background-color: rgba(250, 250, 250, 0.6);
+    font-weight: 700;
+}
+.r-container {
+    box-sizing: border-box;
 }
 /* FOOTER */
 
