@@ -83,7 +83,7 @@
                         <li><a href="#!" class="small-link navlink">CATEGORIES</a></li>
                         <li><a href="{{ url_for('profile', username=session['user']) }}"
                                 class="small-link navlink">PROFILE</a></li>
-                        <li><a href="#!" class="small-link navlink">ADD RECIPIE</a></li>
+                        <li><a href="{{ url_for('add_recipes') }}" class="small-link navlink">ADD RECIPE</a></li>
                         <li><a href="{{ url_for('get_recipes') }}" class="small-link navlink">SNACKS</a></li>
                         <li><a href="#!" class="small-link navlink">LUNCH</a></li>
                         <li><a href="#!" class="small-link navlink">DINNER</a></li>
@@ -108,7 +108,7 @@
                     <li><a href="#!" class="small-link headlinks">CATEGORIES</a></li>
                     <li><a href="{{ url_for('profile', username=session['user']) }}"
                             class="small-link headlinks">PROFILE</a></li>
-                    <li><a href="#!" class="small-link headlinks">ADD RECIPIE</a></li>
+                    <li><a href="{{ url_for('add_recipes') }}" class="small-link headlinks">ADD RECIPE</a></li>
                     <li><a href="{{ url_for('get_recipes') }}" class="small-link headlinks">SNACKS</a></li>
                     <li><a href="#!" class="small-link headlinks">LUNCH</a></li>
                     <li><a href="#!" class="small-link headlinks">DINNER</a></li>
