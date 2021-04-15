@@ -23,21 +23,44 @@
     <header>
 
         <!-- Top Navbar (1st navbar) -->
-        <nav class="headnav" id="#top">
-                <div class="nav-wrapper valign-wrapper col s12 right">
-                    <!-- User logged in out -->
-                    <div class="right text-shadow purple-text accent-3">
-                        {% if session.user %}
-                        <a href="{{ url_for('profile', username=session['user']) }}" class="small-link headlinks">PROFILE</a>
-                        <a href="{{ url_for('logout') }}" class="small-link headlinks">LOG OUT</a>
-                        {% else %}
-                        <a href="{{ url_for('login') }}" class="small-link headlinks">LOG IN</a>
-                        <a href="{{ url_for('register') }}" class="small-link headlinks">REGISTER</a>
-                        {% endif %}
-                    </div>
-                </div>
-        </nav>
+        <div class="text-shadow nav-wrapper top-nav">
+            <img src=" static/images/logohor.png" class="logo-top">
+            <div class="headnav">
+                {% if session.user %}
+                <a href=" {{ url_for('profile', username=session['user']) }}" class="small-link headlinks">PROFILE</a>
+                <a href="{{ url_for('logout') }}" class="small-link headlinks">LOG OUT</a>
+                {% else %}
+                <a href="{{ url_for('login') }}" class="small-link headlinks">LOG IN</a>
+                <a href="{{ url_for('register') }}" class="small-link headlinks">REGISTER</a>
+                {% endif %}
+            </div>
+        </div>
+<!--
 
+        <div class="wrapp">
+            <nav class="valign-wrapper row">
+                <div class="col s5">
+                    <a class="logo-to" href="">
+                        <img src="static/images/logohor.png" class="logo-top left img-fluid">
+                    </a>
+                </div>
+
+                <div class="right-align col s7 nav-second">
+                    <ul class="text-shadow">
+                        {% if session.user %}
+                        <li><a href="{{ url_for('profile', username=session['user']) }}"
+                                class="small-link headlinks">PROFILE</a></li>
+                        <li><a href="{{ url_for('logout') }}" class="small-link headlinks">LOG OUT</a></li>
+                        {% else %}
+                        <li><a href="{{ url_for('login') }}" class="small-link headlinks">LOG IN</a></li>
+                        <li><a href="{{ url_for('register') }}" class="small-link headlinks">REGISTER</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+        </div>
+        </nav>
+        </div>
+    -->
         <!-- Background images -->
         <div class="container">
             <img class="responsive-img" src="static/images/bgvar.jpeg" alt="test">
@@ -52,40 +75,55 @@
         <!-- Toggler (2nd navbar) -->
         <div class="wrapp">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="toggle nav-wrapper valign-wrapper right-align">
+                <div class="toggle nav-wrapper valign-wrapper">
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i
                             class="fas fa-bars small purple-text accent-3"></i></a>
-                    <ul class="text-shadow right-align hide-on-med-and-down">
+                    <ul class="text-shadow nav-second hide-on-med-and-down">
                         {% if session.user %}
-                        <li><a href="#!" class="small-link headlinks">CATEGORIES</a></li>
-                        <li><a href="{{ url_for('profile', username=session['user']) }}" class="small-link headlinks">PROFILE</a></li>
-                        <li><a href="#!" class="small-link headlinks">ADD RECIPIE</a></li>
+                        <li><a href="#!" class="small-link navlink">CATEGORIES</a></li>
+                        <li><a href="{{ url_for('profile', username=session['user']) }}"
+                                class="small-link navlink">PROFILE</a></li>
+                        <li><a href="#!" class="small-link navlink">ADD RECIPIE</a></li>
+                        <li><a href="{{ url_for('get_recipes') }}" class="small-link navlink">SNACKS</a></li>
+                        <li><a href="#!" class="small-link navlink">LUNCH</a></li>
+                        <li><a href="#!" class="small-link navlink">DINNER</a></li>
+                        <li><a href="#!" class="small-link navlink">SWEETS</a></li>
+                        <li><a href="#!" class="small-link navlink">HEALTHY</a></li>
+                        <li><a href="#!" class="small-link navlink">PARTY</a></li>
+                        <li><a href="#!" class="small-link navlink">INPIRATION</a></li>
                         {% else %}
-                        <li><a href="{{ url_for('get_recipes') }}" class="small-link headlinks">SNACKS</a></li>
-                        <li><a href="#!" class="small-link headlinks">LUNCH</a></li>
-                        <li><a href="#!" class="small-link headlinks">DINNER</a></li>
-                        <li><a href="#!" class="small-link headlinks">SWEETS</a></li>
-                        <li><a href="#!" class="small-link headlinks">HEALTHY</a></li>
-                        <li><a href="#!" class="small-link headlinks">PARTY</a></li>
-                        <li><a href="#!" class="small-link headlinks">INPIRATION</a></li>
+                        <li><a href="{{ url_for('get_recipes') }}" class="small-link navlink">SNACKS</a></li>
+                        <li><a href="#!" class="small-link navlink">LUNCH</a></li>
+                        <li><a href="#!" class="small-link navlink">DINNER</a></li>
+                        <li><a href="#!" class="small-link navlink">SWEETS</a></li>
+                        <li><a href="#!" class="small-link navlink">HEALTHY</a></li>
+                        <li><a href="#!" class="small-link navlink">PARTY</a></li>
+                        <li><a href="#!" class="small-link navlink">INPIRATION</a></li>
                         {% endif %}
                     </ul>
                 </div>
                 <!-- Mobile layout -->
-                <ul class="sidenav right-align" id="mobile-demo">
-                        {% if session.user %}
-                        <li><a href="#!" class="small-link headlinks">CATEGORIES</a></li>
-                        <li><a href="{{ url_for('profile', username=session['user']) }}" class="small-link headlinks">PROFILE</a></li>
-                        <li><a href="#!" class="small-link headlinks">ADD RECIPIE</a></li>
-                        {% else %}
-                        <li><a href="{{ url_for('get_recipes') }}" class="small-link headlinks">SNACKS</a></li>
-                        <li><a href="#!" class="small-link headlinks">LUNCH</a></li>
-                        <li><a href="#!" class="small-link headlinks">DINNER</a></li>
-                        <li><a href="#!" class="small-link headlinks">SWEETS</a></li>
-                        <li><a href="#!" class="small-link headlinks">HEALTHY</a></li>
-                        <li><a href="#!" class="small-link headlinks">PARTY</a></li>
-                        <li><a href="#!" class="small-link headlinks">INPIRATION</a></li>
-                        {% endif %}
+                <ul class="sidenav right" id="mobile-demo">
+                    {% if session.user %}
+                    <li><a href="#!" class="small-link headlinks">CATEGORIES</a></li>
+                    <li><a href="{{ url_for('profile', username=session['user']) }}"
+                            class="small-link headlinks">PROFILE</a></li>
+                    <li><a href="#!" class="small-link headlinks">ADD RECIPIE</a></li>
+                    <li><a href="{{ url_for('get_recipes') }}" class="small-link headlinks">SNACKS</a></li>
+                    <li><a href="#!" class="small-link headlinks">LUNCH</a></li>
+                    <li><a href="#!" class="small-link headlinks">DINNER</a></li>
+                    <li><a href="#!" class="small-link headlinks">SWEETS</a></li>
+                    <li><a href="#!" class="small-link headlinks">HEALTHY</a></li>
+                    <li><a href="#!" class="small-link headlinks">PARTY</a></li>
+                    <li><a href="#!" class="small-link headlinks">INPIRATION</a></li>
+                    {% else %}
+                    <li><a href="{{ url_for('get_recipes') }}" class="small-link headlinks">SNACKS</a></li>
+                    <li><a href="#!" class="small-link headlinks">LUNCH</a></li>
+                    <li><a href="#!" class="small-link headlinks">DINNER</a></li>
+                    <li><a href="#!" class="small-link headlinks">SWEETS</a></li>
+                    <li><a href="#!" class="small-link headlinks">HEALTHY</a></li>
+                    <li><a href="#!" class="small-link headlinks">PARTY</a></li>
+                    {% endif %}
                 </ul>
             </nav>
         </div>
@@ -117,7 +155,8 @@
             <div class="row col l4 offset-l2 s12 ">
                 <ul class="left">
                     <li><a class="lime-text left-align" href="#!">HOME</a></li>
-                    <li><a class="lime-text left-align" href="{{ url_for('profile', username=session['user']) }}">PROFILE</a></li>
+                    <li><a class="lime-text left-align"
+                            href="{{ url_for('profile', username=session['user']) }}">PROFILE</a></li>
                 </ul>
                 <ul class="right">
                     <li><a class="lime-text right-align" href="{{ url_for('get_recipes') }}">CATEGORIES</a></li>

@@ -47,7 +47,6 @@ def register():
         flash("Registration Successful!")
     return render_template("register.html")
 
-
 # ---- Login ----
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -78,7 +77,6 @@ def login():
 
     return render_template("login.html")
 
-
 # ---- Profile ----
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
@@ -91,13 +89,13 @@ def profile(username):
     # if user cookie is untrue return to login
     return redirect(url_for("login"))
 
-
 # ---- Logout ----
-    @app.route("/logout")
-    def logout():
-        # remove user from session cookies
-        flash("You have been looged out")
-        return redirect(url_for("login"))
+@app.route("/logout")
+def logout():
+    # remove user from session cookies
+    flash("You have been looged out")
+    session.pop("user")
+    return redirect(url_for("login"))
 
 
 if __name__ == "__main__":

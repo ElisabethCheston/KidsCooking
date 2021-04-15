@@ -1,16 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Atma:wght@400;500;600&family=Oswald:wght@300;400;500;600&family=Schoolbell&display=swap');
 
-/* LAYOUT */
 
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
-main {
-    flex: 1 0 auto;
-}
+ /* NAVBAR */
 
 nav {
     height: 40px;
@@ -18,18 +9,48 @@ nav {
     box-sizing: none;
     box-shadow: none;
 }
-/* Top navbar */
-.headnav {
-    background-color: rgba(212, 211, 211, 0.95)!important;
-}
-.sidenav-trigger {
-    color: rgba(0, 0, 0, 0.959);
-    height: 50px;
+/* Line divider */
+.container {
+  position: relative;
+  width: 100vw;
+  text-align: left;
+  padding-left: 3%;
+  padding-right: 3%;
+  color: black;
 }
 .wrapp,
-.nav-wrapper {
+.nav-wrapper,
+.headnav {
     padding-left: 3%;
     padding-right: 3%;
+}
+
+/* Top navbar */
+
+.top-nav {
+    background:rgb(105, 98, 105);
+    height: 35px;
+}
+.headnav {
+    position: absolute;
+    display:inline;
+    right: 0;
+    padding-top: 5px;
+}
+/* 1st navbar links */
+
+.headlinks {
+    color: #aeee66;
+    font-weight: 600;
+    padding: 5px 0 5px 10px;
+}
+
+
+/* 2nd Navbar */
+
+.nav-second {
+    background-color: transparent;
+    padding: 10px 0 10px 0;
 }
 .navbar-light {
     border-top: 2px solid rgba(0, 0, 0, 0.7);
@@ -37,26 +58,107 @@ nav {
     border-left: none;
     border-right: none;
 }
+/* 2nd navbar links */
+.navlink {
+    color: #d147e9;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: "Oswald";
+    font-size: 14px;
+}
+
+/* mobil */
+.sidenav-trigger {
+    color: rgba(0, 0, 0, 0.959);
+    height: 50px;
+}
 .sidenav {
     width: 30%;
     background-color: rgba(250, 250, 250, 0.7);
 }
-.container {
-  position: relative;
-  width: 100vw;
-  height: 0%;
-  text-align: left;
-  padding-left: 3%;
-  padding-right: 3%;
-  color: black;
+
+/* LOGO */
+
+/* Logo Size */
+
+.logo-top {
+    width: 150px;
+    position: absolute;
+    margin: 0 10px 10px 18px;
+    left: 0;
+    display:inline;
 }
 
-/* back to top */
+.logo {
+    width: 80vw;
+    position: center;
+    padding-bottom: 50px;
+}
+/* Centered logo */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
+/* background img */
+.responsive-img {
+    padding-top: 6px;
+}
+
+/* TEXT STYLE */
+
+.text-shadow {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+
+/* BODY */
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+/* Page content */
+main {
+    flex: 1 0 auto;
+}
+
+/* FORMS (Singin & Register) */
+
+/* Flash messages */
+.flashes h4 {
+    line-height: 2;
+}
+
+/* Icon & Button Style */
+.btn-large {
+    color:#9c27b0;
+    font-size: large;
+}
+button {
+    background-color: rgba(178, 252, 59, 0.9)!important;
+}
+/* FOOTER */
+
+/* footer links */
+
+.page-footer {
+    background-color: transparent;
+    font-weight: 500;
+}
+
+
+
+/* BACK TO TOP */
+
+/* back to top */
 .fa-chevron-up {
     color: rgba(44, 43, 43, 0.918);
     size: 36px;
-    background-color: rgba(250, 250, 250, 0.2);
+    background-color: rgba(250, 250, 250, 0.1);
     font-weight: 900;
     line-height: 1;
     text-rendering: auto;
@@ -75,63 +177,4 @@ nav {
     bottom: 35px;
     right: 35px;
     font-size: 35px;
-}
-/* Logo Size */
-.logo {
-    width: 80vw;
-    position: center;
-    padding-bottom: 50px;
-}
-
-/* IMG STYLE */
-
-/* background img */
-.responsive-img {
-    padding-top: 6px;
-}
-
-/* TEXT STYLE */
-
-.text-shadow {
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
-}
-
-/* top navbar links */
-.headlinks {
-    font-family: "Oswald";
-    font-size: 16px;
-    padding: 3px 0 3px 20px;
-    background-color: transparent;
-    color: #9c27b0;
-    font-weight: 700;
-}
-.headlinks:hover {
-    font-stretch: wider;
-    text-decoration: underline;
-}
-.page-footer {
-    background-color: transparent;
-    font-weight: 500;
-}
-
-/* Icon & Button Style */
-
-.btn-large {
-    color:#9c27b0;
-    font-size: large;
-}
-
-button {
-    background-color: rgba(178, 252, 59, 0.9)!important;
-}
-.flashes h4 {
-    line-height: 2;
-}
-
-/* Centered text */
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
