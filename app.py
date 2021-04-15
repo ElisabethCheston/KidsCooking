@@ -24,6 +24,13 @@ def get_recipes():
     recipes = mongo.db.recipes.find()
     return render_template("recipes.html", recipes=recipes)
 
+
+@app.route("/get_recipes_by_category/<category>")
+def get_recipes_by_category(category):
+    recipes = mongo.db.recipes.find({"category_name": category})
+    return render_template("recipes.html", recipes=recipes)    
+
+
 # ---- Registration ----
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -106,6 +113,36 @@ def add_recipes():
 @app.route("/categories")
 def categories():
     return render_template("categories.html")
+
+
+@app.route("/snacks")
+def snacks():
+    return render_template("snacks.html")
+
+
+@app.route("/lunch")
+def lunch():
+    return render_template("lunch.html")
+
+
+@app.route("/dinner")
+def dinner():
+    return render_template("dinner.html")
+
+
+@app.route("/healthy")
+def healthy():
+    return render_template("healthy.html")
+
+
+@app.route("/sweets")
+def sweets():
+    return render_template("sweets.html")
+
+
+@app.route("/party")
+def party():
+    return render_template("party.html")                   
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
