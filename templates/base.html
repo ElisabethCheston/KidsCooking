@@ -80,7 +80,7 @@
                             class="fas fa-bars small purple-text accent-3"></i></a>
                     <ul class="text-shadow nav-second hide-on-med-and-down">
                         {% if session.user %}
-                        <li><a href="#!" class="small-link navlink">CATEGORIES</a></li>
+                        <li><a href="{{ url_for('categories') }}" class="small-link navlink">CATEGORIES</a></li>
                         <li><a href="{{ url_for('profile', username=session['user']) }}"
                                 class="small-link navlink">PROFILE</a></li>
                         <li><a href="{{ url_for('add_recipes') }}" class="small-link navlink">ADD RECIPE</a></li>
@@ -105,7 +105,7 @@
                 <!-- Mobile layout -->
                 <ul class="sidenav right" id="mobile-demo">
                     {% if session.user %}
-                    <li><a href="#!" class="small-link headlinks">CATEGORIES</a></li>
+                    <li><a href="{{ url_for('categories') }}" class="small-link headlinks">CATEGORIES</a></li>
                     <li><a href="{{ url_for('profile', username=session['user']) }}"
                             class="small-link headlinks">PROFILE</a></li>
                     <li><a href="{{ url_for('add_recipes') }}" class="small-link headlinks">ADD RECIPE</a></li>

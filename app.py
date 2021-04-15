@@ -102,6 +102,10 @@ def logout():
 def add_recipes():
     return render_template("add_recipes.html")
 
+  # ---- Add categories ----
+@app.route("/categories")
+def categories():
+    return render_template("categories.html")
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
