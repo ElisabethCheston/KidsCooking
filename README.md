@@ -318,6 +318,22 @@ Clone to GitHub Desktop:
   
 ### Media
 
+Banner  
+[Header background](https://crossroads.ca/wp-content/uploads/2020/06/cooking-banner-d.jpg)
+
+Categories  
+[Snacks](https://www.wellandgood.com/wp-content/uploads/2019/07/GettyImages-980405988-Manuta.jpg)  
+  
+[Lunch](https://www.parentmap.com/images/article/7762/bento_box_beauty04-e1280985383510.jpg)  
+  
+[Dinner](https://www.froddo.com/media/blog/10%20Ideas%20for%20Kid%E2%80%99s%20Birthday%20Party%20Snacks/04%20fruit%20skewers.jpg)  
+  
+[Healthy](https://www.froddo.com/media/blog/10%20Ideas%20for%20Kid%E2%80%99s%20Birthday%20Party%20Snacks/04%20fruit%20skewers.jpg)  
+  
+[Sweets](https://thumbs.dreamstime.com/b/frozen-banana-chocolate-lollies-easy-homemade-vegan-sweets-lollipops-walnuts-sprinkles-kids-white-close-up-212396164.jpg) 
+  
+[Party](http://www.kidskubby.com/wp-content/uploads/2012/07/kids-birthday-party-food-.001.jpg)  
+
 **Recipes**
   
 Unregistered Users  
