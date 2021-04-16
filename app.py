@@ -139,6 +139,10 @@ def add_recipes():
 def index():
     return render_template("index.html")
 
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
+
 @app.route("/categories")
 def categories():
     return render_template("categories.html")

@@ -38,8 +38,10 @@ nav {
 }
 /* links */
 .headlinks {
-    color: #aeee66;
-    font-weight: 600;
+    color: #9d0ab1;
+    font-size: medium;
+    font-family: "Oswald";
+    font-weight: 800;
     padding: 5px 0 5px 10px;
 }
 
@@ -48,6 +50,7 @@ nav {
 .nav-second {
     background-color: transparent;
     padding: 10px 0 10px 0;
+    display: inline;
 }
 .navbar-light {
     border-top: 2px solid rgba(0, 0, 0, 0.7);
@@ -57,21 +60,20 @@ nav {
 }
 /* 2nd navbar links */
 .navlink {
-    color: #d147e9;
+    color: #9d0ab1;
     font-weight: 700;
     text-decoration: none;
     font-family: "Oswald";
-    font-size: 14px;
+    font-size: large;
 }
-
 /* mobil */
 .sidenav-trigger {
     color: rgba(0, 0, 0, 0.959);
     height: 50px;
 }
 .sidenav {
-    width: 30%;
-    background-color: rgba(250, 250, 250, 0.7);
+    width: 25%;
+    background-color: rgba(250, 250, 250, 0.8);
 }
 
 /* LOGO */
@@ -132,7 +134,7 @@ main {
 
 /* Icon & Button Style */
 .btn-large {
-    color:#9c27b0;
+    color: #9d0ab1;
     background-color: rgba(250, 250, 250, 0.4);
     font-size: large;
 }
@@ -143,7 +145,7 @@ button {
 /* CATEGORIES */
 
 .category-link {
-    color:#9c27b0;
+    color: #9d0ab1;
     font-family: "Atma";
     font-size: xx-large;
     background-color: rgba(250, 250, 250, 0.8);
