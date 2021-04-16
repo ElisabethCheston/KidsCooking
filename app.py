@@ -134,6 +134,11 @@ def add_recipes():
     return render_template("add_recipes.html", categories=categories)
 
 # ---- Add categories ----
+
+@app.route("/index")
+def index():
+    return render_template("index.html")
+
 @app.route("/categories")
 def categories():
     return render_template("categories.html")
