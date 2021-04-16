@@ -45,7 +45,6 @@ nav {
     padding: 5px 0 5px 10px;
 }
 
-
 /* 2nd Navbar */
 
 .nav-second {
@@ -143,17 +142,20 @@ button {
     background-color: rgba(178, 252, 59, 0.9)!important;
 }
 
+value {
+    color:#9c27b0;
+}
 /* CATEGORIES */
 
 .category-link {
     color:#9c27b0;
-    font-size: larger;
-    background-color: rgba(250, 250, 250, 0.6);
+    font-family: "Atma";
+    font-size: x-large;
+    background-color: rgba(250, 250, 250, 0.7);
     font-weight: 700;
+    text-shadow: rgba(44, 43, 43, 0.5);
 }
-.r-container {
-    box-sizing: border-box;
-}
+
 /* FOOTER */
 
 /* footer links */

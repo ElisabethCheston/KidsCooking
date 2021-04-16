@@ -3,6 +3,8 @@ from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
+from PIL import Image
+import glob
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
@@ -29,7 +31,6 @@ def get_recipes():
 def get_recipes_by_category(category):
     recipes = mongo.db.recipes.find({"category_name": category})
     return render_template("recipes.html", recipes=recipes)    
-
 
 # ---- Registration ----
 @app.route("/register", methods=["GET", "POST"])
@@ -104,45 +105,63 @@ def logout():
     session.pop("user")
     return redirect(url_for("login"))
 
-  # ---- Add recipes ----
-@app.route("/add_recipes")
-def add_recipes():
-    return render_template("add_recipes.html")
 
-  # ---- Add categories ----
+# ---- Add recipes ----
+@app.route("/add_recipes", methods=["GET", "POST"])
+def add_recipes():
+    if request.method == "POST":
+        recipe = {
+            "category_name": request.form.get("category_name"),
+            "title": request.form.get("title"),
+            "cooking_time": request.form.get("cooking_time"),
+            "portons": request.form.get("portons"),                      
+            "difficulty_level": request.form.get("difficulty_level"),
+            "cooking_material": request.form.get("cooking_material"),
+            "gluten": request.form.get("gluten"),
+            "egg": request.form.get("egg"),
+            "nuts": request.form.get("nuts"),
+            "lactose": request.form.get("lactose"),              
+            "preparation": request.form.get("preparation"),         
+            "recipe_ingredients": request.form.get("recipe_ingredients"),
+            "recipe_method": request.form.get("recipe_method"),
+            "created_by": session["user"]
+        }
+        mongo.db.recipes.insert_one(recipe)
+        flash("Recipe Successfully Added")
+        return redirect(url_for("get_recipes"))
+
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("add_recipes.html", categories=categories)
+
+# ---- Add categories ----
 @app.route("/categories")
 def categories():
     return render_template("categories.html")
-
-
+    
 @app.route("/snacks")
 def snacks():
     return render_template("snacks.html")
-
 
 @app.route("/lunch")
 def lunch():
     return render_template("lunch.html")
 
-
 @app.route("/dinner")
 def dinner():
     return render_template("dinner.html")
-
 
 @app.route("/healthy")
 def healthy():
     return render_template("healthy.html")
 
-
 @app.route("/sweets")
 def sweets():
     return render_template("sweets.html")
 
-
 @app.route("/party")
 def party():
     return render_template("party.html")                   
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
