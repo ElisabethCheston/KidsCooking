@@ -239,7 +239,23 @@ If you like to delete your account, you should see a “Delete Profile” button
 Make a separate .md file and link it (Idea from https://github.com/juanstelling/MS3_breaktasty/blob/master/TESTING.md )
 
 ### Manual 
+Dev Tools  
+  
+Error: The logo and background image doesn't show in the Profile and throughts a 404 error.  
+  
+   <img width="356" alt="Skärmavbild 2021-04-14 kl  11 11 35" src="https://user-images.githubusercontent.com/70586630/115026318-a4c2b580-9ec2-11eb-845a-648e8c6bea5f.png"> 
+  
+Error: Cookie error after deleting session cookies in the dev tools. Had to contact tutor that went in and did something so I could login.  
+  
+  <img width="329" alt="Skärmavbild 2021-04-14 kl  15 27 16" src="https://user-images.githubusercontent.com/70586630/115026150-71802680-9ec2-11eb-9126-fe4e0b920acd.png">
+  
+Error: Indentation was not correct.  
+  
+<img width="470" alt="Skärmavbild 2021-04-14 kl  15 29 12" src="https://user-images.githubusercontent.com/70586630/115026197-80ff6f80-9ec2-11eb-946c-63d4fa0928c2.png"> 
+  
 
+
+  
 ### Responsivness
 
 ### Browser
