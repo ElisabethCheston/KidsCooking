@@ -6,10 +6,3 @@ $(document).ready(function () {
     $('select').formSelect();
 });
 
-// Contact form
-$(document).ready(function () {
-    M.updateTextFields();
-// Message resize field
-    $('#textarea1').val('New Text');
-    M.textareaAutoResize($('#textarea1'));
-});

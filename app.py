@@ -85,6 +85,14 @@ def login():
 
     return render_template("login.html")
 
+# ---- Logout ----
+@app.route("/logout")
+def logout():
+    # remove user from session cookies
+    flash("You have been looged out")
+    session.pop("user")
+    return redirect(url_for("login"))
+
 # ---- Profile ----
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
@@ -96,15 +104,6 @@ def profile(username):
         return render_template("profile.html", username=username)    
     # if user cookie is untrue return to login
     return redirect(url_for("login"))
-
-# ---- Logout ----
-@app.route("/logout")
-def logout():
-    # remove user from session cookies
-    flash("You have been looged out")
-    session.pop("user")
-    return redirect(url_for("login"))
-
 
 # ---- Add recipes ----
 @app.route("/add_recipes", methods=["GET", "POST"])
@@ -133,8 +132,8 @@ def add_recipes():
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipes.html", categories=categories)
 
-# ---- Add categories ----
 
+# ---- Header & Footer links ----
 @app.route("/index")
 def index():
     return render_template("index.html")
@@ -146,7 +145,8 @@ def contact():
 @app.route("/categories")
 def categories():
     return render_template("categories.html")
-    
+  
+# ---- Categories ----
 @app.route("/snacks")
 def snacks():
     return render_template("snacks.html")

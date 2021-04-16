@@ -28,11 +28,14 @@
             <div class="headnav">
                 {% if session.user %}
                 <a href=" {{ url_for('profile', username=session['user']) }}" class="small-link headlinks">PROFILE</a>
-                <a href="{{ url_for('index') }}" class="small-link headlinks">HOME</a>                
+                <a href="{{ url_for('index') }}" class="small-link headlinks">HOME</a>
+                <a class="small-link headlinks" href="{{ url_for('categories') }}">CATEGORIES</a>                
                 <a href="{{ url_for('add_recipes') }}" class="small-link headlinks">ADD RECIPE</a>                
-                <a href="{{ url_for('logout') }}" class="small-link headlinks">LOG OUT</a>
+                <a href="{{ url_for('logout') }}" class="small-link headlinks">LOGOUT</a>
                 {% else %}
-                <a href="{{ url_for('login') }}" class="small-link headlinks">LOG IN</a>
+                <a href="{{ url_for('index') }}" class="small-link headlinks">HOME</a>
+                <a class="small-link headlinks" href="{{ url_for('categories') }}">CATEGORIES</a>              
+                <a href="{{ url_for('login') }}" class="small-link headlinks">LOGIN</a>
                 <a href="{{ url_for('register') }}" class="small-link headlinks">REGISTER</a>
                 {% endif %}
             </div>
@@ -65,7 +68,7 @@
                         <li><a href="{{ url_for('party') }}" class="small-link navlink">PARTY</a></li>
                     </ul>
                 </div>
-                
+
                 <!-- Mobile layout -->
                 <ul class="sidenav" id="mobile-demo">
                     <li><a href="{{ url_for('snacks') }}" class="small-link navlink">SNACKS</a></li>
