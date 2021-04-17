@@ -168,25 +168,31 @@ If you like to delete your account, you should see a “Delete Profile” button
 
 ### Existing Features
 
-**Top Navbar:** Navbar with links aligned to the right for recipes, login, register. As a user you will have access to links create recipes and delete recipes.  
+**Top Navbar:** [From Materialized](https://materializecss.com/navbar.html) Navbar with links aligned to the right for recipes, login, register. As a user you will have access to links create recipes and delete recipes.  
   
-**Bottom Navbar:** Toggler with categories inspiration, nutrition.  
+**Bottom Navbar:** [From Materialized](https://materializecss.com/navbar.html) Toggler with categories inspiration, nutrition.  
   
-**Register Form:** User create a username and password that has to be retyped for verification.  
+**Register Form:** [From TravelTim at CI ](https://github.com/Code-Institute-Solutions/TaskManagerAuth/tree/main/02-UserAuthenticationAndAuthorization) User create a username and password that has to be retyped for verification.  
   
-**Login Form:** With username and password.   
+**Login Form:** [From TravelTim at CI ](https://github.com/Code-Institute-Solutions/TaskManagerAuth/tree/main/02-UserAuthenticationAndAuthorization) With username and password.   
+  
+**Logout Function:** [From TravelTim at CI ](https://github.com/Code-Institute-Solutions/TaskManagerAuth/tree/main/02-UserAuthenticationAndAuthorization)  
+  
+**Profile Page setup:** [From TravelTim at CI ](https://github.com/Code-Institute-Solutions/TaskManagerAuth/tree/main/02-UserAuthenticationAndAuthorization) Personalized profile page for logged in user. 
   
 **Links:** Responsive links to recipes, forms, profile, add recipes, categories and contact.  
   
 **Recipe Form:**  Includes input fields for name, ingredients, instruction, and additional notes. A dropdown menu for cooking time, difficulty options, categories, portions, cooking material, and if the recipe is free from any allergic effects.
   
 **Images:** All images are taken from internet and box sized to fit the recipes pages.  
+
+**Add Image to recipes** Code from [Gazza J MS3](https://github.com/GazzaJ/CI-MS3-W3Recipes/blob/main/templates/add_recipe.html)
   
 **Flash messages:** Vertification to users when creating, editing or deleting post or deleting account.  
   
 **Buttons:** In the top right coner of every recipe that profile user has created is an option to edit the recipe or delete it. When register an account or login there is a comfirmation button at the end. And in the top right corner there is a x-mark if user want to close the window without register or login.  
 
-**Footer** Repitition links at the bottom from the navbars, copyright information, and a back to top button.
+**Footer** [From Materialized](https://materializecss.com/footer.html) Repitition links at the bottom from the navbars, copyright information, and a back to top button.
   
 
 ### Features Left to Implement
