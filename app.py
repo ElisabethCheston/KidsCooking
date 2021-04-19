@@ -19,18 +19,16 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
-# ---- Recipes ----
+# ---- Home ----
 @app.route("/")
-@app.route("/get_recipes")
-def get_recipes():
-    recipes = mongo.db.recipes.find()
-    return render_template("recipes.html", recipes=recipes)
+def hello():
+    return"Hello World"
 
 
-@app.route("/get_recipes_by_category/<category>")
-def get_recipes_by_category(category):
-    recipes = mongo.db.recipes.find({"category_name": category})
-    return render_template("recipes.html", recipes=recipes)    
+@app.route("/index")
+def index():
+    
+    return render_template("index.html")
 
 # ---- Registration ----
 @app.route("/register", methods=["GET", "POST"])
@@ -105,15 +103,36 @@ def profile(username):
     # if user cookie is untrue return to login
     return redirect(url_for("login"))
 
+# ---- Recipes ----
+@app.route("/get_recipes")
+def get_recipes():
+    recipes = mongo.db.recipes.find()
+    return render_template("recipes.html", recipes=recipes)
+
+# ---- MongoDB Collections ----
+recipe_coll = mongo.db.recipes
+category_coll = mongo.db.recipe_category
+
+# ---- Items per Page ----
+per_page = 6    
+
 # ---- Add recipes ----
 @app.route("/add_recipes", methods=["GET", "POST"])
 def add_recipes():
+
+     # ---- Split the lines for ingredients and directions ----
+    # ingredients = request.form.get("ingredients").splitlines()
+    # directions = request.form.get("instructions").splitlines()
+    # ---- Identifies the author of recipe ----
+
     if request.method == "POST":
-        recipe = {
+        
+        recipes = {
             "category_name": request.form.get("category_name"),
             "title": request.form.get("title"),
+            "url_img": request.form.get("url_img"),
             "cooking_time": request.form.get("cooking_time"),
-            "portons": request.form.get("portons"),                      
+            "portions": request.form.get("portions"),                      
             "difficulty_level": request.form.get("difficulty_level"),
             "cooking_material": request.form.get("cooking_material"),
             "gluten": request.form.get("gluten"),
@@ -121,22 +140,30 @@ def add_recipes():
             "nuts": request.form.get("nuts"),
             "lactose": request.form.get("lactose"),              
             "preparation": request.form.get("preparation"),         
-            "recipe_ingredients": request.form.get("recipe_ingredients"),
-            "recipe_method": request.form.get("recipe_method"),
+            "ingredients": request.form.get("ingredients"), 
+            "instructions": request.form.get("instructions"),
+            "tips": request.form.get("tips"), 
             "created_by": session["user"]
         }
-        mongo.db.recipes.insert_one(recipe)
+        mongo.db.recipes.insert_one(recipes)
         flash("Recipe Successfully Added")
         return redirect(url_for("get_recipes"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipes.html", categories=categories)
 
+# ---- Edit recipes ----
 
-# ---- Header & Footer links ----
-@app.route("/index")
-def index():
-    return render_template("index.html")
+
+# ---- Delete recipes ----
+
+# ---- Recipe by category ----
+@app.route("/get_recipes_by_category/<category>")
+def get_recipes_by_category(category):
+    recipes = mongo.db.recipes.find({"category_name": category})
+    return render_template("recipes.html", recipes=recipes)    
+
+# ---- Categories ----
 
 @app.route("/contact")
 def contact():
@@ -151,9 +178,11 @@ def categories():
 def snacks():
     return render_template("snacks.html")
 
-@app.route("/lunch")
+@app.route("/lunch", methods=["GET", "POST"])
 def lunch():
-    return render_template("lunch.html")
+    lunch_meals = mongo.db.lean_recipes.find({"recipe_types": "Lunch"})
+    print(lunch_meals)
+    return render_template("lunch.html", lunch_meals=lunch_meals, page='lunch')
 
 @app.route("/dinner")
 def dinner():

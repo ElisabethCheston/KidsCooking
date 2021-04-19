@@ -154,6 +154,20 @@ button {
     text-shadow: rgba(44, 43, 43, 0.5);
 }
 
+/* Add recipe page */
+
+.help-text {
+    padding-left: 46px;
+}
+li,
+.allergies {
+    padding-left: 26px;
+}
+.card-panel {
+    margin: 5px;
+    border: 5px;
+}
+
 /* FOOTER */
 
 /* footer links */
