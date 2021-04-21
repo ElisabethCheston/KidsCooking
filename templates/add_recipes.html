@@ -10,15 +10,15 @@
 
             <!-- TEXT INPUT -->
             <!-- Recipe Category -->
-            <div class="col s12 m5 l5">
+            <div class="col s12 m6 l6">
                 <div class="input-field form-field">
+                    <label for="category_name"></label>
                     <select id="category_name" name="category_name" class="validate" required>
                         <option value="" disabled selected>Category: </option>
                         {% for category in categories %}
                         <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                         {% endfor %}
                     </select>
-                    <label for="category_name"></label>
                 </div>
             </div>
             <!-- Recipe Title -->
@@ -33,127 +33,141 @@
 
             <!-- DROPDOWN LIST -->
             <!-- Cooking Time -->
-            <div class="input-field col s12 m5 l5" name="cooking_time" required>
-                <select>
+            <div class="input-field col s12 m6 l6">
+                <label for="cooking_time"></label>
+                <select id="cooking_time" name="cooking_time" class="validate" required>
                     <option value="" disabled selected>Time:</option>
-                    <option value="1"> 5</option>
-                    <option value="2"> 10</option>
-                    <option value="3"> 15</option>
-                    <option value="4"> 20</option>
-                    <option value="5"> 25</option>
-                    <option value="6"> 30</option>
-                    <option value="7"> 35</option>
-                    <option value="8"> 40</option>
-                    <option value="9"> 45</option>
-                    <option value="10"> 50</option>
-                    <option value="11"> 55</option>
-                    <option value="12"> 1 hour</option>
-                    <option value="13"> 1 hour 5 min</option>
-                    <option value="14"> 1 hour 10 min</option>
-                    <option value="15"> 1 hour 15 min</option>
-                    <option value="16"> 1 hour 20 min</option>
-                    <option value="17"> 1 hour 25 min</option>
-                    <option value="18"> 1 hour 5 min</option>
-                    <option value="19"> 1 hour 35 min</option>
-                    <option value="8"> 1 hour 40 min</option>
-                    <option value="9"> 1 hour 45 min</option>
-                    <option value="10">1 hour 50 min</option>
-                    <option value="11"> 1 hour 55 min</option>
-                    <option value="12"> 2 hour</option>
-
+                    <option value="5 min"> 5 min</option>
+                    <option value="10 min"> 10 min</option>
+                    <option value="15 min"> 15 min</option>
+                    <option value="20 min"> 20 min</option>
+                    <option value="25 min"> 25 min</option>
+                    <option value="30 min"> 30 min</option>
+                    <option value="35 min"> 35 min</option>
+                    <option value="40 min"> 40 min</option>
+                    <option value="45 min"> 45 min</option>
+                    <option value="50 min"> 50 min</option>
+                    <option value="55 min"> 55 min</option>
+                    <option value="1 hour"> 1 hour</option>
+                    <option value="1 hour 5 min"> 1 hour 5 min</option>
+                    <option value="1 hour 10 min"> 1 hour 10 min</option>
+                    <option value="1 hour 15 min"> 1 hour 15 min</option>
+                    <option value="1 hour 20 min"> 1 hour 20 min</option>
+                    <option value="1 hour 25 min"> 1 hour 25 min</option>
+                    <option value="1 hour 30 min"> 1 hour 30 min</option>
+                    <option value="1 hour 35 min"> 1 hour 35 min</option>
+                    <option value="1 hour 40 min"> 1 hour 40 min</option>
+                    <option value="1 hour 45 min"> 1 hour 45 min</option>
+                    <option value="1 hour 50 min">1 hour 50 min</option>
+                    <option value="1 hour 55 min"> 1 hour 55 min</option>
+                    <option value="2 hour"> 2 hour</option>
                 </select>
-                <label></label>
             </div>
 
             <!-- Portions Dropdown -->
-            <div class="input-field col s12 m5 l5" name="portions" required>
-                <select>
-                    <option value="" selected>Portions:</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
+            <div class="input-field col s12 m6 l6">
+                <label for="portions"></label>
+                <select id="portions" name="portions" class="validate" required>
+                    <option value="" disabled selected>Portions:</option>
+                    {% for i in range(1, 21) %}
+                    <option value="{{ i }}">{{ i }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <!-- Difficult Dropdown 
+            <div class="input-field col s12 m5 l5">
+                <label for="difficulty_level"></label>
+                <select id="difficulty_level" name="difficult_level" class="validate" required>
+                    <option value="" disabled selected>Difficult Level:</option>
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                </select>
+            </div> -->
+            <div class="input-field col s12 m6 l6">
+                <select name="difficulty_level">
+                    <option value="" disabled selected>Difficult Level:</option>
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
                 </select>
                 <label></label>
             </div>
 
-            <!-- Difficult Dropdown -->
-            <div class="input-field col s12 m5 l5" name="difficult_level">
-                <select name="selectdrop" required>
-                    <option value="" selected>Difficult Level:</option>
-                    <option value="1">Easy </option>
-                    <option value="2">Medium </option>
-                    <option value="3">Hard </option>
+            <!-- Coooking Materials Dropdown 
+            <div class="input-field col s12 m6 l6">
+                <label for="multi_dropdown"></label>
+                <select id="multi_dropdown" name="cooking_material" class="validate" multiple>
+                    <option value="" disabled selected>Choose Material:</option>
+                    <option value="Oven">Oven</option>
+                    <option value="Stove">Stove</option>
+                    <option value="Knife">Knife</option>
+                    <option value="Microwave">Microwave</option>
+                    <option value="Mixer">Mixer</option>
+                </select>
+            </div> -->
+
+            <div class="input-field col s12 m6 l6">
+                <select name="cooking_material" multiple>
+                    <option value="" disabled selected>Material:</option>
+                    <option value="Oven">Oven</option>
+                    <option value="Stove">Stove</option>
+                    <option value="Knife">Knife</option>
+                    <option value="Microwave">Microwave</option>
+                    <option value="Mixer">Mixer</option>
+
                 </select>
                 <label></label>
             </div>
-
-            <!-- Coooking Materials Dropdown -->
-            <div class="input-field col s12 m5 l5" name="cooking_material" required>
-                <select multiple>
-                    <option value="" selected>Choose Material:</option>
-                    <option value="1">Oven</option>
-                    <option value="2">Stove</option>
-                    <option value="3">Knife</option>
-                    <option value="4">Microwave</option>
-                    <option value="5">Mixer</option>
-                </select>
-                <label></label>
-            </div>
-
         </div>
 
-        <!-- CHECKBOX INPUT -->
+        <!-- SWITCH VALUE INPUT -->
         <!-- Allergies Checkboxes -->
         <div class="row form-field allergies">
+            <h6>Allergies:</h6><br>
 
             <!-- Gluten Checkboxes -->
-            <div id="gluten-switch" class="col s12 switch" name="gluten_free">
-                <i class="fas fa-leaf prefix leaf"></i><span class="gluten-text"> Gluten Free</span>
+            <div class="col s12 m6 l6 switch">
+                <i class="fas fa-seedling prefix leaf"></i>
                 <label for="gluten">
-                    <span class="switch-text">No</span>
+                    <span class="switch-text"></span>
                     <input type="checkbox" id="gluten" name="gluten">
                     <span class="lever"></span>
-                    <span class="switch-text">Yes</span>
+                    <span class="switch-text">Gluten Free</span>
                 </label>
             </div>
 
             <!-- Egg Checkbox -->
-            <div id="egg-switch" class="col s12 switch" name="egg_free">
-                <i class="fas fa-seedling prefix leaf"></i><span class="egg-text"> Egg Free</span>
+            <div class="col s12 m6 l6 switch">
+                <i class="fas fa-seedling prefix leaf"></i>
                 <label for="egg">
-                    <span class="switch-text">No</span>
+                    <span class="switch-text"></span>
                     <input type="checkbox" id="egg" name="egg">
                     <span class="lever"></span>
-                    <span class="switch-text">Yes</span>
+                    <span class="switch-text">Egg Free</span>
                 </label>
             </div>
 
             <!-- Nuts Checkbox -->
-            <div id="nuts-switch" class="col s12 switch" name="nut_free">
-                <i class="fas fa-seedling prefix leaf"></i><span class="nuts-text"> Nuts Free</span>
+            <div class="col s12 m6 l6 switch">
+                <i class="fas fa-seedling prefix leaf"></i>
                 <label for="nuts">
-                    <span class="switch-text">No</span>
+                    <span class="switch-text"></span>
                     <input type="checkbox" id="nuts" name="nuts">
                     <span class="lever"></span>
-                    <span class="switch-text">Yes</span>
+                    <span class="switch-text">Nut Free</span>
                 </label>
             </div>
 
             <!-- Lactose Checkbox -->
-            <div id="lactose-switch" class="col s12 switch" name="lactose_free">
-                <i class="fas fa-seedling prefix leaf"></i><span class="lactose-text"> Lactose Free</span>
+            <div class="col s12 m6 l6 switch">
+                <i class="fas fa-seedling prefix leaf"></i>
                 <label for="lactose">
-                    <span class="switch-text">No</span>
+                    <span class="switch-text"></span>
                     <input type="checkbox" id="lactose" name="lactose">
                     <span class="lever"></span>
-                    <span class="switch-text">Yes</span>
+                    <span class="switch-text">Lactose Free</span>
                 </label>
             </div>
         </div>
@@ -164,9 +178,8 @@
             <div class="input-field form-field text-field">
                 <!-- Image URL Input -->
                 <i class="fas fa-camera prefix" aria-hidden="true"></i>
-                <input placeholder="Image URL" id="image_url" name="image_url" type="url" onchange="addImage();"
-                    pattern="https://.*" class="validate">
-                <label for="image_url">Recipe Image</label>
+                <input id="url_img" name="url_img" type="text" class="validate" />
+                <label for="url_img">Recipe Image</label>
             </div>
 
             <!-- Image Display/Checking field -->
@@ -176,10 +189,9 @@
                 <div id="url_help" class="row card-panel grey lighten-2 help-text">
                     <h6>How to select recipe image url:</h6>
                     <ul id="select_url" class="help-text">
-                        <li>Select an image</li>
-                        <li>Right click on it</li>
+                        <li>Once you found an image online, right click on it.</li>
                         <li>Select <span class="img-copy">"Copy image address"</span></li>
-                        <li>Paste the URL in the box above</li>
+                        <li>Click on the url box above and paste the link ('ctrl + V' or 'command + V').</li>
                     </ul>
                     <h6>Links to good recipe images:</h6>
                     <ul id="select_url" class="help-text">
@@ -192,21 +204,20 @@
         </div>
 
         <br>
-                <!-- Recipe Preparation Input -->
+        <!-- Recipe Preparation Input -->
         <div class="input-field text-field">
             <i class="fas fa-book-open prefix" aria-hidden="true"></i>
-            <textarea id="preparation" name="preparation" class="materialize-textarea validate tooltipped"
-                data-position="bottom" data-tooltip="Please add one ingredient on each line."
-                placeholder="One recipe preparation per line" minlength="4" required></textarea>
+            <textarea id="preparation" name="preparation" class="materialize-textarea validate" data-position="bottom"
+                placeholder="Change row for each step." minlength="4" required></textarea>
             <label for="preparation">Recipe Preparation</label>
             <a class=""></a>
         </div>
         <!-- Recipe Ingredients Input -->
         <div class="input-field text-field">
             <i class="fas fa-list-ul prefix" aria-hidden="true"></i>
-            <textarea id="ingredients" name="ingredients" class="materialize-textarea validate tooltipped"
-                data-position="bottom" data-tooltip="Please add one ingredient on each line."
-                placeholder="One recipe ingredients per line" minlength="4" required></textarea>
+            <textarea id="ingredients" name="ingredients" class="materialize-textarea validate" data-position="bottom"
+                data-tooltip="Please add one ingredient on each line." placeholder="One recipe ingredients per line."
+                minlength="4" required></textarea>
             <label for="ingredients">Recipe Ingredients</label>
             <a class=""></a>
         </div>
@@ -215,8 +226,7 @@
         <div class="input-field text-field">
             <i class="fas fa-file-alt prefix" aria-hidden="true"></i>
             <textarea id="instructions" name="instructions" class="materialize-textarea validate"
-                placeholder="Change row for each step" minlength="10" maxlength="200" 
-                required></textarea>
+                placeholder="Change row for each step." minlength="10" maxlength="700" required></textarea>
             <label for="instructions">Recipe Instructions</label>
         </div>
 
@@ -224,8 +234,7 @@
         <div class="input-field text-field">
             <i class="fas fa-lightbulb prefix" prefix" aria-hidden="true"></i>
             <textarea id="tips" name="tips" class="materialize-textarea validate"
-                placeholder="Tips or ideas for the recipe" minlength="5" maxlength="200"
-                required></textarea>
+                placeholder="Tips or ideas for the recipe" minlength="5" maxlength="200" required></textarea>
             <label for="tips">Tips</label>
         </div>
 
@@ -234,7 +243,7 @@
 </div>
 
 </div>
-<!-- Recipe Submit Button -->
+<!-- Cancel Recipe Button -->
 <div class="row">
     <div id="cancel-button" class="col s6 right-align">
         <a id="cancel-add" href="{{ url_for('get_recipes') }}" class="btn red darken-4 tooltipped"
@@ -242,9 +251,10 @@
             Cancel <i class="fas fa-times-circle" aria-hidden="true"></i>
         </a>
     </div>
+    <!-- Submit Recipe Button -->
     <div class="col s6 left-align">
-        <button type="submit" data-target="added" class="btn waves-effect center-align light-green darken-4">Save
-            <i class="fas fa-check-circle" aria-hidden="true"></i>
+        <button type="submit" data-target="added" class="btn waves-effect center-align light-green darken-4">
+            Add Recipe <i class="fas fa-check-circle" aria-hidden="true"></i>
         </button>
     </div>
 </div>

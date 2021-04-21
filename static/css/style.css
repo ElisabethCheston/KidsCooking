@@ -168,6 +168,13 @@ li,
     border: 5px;
 }
 
+info_container {
+    height: 50px;
+    background-color: #9d0ab1;
+    color: lime;
+    font-weight: 700;
+    font-size: medium;
+}
 /* FOOTER */
 
 /* footer links */

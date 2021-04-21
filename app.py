@@ -109,7 +109,7 @@ def get_recipes():
     recipes = mongo.db.recipes.find()
     return render_template("recipes.html", recipes=recipes)
 
-# ---- MongoDB Collections ----
+# ---- Collections ----
 recipe_coll = mongo.db.recipes
 category_coll = mongo.db.recipe_category
 
@@ -120,13 +120,16 @@ per_page = 6
 @app.route("/add_recipes", methods=["GET", "POST"])
 def add_recipes():
 
-     # ---- Split the lines for ingredients and directions ----
-    # ingredients = request.form.get("ingredients").splitlines()
-    # directions = request.form.get("instructions").splitlines()
-    # ---- Identifies the author of recipe ----
-
     if request.method == "POST":
-        
+        gluten = "on" if request.form.get(
+            "gluten") else "off"
+        egg = "on" if request.form.get(
+            "egg") else "off"
+        nuts = "on" if request.form.get(
+            "nuts") else "off"
+        lactose = "on" if request.form.get(
+            "lactose") else "off"    
+
         recipes = {
             "category_name": request.form.get("category_name"),
             "title": request.form.get("title"),
@@ -135,16 +138,18 @@ def add_recipes():
             "portions": request.form.get("portions"),                      
             "difficulty_level": request.form.get("difficulty_level"),
             "cooking_material": request.form.get("cooking_material"),
-            "gluten": request.form.get("gluten"),
-            "egg": request.form.get("egg"),
-            "nuts": request.form.get("nuts"),
-            "lactose": request.form.get("lactose"),              
+            "gluten": gluten,
+            "egg": egg,
+            "nuts": nuts,
+            "lactose": lactose,              
             "preparation": request.form.get("preparation"),         
             "ingredients": request.form.get("ingredients"), 
             "instructions": request.form.get("instructions"),
             "tips": request.form.get("tips"), 
             "created_by": session["user"]
         }
+        # print(request.form)
+
         mongo.db.recipes.insert_one(recipes)
         flash("Recipe Successfully Added")
         return redirect(url_for("get_recipes"))
@@ -157,6 +162,8 @@ def add_recipes():
 
 # ---- Delete recipes ----
 
+
+
 # ---- Recipe by category ----
 @app.route("/get_recipes_by_category/<category>")
 def get_recipes_by_category(category):
@@ -164,7 +171,6 @@ def get_recipes_by_category(category):
     return render_template("recipes.html", recipes=recipes)    
 
 # ---- Categories ----
-
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
