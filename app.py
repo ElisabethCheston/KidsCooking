@@ -121,15 +121,7 @@ per_page = 6
 def add_recipes():
 
     if request.method == "POST":
-        gluten = "on" if request.form.get(
-            "gluten") else "off"
-        egg = "on" if request.form.get(
-            "egg") else "off"
-        nuts = "on" if request.form.get(
-            "nuts") else "off"
-        lactose = "on" if request.form.get(
-            "lactose") else "off"    
-
+        
         recipes = {
             "category_name": request.form.get("category_name"),
             "title": request.form.get("title"),
@@ -137,11 +129,7 @@ def add_recipes():
             "cooking_time": request.form.get("cooking_time"),
             "portions": request.form.get("portions"),                      
             "difficulty_level": request.form.get("difficulty_level"),
-            "cooking_material": request.form.get("cooking_material"),
-            "gluten": gluten,
-            "egg": egg,
-            "nuts": nuts,
-            "lactose": lactose,              
+            "cooking_material": request.form.getlist("cooking_material"),            
             "preparation": request.form.get("preparation"),         
             "ingredients": request.form.get("ingredients"), 
             "instructions": request.form.get("instructions"),

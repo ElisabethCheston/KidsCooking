@@ -3,7 +3,7 @@ $(document).ready(function () {
     $(".sidenav").sidenav({ edge: "right" });
     $(".tooltipped").tooltip();
     $("select").formSelect();
-    $('select').material_select();
+    // $('select').material_select();
     $(".parallax").parallax();
     $('.dropdown-trigger').dropdown();
     $(".fixed-action-btn").floatingActionButton();

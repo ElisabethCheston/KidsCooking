@@ -21,14 +21,13 @@
     <img class="responsive-img center-align" src="{{ recipes.url_img }}" alt="test">
     <br>
 
-    <table class="purple-text lime accent-3 center-align">
+    <table class="info-table">
         <thead>
             <tr>
                 <th>Time:</th>
                 <th>Portions:</th>
                 <th>Difficulty:</th>
                 <th>Material:</th>
-                <th>Allergies:</th>
             </tr>
         </thead>
 
@@ -38,27 +37,21 @@
                 <td>{{ recipes.portions }}</td>
                 <td>{{ recipes.difficulty_level }}</td>
                 <td>{{ recipes.cooking_material }}</td>
-                <td>{{ recipes.allergier }}</td>
             </tr>
         </tbody>
     </table>
+    <br>
+    <div class="recipe-info">
+            <h6 class="recipe-header">Preparation</h6>
+            <p class="flow-text">{{ recipes.preparation }}</p><br>
+            <h6 class="recipe-header">Ingredients</h6>
+            <p class="flow-text">{{ recipes.ingredients }}</p><br>
+            <h6 class="recipe-header">Instructions</h6>
+            <p class="flow-text">{{ recipes.instructions }}</p><br>
+            <h6 class="recipe-header">Tips</h6>
+            <p class="flow-text">{{ recipes.tips }}</p><br>
+    </div>
 
-
-
-
-    <h6>Allergies</h6>
-    {{ recipes.gluten }}<br>
-    {{ recipes.egg }}<br>
-    {{ recipes.nuts }}<br>
-    {{ recipes.lactose }}<br>
-    <h6>Preparation</h6>
-    <p>{{ recipes.preparation }}</p><br>
-    <h6>Ingredients</h6>
-    <p>{{ recipes.ingredients }}</p><br>
-    <h6>Instructions</h6>
-    <p>{{ recipes.instructions }}</p><br>
-    <h6>Tips</h6>
-    <p>{{ recipes.tips }}</p><br>
 </div>
 
 {% endfor %}
