@@ -29,12 +29,12 @@
                 {% if session.user %}
                 <a href=" {{ url_for('profile', username=session['user']) }}" class="small-link headlinks">PROFILE</a>
                 <a href="{{ url_for('index') }}" class="small-link headlinks">HOME</a>
-                <a class="small-link headlinks" href="{{ url_for('categories') }}">CATEGORIES</a>                
-                <a href="{{ url_for('add_recipes') }}" class="small-link headlinks">ADD RECIPE</a>                
+                <a class="small-link headlinks" href="{{ url_for('categories') }}">CATEGORIES</a>
+                <a href="{{ url_for('add_recipes') }}" class="small-link headlinks">ADD RECIPE</a>
                 <a href="{{ url_for('logout') }}" class="small-link headlinks">LOGOUT</a>
                 {% else %}
                 <a href="{{ url_for('index') }}" class="small-link headlinks">HOME</a>
-                <a class="small-link headlinks" href="{{ url_for('categories') }}">CATEGORIES</a>              
+                <a class="small-link headlinks" href="{{ url_for('categories') }}">CATEGORIES</a>
                 <a href="{{ url_for('login') }}" class="small-link headlinks">LOGIN</a>
                 <a href="{{ url_for('register') }}" class="small-link headlinks">REGISTER</a>
                 {% endif %}
@@ -58,7 +58,7 @@
                     <a href="#" data-target="mobile-demo" class="left-align sidenav-trigger">
                         <i class="fas fa-bars small purple-text accent-3"></i>
                     </a>
-          
+
                     <ul class="center-align text-shadow nav-second hide-on-med-and-down">
                         <li><a href="{{ url_for('snacks') }}" class="small-link navlink">SNACKS</a></li>
                         <li><a href="{{ url_for('lunch') }}" class="small-link navlink">LUNCH</a></li>
@@ -66,6 +66,8 @@
                         <li><a href="{{ url_for('sweets') }}" class="small-link navlink">SWEETS</a></li>
                         <li><a href="{{ url_for('healthy') }}" class="small-link navlink">HEALTHY</a></li>
                         <li><a href="{{ url_for('party') }}" class="small-link navlink">PARTY</a></li>
+                        <li><a href="{{ url_for('recipes') }}" class="small-link navlink">ALL RECIPES</a></li>
+
                     </ul>
                 </div>
 
@@ -77,6 +79,8 @@
                     <li><a href="{{ url_for('sweets') }}" class="small-link navlink">SWEETS</a></li>
                     <li><a href="{{ url_for('healthy') }}" class="small-link navlink">HEALTHY</a></li>
                     <li><a href="{{ url_for('party') }}" class="small-link navlink">PARTY</a></li>
+                    <li><a href="{{ url_for('recipes') }}" class="small-link navlink">ALL RECIPES</a></li>
+
 
                 </ul>
             </nav>
@@ -110,7 +114,8 @@
             <div class="row col l4 offset-l2 s12 ">
                 <ul class="left">
                     <li><a class="lime-text left-align" href="{{ url_for('index') }}">HOME</a></li>
-                    <li><a class="lime-text left-align" href="{{ url_for('profile', username=session['user']) }}">PROFILE</a></li>
+                    <li><a class="lime-text left-align"
+                            href="{{ url_for('profile', username=session['user']) }}">PROFILE</a></li>
                 </ul>
                 <ul class="right">
                     <li><a class="lime-text right-align" href="{{ url_for('categories') }}">CATEGORIES</a></li>
