@@ -6,8 +6,8 @@ $(document).ready(function () {
     // $('select').material_select();
     $(".parallax").parallax();
     $('.dropdown-trigger').dropdown();
-    $(".fixed-action-btn").floatingActionButton();
-    $(".modal").modal();
+    // $(".fixed-action-btn").floatingActionButton();
+    // $(".modal").modal();
 });
 
 

@@ -91,7 +91,6 @@ nav {
 .logo {
     width: 80vw;
     position: center;
-    padding-bottom: 50px;
 }
 /* Centered logo */
 .centered {
@@ -164,8 +163,8 @@ button {
 }
 
 .card-panel {
-    margin: 5px;
-    border: 5px;
+    margin: 20px;
+    border: 2px;
 }
 
 /* RECIPE PAGE */
@@ -175,11 +174,12 @@ th,
 td {
     width: 100vw;
     text-align: center;
-    padding: 5px 10px 5px 10px;
+    padding: 5px 5px 5px 5px;
     box-sizing: border-box;
     font-size: 12px;
     background-color: rgba(178, 252, 59, 0.9)!important;
     color: #9d0ab1;
+    font-weight: 600;
 
 }
 /* RECIPES COLLECTIONS */
@@ -188,36 +188,31 @@ td {
     width: 100%;
     height: 100%;
 }
-
-/* RECIPE */
-/* Recipe image */
-.box img {
-    width: 100%;
-    height: 100%; 
-
+.box {
     object-fit: cover;
 }
+
 /* Recipie Style */
 
 .recipe-header {
     font-family: "Atma";
+    color: #9d0ab1;
+    font-weight: 600;
 }
 .flow-text {
-    font-weight: 600;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: smaller;
+    font-weight: 500;
+    font-size: small;
+    font-weight: 400;
+    font-size: 16px;    
 }
 
 /* FOOTER */
 
 /* footer links */
-
 .page-footer {
     background-color: transparent;
     font-weight: 500;
 }
-
-
 
 /* BACK TO TOP */
 
