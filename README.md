@@ -95,7 +95,7 @@ If you like to delete your account, you should see a “Delete Profile” button
 
 ### The structure of the website:   
 
-<img width="687" alt="skeletoncooking" src="https://user-images.githubusercontent.com/70586630/113631652-0c2e6900-966a-11eb-85c7-89f3bedb2d38.png">
+![Skeleton](https://user-images.githubusercontent.com/70586630/115709898-075bfb80-a372-11eb-80aa-6ff07e7046c0.png)
 
 ### The database structure:   
  
