@@ -1,47 +1,48 @@
 {% extends "base.html" %}
 {% block content %}
 
-<!--
-<div class="container">
-    <div class="row">
-        <div class="col s6">
-            <img class="responsive-img" src="static/images/recipes/bentobox.jpg" alt="bentobox">
-        </div>
-
-    </div>
-</div> -->
 
 {% for recipes in recipes %}
 
-<div class="row card-panel">
+            <!-- Head banner -->
+
+<div class="row card-panel hoverable">
     <h6 class="purple-text accent-3 left-align">{{ recipes.category_name }}</h6>
-    <br>
-    <h4 class="purple-text accent-3 left-align">{{ recipes.title }}</h4>
-    <p><em>by: {{ recipes.created_by }}</em></p>
-    <img class="responsive-img center-align" src="{{ recipes.url_img }}" alt="test">
-    <br>
 
-    <table class="info-table">
-        <thead>
-            <tr>
-                <th>Time:</th>
-                <th>Portions:</th>
-                <th>Difficulty:</th>
-                <th>Material:</th>
-            </tr>
-        </thead>
+            <!-- Left column -->
+    <div class="col s12 m6 l6">
+        <h4 class="purple-text accent-3 left-align">{{ recipes.title }}</h4>
+        <p><em>by: {{ recipes.created_by }}</em></p>
+        <div class="list-img">
+            <img class="responsive-img center-align" src="{{ recipes.url_img }}" alt="test">
+            
+            <!-- Recipe info banner under image -->
+            <table class="info-table">
+                <thead>
+                    <tr>
+                        <th>Time:</th>
+                        <th>Portions:</th>
+                        <th>Difficulty:</th>
+                        <th>Material:</th>
+                    </tr>
+                </thead>
 
-        <tbody>
-            <tr>
-                <td>{{ recipes.cooking_time }}</td>
-                <td>{{ recipes.portions }}</td>
-                <td>{{ recipes.difficulty_level }}</td>
-                <td>{{ recipes.cooking_material }}</td>
-            </tr>
-        </tbody>
-    </table>
-    <br>
-    <div class="recipe-info">
+                <tbody>
+                    <tr>
+                        <td>{{ recipes.cooking_time }}</td>
+                        <td>{{ recipes.portions }}</td>
+                        <td>{{ recipes.difficulty_level }}</td>
+                        <td>{{ recipes.cooking_material }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+            <!-- Right column -->
+    <div class="col s12 m6 l6">
+        <br>
+        <div class="recipe-info">
             <h6 class="recipe-header">Preparation</h6>
             <p class="flow-text">{{ recipes.preparation }}</p><br>
             <h6 class="recipe-header">Ingredients</h6>
@@ -50,8 +51,8 @@
             <p class="flow-text">{{ recipes.instructions }}</p><br>
             <h6 class="recipe-header">Tips</h6>
             <p class="flow-text">{{ recipes.tips }}</p><br>
+        </div>
     </div>
-
 </div>
 
 {% endfor %}

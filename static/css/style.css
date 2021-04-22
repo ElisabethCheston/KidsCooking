@@ -182,7 +182,14 @@ td {
     color: #9d0ab1;
 
 }
+/* RECIPES COLLECTIONS */
 
+.list-img {
+    width: 100%;
+    height: 100%;
+}
+
+/* RECIPE */
 /* Recipe image */
 .box img {
     width: 100%;
