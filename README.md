@@ -28,8 +28,7 @@ As a guest user I want:
 
 **Parent goals:**  
 As a parent I want:  
-* the recipes to state any common allergies, to prevent breakouts.
-* the recipes to inform if help with stove or oven is needed, so my child know when to ask for help if needed.
+* the recipes to inform if spcial material (stove, oven, microwave, etc) is needed, so my child know when to ask for my help.
 * the only communication possible is through posts that are public, to prevent unsupervised contact with predators or bad influences.
 
 **Registered user goals**  
@@ -64,7 +63,7 @@ Except for black and white the 3 basic colors used through the website are:
 
 ### Interactiv Design & Informatiove Architecture
   
-#### Public Recipes  
+#### Recipes  
 In the top navbar there is a dropdown button with all recipe categories open for public. Once I select one of them rows with recipes are shown in the body. To view the you click on the name or pic.
 
 #### Create an account  
@@ -112,19 +111,18 @@ If you like to delete your account, you should see a “Delete Profile” button
 *	Party  
 
 ### Recipe information:   
+
+*	Category  
+*	Name of the recipe  
+*	Created by user  
+*	image  
 *	Cooking Time  
 *	Portion size  
 *	Difficult level  
-*	Cooking materials needed  
-*	Name of the recipe  
+*	Cooking materials needed   
+*	Preparation  
 *	Ingredients need  
-*	Easy cooking instructions  
-*	Allergies   
-    * Wheat free 
-    * Gluten free  
-    * Egg free  
-    * Nut free  
-    * Dairy free   
+*	Cooking instructions    
 *	Tips on things to think about or to improve the recipe  
 
 ## 1.5	Surface Plane
