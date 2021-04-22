@@ -5,7 +5,7 @@ $(document).ready(function () {
     $("select").formSelect();
     // $('select').material_select();
     $(".parallax").parallax();
-    $('.dropdown-trigger').dropdown();
+    // $('.dropdown-trigger').dropdown();
     // $(".fixed-action-btn").floatingActionButton();
     // $(".modal").modal();
 });
