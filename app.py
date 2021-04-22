@@ -21,10 +21,6 @@ mongo = PyMongo(app)
 
 # ---- Home ----
 @app.route("/")
-def hello():
-    return"Hello World"
-
-
 @app.route("/index")
 def index():
     
@@ -110,19 +106,19 @@ def get_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 # ---- Collections ----
-recipe_coll = mongo.db.recipes
-category_coll = mongo.db.recipe_category
+# recipe_coll = mongo.db.recipes
+# category_coll = mongo.db.categories
 
 # ---- Items per Page ----
 per_page = 6    
 
 # ---- Add recipes ----
-@app.route("/add_recipes", methods=["GET", "POST"])
-def add_recipes():
+@app.route("/add_recipe", methods=["GET", "POST"])
+def add_recipe():
 
     if request.method == "POST":
         
-        recipes = {
+        recipe = {
             "category_name": request.form.get("category_name"),
             "title": request.form.get("title"),
             "url_img": request.form.get("url_img"),
@@ -136,27 +132,50 @@ def add_recipes():
             "tips": request.form.get("tips"), 
             "created_by": session["user"]
         }
-        # print(request.form)
 
-        mongo.db.recipes.insert_one(recipes)
+        mongo.db.recipes.insert_one(recipe)
         flash("Recipe Successfully Added")
-        return redirect(url_for("get_recipes"))
+    return redirect(url_for("get_recipes"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("add_recipes.html", categories=categories)
+    return render_template("add_recipe.html", categories=categories)
+
 
 # ---- Edit recipes ----
+@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+def edit_recipe(recipe_id):
+    if request.method == "POST":
+        
+        submit = {
+            "category_name": request.form.get("category_name"),
+            "title": request.form.get("title"),
+            "url_img": request.form.get("url_img"),
+            "cooking_time": request.form.get("cooking_time"),
+            "portions": request.form.get("portions"),                      
+            "difficulty_level": request.form.get("difficulty_level"),
+            "cooking_material": request.form.getlist("cooking_material"),            
+            "preparation": request.form.get("preparation"),         
+            "ingredients": request.form.get("ingredients"), 
+            "instructions": request.form.get("instructions"),
+            "tips": request.form.get("tips"), 
+            "created_by": session["user"]
+        }
+        mongo.db.update({"_id": ObjectId(recipe_id)}, submit)
+        flash("Recipe Successfully Updated")
 
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_recipe.html", recipe=recipe, categories=categories)
 
 # ---- Delete recipes ----
 
 
 
 # ---- Recipe by category ----
-@app.route("/get_recipes_by_category/<category>")
+@app.route("/get_recipe_by_category/<category>")
 def get_recipes_by_category(category):
-    recipes = mongo.db.recipes.find({"category_name": category})
-    return render_template("recipes.html", recipes=recipes)    
+    recipe = mongo.db.recipes.find({"category_name": category})
+    return render_template("recipes.html", recipe=recipe)    
 
 # ---- Categories ----
 @app.route("/contact")
@@ -168,19 +187,23 @@ def categories():
     return render_template("categories.html")
   
 # ---- Categories ----
-@app.route("/snacks")
+@app.route("/snacks", methods=["GET", "POST"])
 def snacks():
-    return render_template("snacks.html")
+    snacks_recipe = mongo.db.recipes.find({"recipe_types": "Snacks"})
+    print(snacks_recipe)
+    return render_template("snacks.html", snacks_recipe=snacks_recipe, page='snacks')
 
 @app.route("/lunch", methods=["GET", "POST"])
 def lunch():
-    lunch_meals = mongo.db.lean_recipes.find({"recipe_types": "Lunch"})
-    print(lunch_meals)
-    return render_template("lunch.html", lunch_meals=lunch_meals, page='lunch')
+    lunch_recipe = mongo.db.recipes.find({"recipe_types": "Lunch"})
+    print(lunch_recipe)
+    return render_template("lunch.html", lunch_recipe=lunch_recipe, page='lunch')
 
-@app.route("/dinner")
+@app.route("/dinner", methods=["GET", "POST"])
 def dinner():
-    return render_template("dinner.html")
+    dinner_recipe = mongo.db.recipes.find({"recipe_type": "Dinner"})
+    print(dinner_recipe)
+    return render_template("dinner.html", dinner_recipe=dinner_recipe, page='dinner')
 
 @app.route("/healthy")
 def healthy():

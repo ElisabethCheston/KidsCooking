@@ -2,24 +2,23 @@
 {% block content %}
 
 
-{% for recipes in recipes %}
+{% for recipe in recipes %}
 
 <!-- Head banner -->
-
 <div class="row card-panel hoverable">
-    <h6 class="purple-text accent-3 left-align col s6">{{ recipes.category_name }}</h6>
+    <h6 class="purple-text accent-3 left-align col s6">{{ recipe.category_name }}</h6>
 
     <div class="col s6 text-shadow">
+        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small editbutton right">Edit</a>
         <a href="" class="btn-small editbutton right">Delete</a>
-        <a href="" class="btn-small editbutton right">Edit</a>
     </div>
 
     <!-- Left column -->
     <div class="col s12 m6 l6">
-        <h4 class="purple-text accent-3 left-align">{{ recipes.title }}</h4>
-        <p><em>by: {{ recipes.created_by }}</em></p>
+        <h4 class="purple-text accent-3 left-align">{{ recipe.title }}</h4>
+        <p><em>by: {{ recipe.created_by }}</em></p>
         <div class="list-img">
-            <img class="responsive-img box center-align" src="{{ recipes.url_img }}" alt="test">
+            <img class="responsive-img box center-align" src="{{ recipe.url_img }}" alt="test">
 
             <!-- Recipe info banner under image -->
             <table class="info-table">
@@ -34,10 +33,10 @@
 
                 <tbody>
                     <tr>
-                        <td>{{ recipes.cooking_time }}</td>
-                        <td>{{ recipes.portions }}</td>
-                        <td>{{ recipes.difficulty_level }}</td>
-                        <td>{{ recipes.cooking_material }}</td>
+                        <td>{{ recipe.cooking_time }}</td>
+                        <td>{{ recipe.portions }}</td>
+                        <td>{{ recipe.difficulty_level }}</td>
+                        <td>{{ recipe.cooking_material }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -49,13 +48,13 @@
         <br>
         <div class="recipe-info">
             <h6 class="recipe-header">Preparation</h6>
-            <p class="flow-text">{{ recipes.preparation }}</p><br>
+            <p class="flow-text">{{ recipe.preparation }}</p><br>
             <h6 class="recipe-header">Ingredients</h6>
-            <p class="flow-text">{{ recipes.ingredients }}</p><br>
+            <p class="flow-text">{{ recipe.ingredients }}</p><br>
             <h6 class="recipe-header">Instructions</h6>
-            <p class="flow-text">{{ recipes.instructions }}</p><br>
+            <p class="flow-text">{{ recipe.instructions }}</p><br>
             <h6 class="recipe-header">Tips</h6>
-            <p class="flow-text">{{ recipes.tips }}</p><br>
+            <p class="flow-text">{{ recipe.tips }}</p><br>
         </div>
 
     </div>
@@ -65,17 +64,18 @@
 
 <div class="row">
     <div class="col s12 center-align">
-        <p>RANDOM SUGGESTIONS FR0M DATABASE</p>
+        <p>OTHER</p>
     </div>
-    <div class="box col s12 m4 l2"><img class="responsive-img" src="static/images/recipes/chickenbroccoli.jpg">
+    <div class="col s12 m4 l2"><img class="responsive-img" src="static/images/recipes/chickenbroccoli.jpg">
         <p>Chicken Broccoli</p>
     </div>
-    <div class="box col s12 m4 l8"><img class="responsive-img" src="static/images/recipes/pastasalad.jpg">
+    <div class="col s12 m4 l8"><img class="responsive-img" src="static/images/recipes/pastasalad.jpg">
         <p>Pasta Sallad</p>
     </div>
-    <div class="box col s12 m4 l2"><img class="responsive-img" src="static/images/recipes/flyingsaucers.jpg">
+    <div class="col s12 m4 l2"><img class="responsive-img" src="static/images/recipes/flyingsaucers.jpg">
         <p>Flying Sauser</p>
     </div>
+</div>
 </div>
 
 {% endblock %}

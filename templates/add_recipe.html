@@ -5,7 +5,7 @@
 <h4 class="left-align purple-text text-shadow">Add Recipe</h4>
 
 <div class="card-panel grey lighten-5">
-    <form class="col s12" method="POST" action="{{ url_for('add_recipes') }}">
+    <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
         <div class="row">
 
             <!-- TEXT INPUT -->
@@ -99,9 +99,8 @@
                 <label></label>
             </div>
         </div>
-
-
         <br>
+
         <!-- Image Input -->
         <div class="col s12 m12 l4">
 
@@ -132,8 +131,8 @@
                 </div>
             </div>
         </div>
-
         <br>
+
         <!-- Recipe Preparation Input -->
         <div class="input-field text-field">
             <i class="fas fa-book-open prefix" aria-hidden="true"></i>
@@ -142,6 +141,7 @@
             <label for="preparation">Recipe Preparation</label>
             <a class=""></a>
         </div>
+
         <!-- Recipe Ingredients Input -->
         <div class="input-field text-field">
             <i class="fas fa-list-ul prefix" aria-hidden="true"></i>
@@ -176,7 +176,7 @@
 <!-- Cancel Recipe Button -->
 <div class="row">
     <div id="cancel-button" class="col s6 right-align">
-        <a id="cancel-add" href="{{ url_for('get_recipes') }}" class="btn red darken-4 tooltipped"
+        <a id="cancel-add" href="{{ url_for('recipes') }}" class="btn red darken-4 tooltipped"
             data-position="bottom" data-tooltip="This will take you back to the recipes page">
             Cancel <i class="fas fa-times-circle" aria-hidden="true"></i>
         </a>

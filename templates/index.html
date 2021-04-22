@@ -7,47 +7,40 @@
 
 
 
-    {% for recipes in recipes %}
+{% for recipe in recipes %}
 
 <div class="row">
-    {{ recipes.title }}<br>
-    {{ recipes.category_name }}<br>
-    {{ recipes.url_img }}<br>
+    {{ recipe.title }}<br>
+    {{ recipe.category_name }}<br>
+    {{ recipe.url_img }}<br>
 
-    {{ recipes.cooking_time }}<br>
-    {{ recipes.portions }}<br>
-    {{ recipes.cooking_material }}<br>
-    {{ recipes.difficult_level }}<br>
+    {{ recipe.cooking_time }}<br>
+    {{ recipe.portions }}<br>
+    {{ recipe.cooking_material }}<br>
+    {{ recipe.difficult_level }}<br>
 
-    {{ recipes.wheat_free }}<br>
-    {{ recipes.gluten_free }}<br>
-    {{ recipes.egg_free }}<br>
-    {{ recipes.nut_free }}<br>
-    {{ recipes.dairy_free }}<br>
-
-    {{ recipes.preparation }}<br>
-    {{ recipes.ingredients }}<br>
-    {{ recipes.instructions }}<br>
-    {{ recipes.tips }}<br>
+    {{ recipe.preparation }}<br>
+    {{ recipe.ingredients }}<br>
+    {{ recipe.instructions }}<br>
+    {{ recipe.tips }}<br>
 </div>
 
 {% endfor %}
 
 <div class="row">
     <div class="col s12 center-align">
-        <p>OTHER</p>
+            <p>OTHER</p>
+        </div>
+        <div class="col s12 m4 l2"><img class="responsive-img" src="static/images/recipes/chickenbroccoli.jpg">
+            <p>Chicken Broccoli</p>
+        </div>
+        <div class="col s12 m4 l8"><img class="responsive-img" src="static/images/recipes/pastasalad.jpg">
+            <p>Pasta Sallad</p>
+        </div>
+        <div class="col s12 m4 l2"><img class="responsive-img" src="static/images/recipes/flyingsaucers.jpg">
+            <p>Flying Sauser</p>
+        </div>
     </div>
-    <div class="col s12 m4 l2"><img class="responsive-img" src="static/images/recipes/chickenbroccoli.jpg">
-        <p>Chicken Broccoli</p>
-    </div>
-    <div class="col s12 m4 l8"><img class="responsive-img" src="static/images/recipes/pastasalad.jpg">
-        <p>Pasta Sallad</p>
-    </div>
-    <div class="col s12 m4 l2"><img class="responsive-img" src="static/images/recipes/flyingsaucers.jpg">
-        <p>Flying Sauser</p>
-    </div>
-
-</div>
 </div>
 
 {% endblock %}

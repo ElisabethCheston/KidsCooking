@@ -11,10 +11,10 @@ $(document).ready(function () {
 });
 
 
-/*----- Display url image ----- 
------------ on AddRecipe Pages----------
-Adapted from https://stackoverflow.com/questions/31398473/
-load-image-in-div-from-url-obtained-from-a-text-box/31398762*/
+/* --- URL IMAGES --- */
+
+/* --- For Add Recipe --- */
+// Reference  https://stackoverflow.com/questions/31398473/load-image-in-div-from-url-obtained-from-a-text-box/31398762
 function addImage() {
     var url = document.getElementById("url_img").value;
     var image = new Image();
