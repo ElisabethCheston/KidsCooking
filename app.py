@@ -162,6 +162,7 @@ def edit_recipe(recipe_id):
         }
         mongo.db.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Recipe Successfully Updated")
+        return redirect(url_for("get_recipes"))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
@@ -201,26 +202,33 @@ def lunch():
 
 @app.route("/dinner", methods=["GET", "POST"])
 def dinner():
-    dinner_recipe = mongo.db.recipes.find({"recipe_type": "Dinner"})
-    print(dinner_recipe)
-    return render_template("dinner.html", dinner_recipe=dinner_recipe, page='dinner')
+    dinner_recipes = mongo.db.recipes.find({"recipe_type": "Dinner"})
+    print(dinner_recipes)
+    return render_template("dinner.html", dinner_recipes=dinner_recipes, page='dinner')
 
-@app.route("/healthy")
+@app.route("/healthy", methods=["GET", "POST"])
 def healthy():
-    return render_template("healthy.html")
+    healthy_recipes = mongo.db.recipes.find({"recipe_type": "Healthy"})
+    print(healthy_recipes)
+    return render_template("healthy.html", healthy_recipes=healthy_recipes, page='healthy')
 
-@app.route("/sweets")
+@app.route("/sweets", methods=["GET", "POST"])
 def sweets():
-    return render_template("sweets.html")
+    sweets_recipes = mongo.db.recipes.find({"recipe_type": "Sweets"})
+    print(sweets_recipes)
+    return render_template("dinner.html", sweets_recipes=sweets_recipes, page='sweets')
 
-@app.route("/party")
+@app.route("/party", methods=["GET", "POST"])
 def party():
-    return render_template("party.html") 
+    party_recipes = mongo.db.recipes.find({"recipe_type": "Party"})
+    print(party_recipes)
+    return render_template("dinner.html", party_recipes=party_recipes, page='party')
 
-@app.route("/recipes")
+@app.route("/recipes", methods=["GET", "POST"])
 def recipes():
-    return render_template("recipes.html")                      
-
+    all_recipes = mongo.db.recipes.find({"recipe_type": "All Rrecipes"})
+    print(all_recipes)
+    return render_template("dinner.html", all_recipes=all_recipes, page='recipes')
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

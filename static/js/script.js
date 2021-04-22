@@ -21,4 +21,3 @@ function addImage() {
     image.src = url;
     document.getElementById("image-container").appendChild(image);
 }
-
