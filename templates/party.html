@@ -1,47 +1,66 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h4 class="left-align purple-text text-shadow">PARTY</h4>
+<h4 class="left-align purple-text text-shadow">PARTY RECIPES</h4>
 
-<div class="container">
-    <div class="row">
-        <div class="col s6">
-            <img class="responsive-img" src="static/images/categories-img/party.jpg" alt="party">
+{% for recipe in party_recipes %}
+
+<!-- Head banner -->
+<div class="row card-panel hoverable">
+    <h6 class="purple-text accent-3 left-align col s6">{{ recipe.category_name }}</h6>
+
+    <div class="col s6 text-shadow">
+        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small editbutton right">Edit</a>
+        <a href="" class="btn-small editbutton right">Delete</a>
+    </div>
+
+    <!-- Left column -->
+    <div class="col s12 m6 l6">
+        <h5 class="purple-text accent-3 left-align">{{ recipe.title }}</h5>
+        <p><em>by: {{ recipe.created_by }}</em></p>
+        <div class="list-img">
+            <img class="responsive-img box center-align" src="{{ recipe.url_img }}" alt="test">
+
+            <!-- Recipe info banner under image -->
+            <table class="info-table">
+                <thead>
+                    <tr>
+                        <th>Time:</th>
+                        <th>Portions:</th>
+                        <th>Difficulty:</th>
+                        <th>Material:</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>{{ recipe.cooking_time }}</td>
+                        <td>{{ recipe.portions }}</td>
+                        <td>{{ recipe.difficulty_level }}</td>
+                        <td>{{ recipe.cooking_material }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Right column -->
+    <div class="col s12 m6 l6">
+        <br>
+        <div class="recipe-info">
+            <h6 class="recipe-header">Preparation</h6>
+            <p class="flow-text">{{ recipe.preparation }}</p><br>
+            <h6 class="recipe-header">Ingredients</h6>
+            <p class="flow-text">{{ recipe.ingredients }}</p><br>
+            <h6 class="recipe-header">Instructions</h6>
+            <p class="flow-text">{{ recipe.instructions }}</p><br>
+            <h6 class="recipe-header">Tips</h6>
+            <p class="flow-text">{{ recipe.tips }}</p><br>
         </div>
 
     </div>
 </div>
 
-<div class="row">
-    <div class="col s12 center-align">
-        <p>OTHER</p>
-    </div>
-    <div class="col s12 m4 l2"><img class="responsive-img" src="static/images/recipes/chickenbroccoli.jpg">
-        <p>Chicken Broccoli</p>
-    </div>
-    <div class="col s12 m4 l8"><img class="responsive-img" src="static/images/recipes/pastasalad.jpg">
-        <p>Pasta Sallad</p>
-    </div>
-    <div class="col s12 m4 l2"><img class="responsive-img" src="static/images/recipes/flyingsaucers.jpg">
-        <p>Flying Sauser</p>
-    </div>
-    <div class="col s12 m4 l2"><img class="responsive-img" src="static/images/recipes/chickenbroccoli.jpg">
-        <p>Chicken Broccoli</p>
-    </div>
-    <div class="col s12 m4 l8"><img class="responsive-img" src="static/images/recipes/pastasalad.jpg">
-        <p>Pasta Sallad</p>
-    </div>
-    <div class="col s12 m4 l2"><img class="responsive-img" src="static/images/recipes/flyingsaucers.jpg">
-        <p>Flying Sauser</p>
-    </div>
-        <div class="col s12 m4 l2"><img class="responsive-img" src="static/images/recipes/chickenbroccoli.jpg">
-        <p>Chicken Broccoli</p>
-    </div>
-    <div class="col s12 m4 l8"><img class="responsive-img" src="static/images/recipes/pastasalad.jpg">
-        <p>Pasta Sallad</p>
-    </div>
-    <div class="col s12 m4 l2"><img class="responsive-img" src="static/images/recipes/flyingsaucers.jpg">
-        <p>Flying Sauser</p>
-    </div>
-</div>
+{% endfor %}
+
 {% endblock %}

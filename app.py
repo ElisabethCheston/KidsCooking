@@ -177,57 +177,58 @@ def get_recipes_by_category(category):
     recipe = mongo.db.recipes.find({"category_name": category})
     return render_template("recipes.html", recipe=recipe)    
 
-# ---- Categories ----
+# ---- Contact ----
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
 
+# ---- Categories ----
 @app.route("/categories")
 def categories():
     return render_template("categories.html")
-  
-# ---- Categories ----
+
+@app.route("/recipes", methods=["GET", "POST"])
+def recipes():
+    all_recipes = mongo.db.recipes.find({"category_name": "All Recipes"})
+    print(all_recipes)
+    return render_template("all_recipes.html", all_recipes=all_recipes, page='recipes')
+ 
 @app.route("/snacks", methods=["GET", "POST"])
 def snacks():
-    snacks_recipes = mongo.db.recipes.find({"recipe_types": "Snacks"})
+    snacks_recipes = mongo.db.recipes.find({"category_name": "Snacks"})
     print(snacks_recipes)
     return render_template("snacks.html", snacks_recipes=snacks_recipes, page='snacks')
 
 @app.route("/lunch", methods=["GET", "POST"])
 def lunch():
-    lunch_recipes = mongo.db.recipes.find({"recipe_types": "Lunch"})
+    lunch_recipes = mongo.db.recipes.find({"category_name": "Lunch"})
     print(lunch_recipes)
     return render_template("lunch.html", lunch_recipes=lunch_recipes, page='lunch')
 
 @app.route("/dinner", methods=["GET", "POST"])
 def dinner():
-    dinner_recipes = mongo.db.recipes.find({"recipe_type": "Dinner"})
+    dinner_recipes = mongo.db.recipes.find({"category_name": "Dinner"})
     print(dinner_recipes)
     return render_template("dinner.html", dinner_recipes=dinner_recipes, page='dinner')
 
 @app.route("/healthy", methods=["GET", "POST"])
 def healthy():
-    healthy_recipes = mongo.db.recipes.find({"recipe_type": "Healthy"})
+    healthy_recipes = mongo.db.recipes.find({"category_name": "Healthy"})
     print(healthy_recipes)
     return render_template("healthy.html", healthy_recipes=healthy_recipes, page='healthy')
 
 @app.route("/sweets", methods=["GET", "POST"])
 def sweets():
-    sweets_recipes = mongo.db.recipes.find({"recipe_type": "Sweets"})
+    sweets_recipes = mongo.db.recipes.find({"category_name": "Sweets"})
     print(sweets_recipes)
-    return render_template("dinner.html", sweets_recipes=sweets_recipes, page='sweets')
+    return render_template("sweets.html", sweets_recipes=sweets_recipes, page='sweets')
 
 @app.route("/party", methods=["GET", "POST"])
 def party():
-    party_recipes = mongo.db.recipes.find({"recipe_type": "Party"})
+    party_recipes = mongo.db.recipes.find({"category_name": "Party"})
     print(party_recipes)
-    return render_template("dinner.html", party_recipes=party_recipes, page='party')
+    return render_template("party.html", party_recipes=party_recipes, page='party')
 
-@app.route("/recipes", methods=["GET", "POST"])
-def recipes():
-    all_recipes = mongo.db.recipes.find({"recipe_type": "All Recipes"})
-    print(all_recipes)
-    return render_template("dinner.html", all_recipes=all_recipes, page='recipes')
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

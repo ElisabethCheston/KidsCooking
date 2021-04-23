@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h4 class="left-align purple-text text-shadow">LUNCH RECIPES</h4>
 
 {% for recipe in lunch_recipes %}
 
 <!-- Head banner -->
 
 <div class="row card-panel hoverable">
-    <h6 class="purple-text accent-3 left-align col s6">{{ recipe.lunch_recipes }}</h6>
+    <h6 class="purple-text accent-3 left-align col s6">{{ recipe.category_name }}</h6>
 
         <!-- Edit & Delete Buttons -->
     <div class="col s6 text-shadow">
@@ -18,7 +19,7 @@
 
     <!-- Left column -->
     <div class="col s12 m6 l6">
-        <h4 class="purple-text accent-3 left-align">{{ recipe.title }}</h4>
+        <h5 class="purple-text accent-3 left-align">{{ recipe.title }}</h5>
         <p><em>by: {{ recipe.created_by }}</em></p>
         <div class="list-img">
             <img class="responsive-img box center-align" src="{{ recipe.url_img }}" alt="Lunch Image">
@@ -65,19 +66,4 @@
 
 {% endfor %}
 
-<div class="row">
-    <div class="col s12 center-align">
-        <p>OTHER</p>
-    </div>
-    <div class="col s12 m4 l2"><img class="responsive-img" src="static/images/recipes/chickenbroccoli.jpg">
-        <p>Chicken Broccoli</p>
-    </div>
-    <div class="col s12 m4 l8"><img class="responsive-img" src="static/images/recipes/pastasalad.jpg">
-        <p>Pasta Sallad</p>
-    </div>
-    <div class="col s12 m4 l2"><img class="responsive-img" src="static/images/recipes/flyingsaucers.jpg">
-        <p>Flying Sauser</p>
-    </div>
-
-</div>
 {% endblock %}
