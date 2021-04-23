@@ -42,11 +42,11 @@
         </div>
 
         <div class="container">
-            <img class="responsive-img" src="static/images/banner.jpg" alt="test">
+            <img src= "{{ url_for('static', filename='images/banner.jpg') }}" class="responsive-img" alt="test">
             <!-- Logo -->
             <div class="col4 logocontainer centered">
                 <a class="logo" href="">
-                    <img src="static/images/logohor.png" class="logo img-fluid">
+                    <img src= "{{ url_for('static', filename='images/logohor.png') }}" class="logo img-fluid">
                 </a>
             </div>
         </div>

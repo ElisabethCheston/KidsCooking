@@ -135,7 +135,7 @@ def add_recipe():
 
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe Successfully Added")
-    return redirect(url_for("get_recipes"))
+        return redirect(url_for("get_recipes"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipe.html", categories=categories)
@@ -162,14 +162,13 @@ def edit_recipe(recipe_id):
         }
         mongo.db.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Recipe Successfully Updated")
-        return redirect(url_for("get_recipes"))
+        # return redirect(url_for("get_recipes"))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_recipe.html", recipe=recipe, categories=categories)
 
 # ---- Delete recipes ----
-
 
 
 # ---- Recipe by category ----
@@ -190,15 +189,15 @@ def categories():
 # ---- Categories ----
 @app.route("/snacks", methods=["GET", "POST"])
 def snacks():
-    snacks_recipe = mongo.db.recipes.find({"recipe_types": "Snacks"})
-    print(snacks_recipe)
-    return render_template("snacks.html", snacks_recipe=snacks_recipe, page='snacks')
+    snacks_recipes = mongo.db.recipes.find({"recipe_types": "Snacks"})
+    print(snacks_recipes)
+    return render_template("snacks.html", snacks_recipes=snacks_recipes, page='snacks')
 
 @app.route("/lunch", methods=["GET", "POST"])
 def lunch():
-    lunch_recipe = mongo.db.recipes.find({"recipe_types": "Lunch"})
-    print(lunch_recipe)
-    return render_template("lunch.html", lunch_recipe=lunch_recipe, page='lunch')
+    lunch_recipes = mongo.db.recipes.find({"recipe_types": "Lunch"})
+    print(lunch_recipes)
+    return render_template("lunch.html", lunch_recipes=lunch_recipes, page='lunch')
 
 @app.route("/dinner", methods=["GET", "POST"])
 def dinner():
@@ -226,7 +225,7 @@ def party():
 
 @app.route("/recipes", methods=["GET", "POST"])
 def recipes():
-    all_recipes = mongo.db.recipes.find({"recipe_type": "All Rrecipes"})
+    all_recipes = mongo.db.recipes.find({"recipe_type": "All Recipes"})
     print(all_recipes)
     return render_template("dinner.html", all_recipes=all_recipes, page='recipes')
 
