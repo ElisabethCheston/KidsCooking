@@ -2,7 +2,7 @@
 {% block content %}
 
 
-<h4 class="left-align purple-text text-shadow">DINNER RECIPES</h4>
+<h5 class="left-align purple-text text-shadow">DINNER RECIPES</h5>
 
 {% for recipe in dinner_recipes %}
 
@@ -14,13 +14,13 @@
     <div class="col s6 text-shadow">
         <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small editbutton right">Edit</a>
         <a href="" class="btn-small editbutton right">Delete</a>
-
     </div>
 
     <!-- Left column -->
-    <div class="col s12 m6 l6">
-        <h5 class="purple-text accent-3 left-align">{{ recipe.title }}</h5>
+        <h4 class="purple-text accent-3 left-align">{{ recipe.title }}</h4>
         <p><em>by: {{ recipe.created_by }}</em></p>
+        <div class="col s12 m6 l6">
+
         <div class="list-img">
             <img class="responsive-img box center-align" src="{{ recipe.url_img }}" alt="Lunch Image">
 
@@ -45,16 +45,16 @@
                 </tbody>
             </table>
         </div>
+        <br>
+            <h6 class="recipe-header">Ingredients</h6>
+            <p class="flow-text">{{ recipe.ingredients }}</p><br>
     </div>
 
     <!-- Right column -->
     <div class="col s12 m6 l6">
-        <br>
         <div class="recipe-info">
             <h6 class="recipe-header">Preparation</h6>
-            <p class="flow-text">{{ recipe.preparation }}</p><br>
-            <h6 class="recipe-header">Ingredients</h6>
-            <p class="flow-text">{{ recipe.ingredients }}</p><br>
+            <p class="flow-text">{{ recipe.preparation }}</p><br>            
             <h6 class="recipe-header">Instructions</h6>
             <p class="flow-text">{{ recipe.instructions }}</p><br>
             <h6 class="recipe-header">Tips</h6>
