@@ -55,6 +55,14 @@ nav {
     padding: 5px 10px 5px 0;
 }
 /* mobil */
+i.fas.fa-bars,
+.trigger {
+    position: absolute;
+    color: #76ff03;
+    display:inline;
+    padding-bottom: 10px;
+    line-height: 30px;
+}
 .sidenav-trigger {
     color: rgba(0, 0, 0, 0.959);
     height: 50px;
