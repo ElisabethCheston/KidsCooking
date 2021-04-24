@@ -14,9 +14,13 @@
                 <div class="input-field form-field">
                     <label for="category_name"></label>
                     <select id="category_name" name="category_name" class="validate" required>
-                        <option value="" disabled selected>Category: </option>
+                        <option value="" disabled>Category: </option>
                         {% for category in categories %}
-                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% if category.category_name == recipe.category_name %}
+                        <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                        {% else %}
+                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>}
+                        {% endif %}
                         {% endfor %}
                     </select>
                 </div>
@@ -25,7 +29,7 @@
             <div class="input-field col s12">
                 <div class="input-field form-field text-field">
                     <i class="fas fa-pencil-alt prefix small"></i>
-                    <input placeholder="Title of recipe" id="title" name="title" type="text" class="validate"
+                    <input placeholder="Title of recipe" value="{{ recipe.title }}" id="title" name="title" type="text" class="validate"
                         minlength="5" maxlength="50" pattern="(?:\s*[a-zA-Z]+){1,6}" required>
                     <label for="title">Recipe name</label>
                 </div>
@@ -36,7 +40,7 @@
             <div class="input-field col s12 m6 l6">
                 <label for="cooking_time"></label>
                 <select id="cooking_time" name="cooking_time" class="validate" required>
-                    <option value="" disabled selected>Time:</option>
+                    <option value="{{ recipe.cooking_time }}" selected>{{ recipe.cooking_time }}</option>
                     <option value="5 min"> 5 min</option>
                     <option value="10 min"> 10 min</option>
                     <option value="15 min"> 15 min</option>
@@ -66,9 +70,9 @@
 
             <!-- Portions Dropdown -->
             <div class="input-field col s12 m6 l6">
-                <label for="portions"></label>
+                <label for="portions">{{- recipe.portions -}}</label>
                 <select id="portions" name="portions" class="validate" required>
-                    <option value="" disabled selected>Portions:</option>
+                    <option value="{{ recipe.portions }}" selected>{{ recipe.portions }}</option>
                     {% for i in range(1, 21) %}
                     <option value="{{ i }}">{{ i }}</option>
                     {% endfor %}
@@ -78,7 +82,7 @@
             <!-- Difficult Level Dropdown -->
             <div class="input-field col s12 m6 l6">
                 <select name="difficulty_level">
-                    <option value="" disabled selected>Difficult Level:</option>
+                    <option value="{{ recipe.difficulty_level }}" selected>{{ recipe.difficulty_level }}</option>
                     <option value="Easy">Easy</option>
                     <option value="Medium">Medium</option>
                     <option value="Hard">Hard</option>
@@ -89,7 +93,7 @@
             <!-- Cooking Tools Dropdown -->
             <div class="input-field col s12 m6 l6">
                 <select name="cooking_material" multiple>
-                    <option value="" disabled selected>Material:</option>
+                    <option value="{{ recipe.cooking_material }}" selected>{{ recipe.cooking_material }}</option>
                     <option value="Oven">Oven</option>
                     <option value="Stove">Stove</option>
                     <option value="Knife">Knife</option>
@@ -107,7 +111,7 @@
             <div class="input-field form-field text-field">
                 <!-- Image URL Input -->
                 <i class="fas fa-camera prefix" aria-hidden="true"></i>
-                <input id="url_img" name="url_img" type="text" class="validate" />
+                <input id="url_img" name="url_img" value="{{ recipe.url_img }}" type="text" class="validate" />
                 <label for="url_img">Recipe Image</label>
             </div>
 
@@ -137,7 +141,8 @@
         <div class="input-field text-field">
             <i class="fas fa-book-open prefix" aria-hidden="true"></i>
             <textarea id="preparation" name="preparation" class="materialize-textarea validate" data-position="bottom"
-                placeholder="Change row for each step." minlength="4" required></textarea>
+                placeholder="Change row for each step." minlength="4" required>
+            {{- recipe.preparation -}}</textarea>
             <label for="preparation">Recipe Preparation</label>
             <a class=""></a>
         </div>
@@ -147,7 +152,7 @@
             <i class="fas fa-list-ul prefix" aria-hidden="true"></i>
             <textarea id="ingredients" name="ingredients" class="materialize-textarea validate" data-position="bottom"
                 data-tooltip="Please add one ingredient on each line." placeholder="One recipe ingredients per line."
-                minlength="4" required></textarea>
+                minlength="4" required>{{- recipe.ingredients -}}</textarea>
             <label for="ingredients">Recipe Ingredients</label>
             <a class=""></a>
         </div>
@@ -156,7 +161,8 @@
         <div class="input-field text-field">
             <i class="fas fa-file-alt prefix" aria-hidden="true"></i>
             <textarea id="instructions" name="instructions" class="materialize-textarea validate"
-                placeholder="Change row for each step." minlength="10" maxlength="700" required></textarea>
+                placeholder="Change row for each step." minlength="10" maxlength="700" required>
+                {{- recipe.instructions -}}</textarea>
             <label for="instructions">Recipe Instructions</label>
         </div>
 
@@ -164,7 +170,8 @@
         <div class="input-field text-field">
             <i class="fas fa-lightbulb prefix" prefix" aria-hidden="true"></i>
             <textarea id="tips" name="tips" class="materialize-textarea validate"
-                placeholder="Tips or ideas for the recipe" minlength="5" maxlength="200" required></textarea>
+                placeholder="Tips or ideas for the recipe" minlength="5" maxlength="200" required>
+            {{- recipe.tips -}}</textarea>
             <label for="tips">Tips</label>
         </div>
 
