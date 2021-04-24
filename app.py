@@ -47,6 +47,8 @@ def register():
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
+        return redirect(url_for("profile", username=session["user"]))
+        
     return render_template("register.html")
 
 # ---- Login ----
@@ -160,9 +162,8 @@ def edit_recipe(recipe_id):
             "tips": request.form.get("tips"), 
             "created_by": session["user"]
         }
-        mongo.db.update({"_id": ObjectId(recipe_id)}, submit)
+        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Recipe Successfully Updated")
-        # return redirect(url_for("get_recipes"))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
