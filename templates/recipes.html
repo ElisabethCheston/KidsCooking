@@ -4,7 +4,6 @@
 
 {% for recipe in recipes %}
 
-<!-- Head banner -->
 <div class="row card-panel hoverable">
     <h6 class="purple-text accent-3 left-align col s6">{{ recipe.category_name }}</h6>
 
@@ -16,11 +15,12 @@
     </div>
 
     <!-- Left column -->
+    <h5 class="col s12 purple-text accent-3 left-align">{{ recipe.title }}</h5>
+    <p><em>by: {{ recipe.created_by }}</em></p>
+
     <div class="col s12 m6 l6">
-        <h4 class="purple-text accent-3 left-align">{{ recipe.title }}</h4>
-        <p><em>by: {{ recipe.created_by }}</em></p>
         <div class="list-img">
-            <img class="responsive-img box center-align" src="{{ recipe.url_img }}" alt="test">
+            <img class="responsive-img box center-align" src="{{ recipe.url_img }}" alt="Dinner Image">
 
             <!-- Recipe info banner under image -->
             <table class="info-table">
@@ -43,27 +43,23 @@
                 </tbody>
             </table>
         </div>
+        <br>
+        <h6 class="recipe-header">Ingredients</h6>
+        <p class="flow-text">{{ recipe.ingredients }}</p><br>
     </div>
 
     <!-- Right column -->
     <div class="col s12 m6 l6">
-        <br>
         <div class="recipe-info">
             <h6 class="recipe-header">Preparation</h6>
             <p class="flow-text">{{ recipe.preparation }}</p><br>
-            <h6 class="recipe-header">Ingredients</h6>
-            <p class="flow-text">{{ recipe.ingredients }}</p><br>
             <h6 class="recipe-header">Instructions</h6>
             <p class="flow-text">{{ recipe.instructions }}</p><br>
             <h6 class="recipe-header">Tips</h6>
             <p class="flow-text">{{ recipe.tips }}</p><br>
         </div>
-
     </div>
 </div>
-
 {% endfor %}
-
-</div>
 
 {% endblock %}

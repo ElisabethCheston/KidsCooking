@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h5 class="left-align purple-text text-shadow">SWEETS RECIPES</h5>
+<h6 class="left-align purple-text text-shadow">SWEETS RECIPES</h6>
 
 {% for recipe in sweets_recipes %}
 
@@ -10,16 +10,19 @@
     <h6 class="purple-text accent-3 left-align col s6">{{ recipe.category_name }}</h6>
 
     <div class="col s6 text-shadow">
+        {% if session.user|lower == recipe.created_by|lower %}
         <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small editbutton right">Edit</a>
-        <a href="" class="btn-small editbutton right">Delete</a>
+        <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small editbutton right">Delete</a>
+        {% endif %}
     </div>
 
     <!-- Left column -->
+    <h5 class="col s12 purple-text accent-3 left-align">{{ recipe.title }}</h5>
+    <p><em>by: {{ recipe.created_by }}</em></p>
+
     <div class="col s12 m6 l6">
-        <h5 class="purple-text accent-3 left-align">{{ recipe.title }}</h5>
-        <p><em>by: {{ recipe.created_by }}</em></p>
         <div class="list-img">
-            <img class="responsive-img box center-align" src="{{ recipe.url_img }}" alt="test">
+            <img class="responsive-img box center-align" src="{{ recipe.url_img }}" alt="Dinner Image">
 
             <!-- Recipe info banner under image -->
             <table class="info-table">
@@ -42,25 +45,23 @@
                 </tbody>
             </table>
         </div>
+        <br>
+        <h6 class="recipe-header">Ingredients</h6>
+        <p class="flow-text">{{ recipe.ingredients }}</p><br>
     </div>
 
     <!-- Right column -->
     <div class="col s12 m6 l6">
-        <br>
         <div class="recipe-info">
             <h6 class="recipe-header">Preparation</h6>
             <p class="flow-text">{{ recipe.preparation }}</p><br>
-            <h6 class="recipe-header">Ingredients</h6>
-            <p class="flow-text">{{ recipe.ingredients }}</p><br>
             <h6 class="recipe-header">Instructions</h6>
             <p class="flow-text">{{ recipe.instructions }}</p><br>
             <h6 class="recipe-header">Tips</h6>
             <p class="flow-text">{{ recipe.tips }}</p><br>
         </div>
-
     </div>
 </div>
-
 {% endfor %}
 
 {% endblock %}
