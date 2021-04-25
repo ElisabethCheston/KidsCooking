@@ -9,8 +9,10 @@
     <h6 class="purple-text accent-3 left-align col s6">{{ recipe.category_name }}</h6>
 
     <div class="col s6 text-shadow">
+        {% if session.user|lower == recipe.created_by|lower %}
         <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small editbutton right">Edit</a>
         <a href="" class="btn-small editbutton right">Delete</a>
+        {% endif %}
     </div>
 
     <!-- Left column -->
@@ -62,20 +64,6 @@
 
 {% endfor %}
 
-<div class="row">
-    <div class="col s12 center-align">
-        <p>OTHER</p>
-    </div>
-    <div class="col s12 m4 l2"><img class="responsive-img" src="static/images/recipes/chickenbroccoli.jpg">
-        <p>Chicken Broccoli</p>
-    </div>
-    <div class="col s12 m4 l8"><img class="responsive-img" src="static/images/recipes/pastasalad.jpg">
-        <p>Pasta Sallad</p>
-    </div>
-    <div class="col s12 m4 l2"><img class="responsive-img" src="static/images/recipes/flyingsaucers.jpg">
-        <p>Flying Sauser</p>
-    </div>
-</div>
 </div>
 
 {% endblock %}
