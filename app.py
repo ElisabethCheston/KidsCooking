@@ -26,6 +26,11 @@ def index():
     
     return render_template("index.html")
 
+# ---- Contact ----
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
+
 # ---- Registration ----
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -101,23 +106,23 @@ def profile(username):
     # if user cookie is untrue return to login
     return redirect(url_for("login"))
 
+
+# ---- RECIPES ----
 # ---- Recipes ----
+@app.route("/recipes", methods=["GET", "POST"])
+def recipes():
+    all_recipes = mongo.db.recipes.find({"category_name": "All Recipes"})
+    print(all_recipes)
+    return render_template("all_recipes.html", all_recipes=all_recipes, page='recipes')
+
 @app.route("/get_recipes")
 def get_recipes():
     recipes = mongo.db.recipes.find()
     return render_template("recipes.html", recipes=recipes)
 
-# ---- Collections ----
-# recipe_coll = mongo.db.recipes
-# category_coll = mongo.db.categories
-
-# ---- Items per Page ----
-per_page = 6    
-
 # ---- Add recipes ----
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
-
     if request.method == "POST":
         
         recipe = {
@@ -134,7 +139,6 @@ def add_recipe():
             "tips": request.form.get("tips"), 
             "created_by": session["user"]
         }
-
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe Successfully Added")
         return redirect(url_for("get_recipes"))
@@ -142,12 +146,10 @@ def add_recipe():
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipe.html", categories=categories)
 
-
 # ---- Edit recipes ----
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":
-        
         submit = {
             "category_name": request.form.get("category_name"),
             "title": request.form.get("title"),
@@ -176,17 +178,15 @@ def delete_recipe(recipe_id):
     flash("Recipe Successfully Deleted")
     return redirect(url_for("get_recipes"))
 
-
 # ---- Recipe by category ----
 @app.route("/get_recipe_by_category/<category>")
 def get_recipes_by_category(category):
     recipe = mongo.db.recipes.find({"category_name": category})
     return render_template("recipes.html", recipe=recipe) 
 
-# ---- Contact ----
-@app.route("/contact")
-def contact():
-    return render_template("contact.html")
+
+
+# ---- CATEGORIES ----
 
 # ---- Categories ----
 @app.route("/categories")
@@ -232,13 +232,7 @@ def delete_category(category_id):
     flash("Category Successfully Deleted")
     return redirect(url_for("get_categories"))
 
-
-@app.route("/recipes", methods=["GET", "POST"])
-def recipes():
-    all_recipes = mongo.db.recipes.find({"category_name": "All Recipes"})
-    print(all_recipes)
-    return render_template("all_recipes.html", all_recipes=all_recipes, page='recipes')
- 
+# ---- Category names ----
 @app.route("/snacks", methods=["GET", "POST"])
 def snacks():
     snacks_recipes = mongo.db.recipes.find({"category_name": "Snacks"})

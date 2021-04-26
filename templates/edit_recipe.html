@@ -29,8 +29,8 @@
             <div class="input-field col s12">
                 <div class="input-field form-field text-field">
                     <i class="fas fa-pencil-alt prefix small"></i>
-                    <input placeholder="Title of recipe" value="{{ recipe.title }}" id="title" name="title" type="text" class="validate"
-                        minlength="5" maxlength="50" pattern="(?:\s*[a-zA-Z]+){1,6}" required>
+                    <input placeholder="Title of recipe" value="{{ recipe.title }}" id="title" name="title" type="text"
+                        class="validate" minlength="5" maxlength="50" pattern="(?:\s*[a-zA-Z]+){1,6}" required>
                     <label for="title">Recipe name</label>
                 </div>
             </div>
@@ -73,7 +73,6 @@
                 <label for="portions"></label>
                 <select id="portions" name="portions" class="validate" required>
                     <option value="{{ recipe.portions }}" selected>{{ recipe.portions }}</option>
-                    <!--{% for i in range(1, 21) %}-->
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -85,9 +84,7 @@
                     <option value="9">9</option>
                     <option value="10">10</option>
                     <option value="11">11</option>
-                    <option value="12">12</option>                                       
-                    <!--<option value="{{ i }}">{{ i }}</option>
-                    {% endfor %}-->
+                    <option value="12">12</option>
                 </select>
             </div>
 
@@ -187,30 +184,26 @@
             <label for="tips">Tips</label>
         </div>
 
-</div>
-</div>
-</div>
+        <div class="row">
 
-</div>
+            <!-- Cancel Recipe Button -->
+            <div id="cancel-button" class="col s6 right-align">
+                <a id="cancel-add" href="{{ url_for('get_recipes') }}" class="btn cancelbutton tooltipped"
+                    data-position="bottom" data-tooltip="This will take you back to the recipes page">
+                    Cancel <i class="fas fa-times-circle #9d0ab1" aria-hidden="true"></i>
+                </a>
+            </div>
 
-<!-- Cancel Recipe Button -->
-<div class="row">
-    <div id="cancel-button" class="col s6 right-align">
-        <a id="cancel-add" href="{{ url_for('get_recipes') }}" class="btn cancelbutton tooltipped"
-            data-position="bottom" data-tooltip="This will take you back to the recipes page">
-            Cancel <i class="fas fa-times-circle #9d0ab1" aria-hidden="true"></i>
-        </a>
-    </div>
+            <!-- Submit Recipe Button -->
+            <div class="col s6 left-align">
+                <button type="submit" data-target="added" class="btn waves-effect #9d0ab1 submitbutton">
+                    Submit <i class="fas fa-edit #c6ff00" aria-hidden="true"></i>
+                </button>
+            </div>
 
-    <!-- Submit Recipe Button -->
-    <div class="col s6 left-align">
-        <button type="submit" data-target="added" class="btn waves-effect #9d0ab1 submitbutton">
-            Submit <i class="fas fa-edit #c6ff00" aria-hidden="true"></i>
-        </button>
-    </div>
-</div>
+        </div>
 
-</form>
+    </form>
 </div>
 
 {% endblock %}
