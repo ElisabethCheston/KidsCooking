@@ -5,23 +5,26 @@
 <h4 class="left-align purple-text text-shadow">Edit Category</h4>
 
 <div class="card-panel grey lighten-5">
-    <form class="col s12" method="POST" action="{{ url_for('edit_category') }}">
+    <form class="col s12" method="POST" action="{{ url_for('edit_category', category_id=category._id) }}">
 
         <!-- TEXT INPUT -->
         <!-- Recipe Category -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
-                <input id="category_name" name="category_name" minlength="3" maxlength="25" type="text" class="validate"
-                    required>
+                <input id="category_name" value="{{ category.category_name }}" name="category_name" minlength="3"
+                    maxlength="25" type="text" class="validate" required>
                 <label for="category_name">Category Name</label>
             </div>
         </div>
 
         <!-- Submit Recipe Button -->
-        <div class="col s6 left-align">
-            <button type="submit" data-target="added" class="btn waves-effect submitbutton">
-                Submit <i class="fas fa-edit #c6ff00" aria-hidden="true"></i>
+        <div class="col s12 center-align">
+            <a href="{{ url_for('get_categories') }}" class="btn-large red text-shadow">
+                Cancel <i class="fas fa-times-circle right"></i>
+            </a>
+            <button type="submit" class="btn-large light-blue darken-1 text-shadow">
+                Edit Category <i class="fas fa-edit right"></i>
             </button>
         </div>
     </form>
