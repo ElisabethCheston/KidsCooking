@@ -21,6 +21,11 @@ mongo = PyMongo(app)
 
 # ---- Home ----
 @app.route("/")
+# ---- Categories ----
+@app.route("/categories")
+def categories():
+    return render_template("categories.html")
+    
 @app.route("/index")
 def index():
     
@@ -188,10 +193,6 @@ def get_recipes_by_category(category):
 
 # ---- CATEGORIES ----
 
-# ---- Categories ----
-@app.route("/categories")
-def categories():
-    return render_template("categories.html")
 
 @app.route("/get_categories")
 def get_categories():

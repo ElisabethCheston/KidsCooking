@@ -21,15 +21,14 @@ function addImage() {
     document.getElementById("image-container").appendChild(image);
 }
 
-// - START POPUP MODAL ONLY SHOWN ONCE  - //
-
-$(window).on('load', function () {
-    $('#startModal').modal('show');
+document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems, options);
 });
 
-// - NAME LINK TO START MODE WITHOUT START MODAL - //
-
-$("#startView").click(function() {
-  infowindow.close();
-  map.fitBounds(bounds);
+// Or with jQuery
+/*
+$(document).ready(function () {
+    $('.modal').modal();
 });
+*/
