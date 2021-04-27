@@ -131,7 +131,8 @@ If you like to delete your account, you should see a “Delete Profile” button
 
 **First Page** 
   
-![First Page](https://user-images.githubusercontent.com/70586630/114395902-35388780-9b9d-11eb-8fd5-7bf96acf0ff0.png)
+  ![First Page](https://user-images.githubusercontent.com/70586630/116284959-f22a0700-a78d-11eb-9862-a5f7fc8f53ee.png)
+
   
   **Login**
     
@@ -139,27 +140,31 @@ If you like to delete your account, you should see a “Delete Profile” button
   
   **Register**  
     
-![Register](https://user-images.githubusercontent.com/70586630/114396595-05d64a80-9b9e-11eb-95df-5ab74a1d15b3.png)
+![Register](https://user-images.githubusercontent.com/70586630/116284979-f9e9ab80-a78d-11eb-98a1-05dd7b17aed0.png)
+
   
   **Profile**  
     
-![Login Profile](https://user-images.githubusercontent.com/70586630/114395977-4bdede80-9b9d-11eb-87ec-04aafea8b911.png)
+
   
   **Categories**  
     
-![categories](https://user-images.githubusercontent.com/70586630/114396036-5e591800-9b9d-11eb-8e6c-02fb0e875792.png)
+![Categories](https://user-images.githubusercontent.com/70586630/116285011-0241e680-a78e-11eb-815e-11190d83eab8.png)
 
-  **Recipes**  
+
+  **Unregistered User**  
     
-![Recipes](https://user-images.githubusercontent.com/70586630/114396056-64e78f80-9b9d-11eb-920d-35f5040c8af8.png)
+![Unregister user](https://user-images.githubusercontent.com/70586630/116285489-6d8bb880-a78e-11eb-8a96-05b1cbc04d37.png)
+
   
   **Create Recipes**  
   
-![Create Recipes](https://user-images.githubusercontent.com/70586630/114414107-d54adc80-9bae-11eb-9263-74960065b3cf.png)
-  
+![Create Recipes](https://user-images.githubusercontent.com/70586630/116285066-0ec63f00-a78e-11eb-9ab2-a5e5acf17dba.png)
+
   **Recipe Layout**  
     
-![Recipe Layout](https://user-images.githubusercontent.com/70586630/114414084-d0862880-9bae-11eb-931d-0a5c9293ed91.png)
+![Recipe Layout](https://user-images.githubusercontent.com/70586630/116285092-15ed4d00-a78e-11eb-903c-d826c8c0244c.png)
+
 
 
 ## Features
