@@ -6,7 +6,7 @@ $(document).ready(function () {
     $(".parallax").parallax();
     // $('.dropdown-trigger').dropdown();
     // $(".fixed-action-btn").floatingActionButton();
-    // $(".modal").modal();
+     $(".modal").modal();
 });
 
 
@@ -21,14 +21,4 @@ function addImage() {
     document.getElementById("image-container").appendChild(image);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    var elems = document.querySelectorAll('.modal');
-    var instances = M.Modal.init(elems, options);
-});
 
-// Or with jQuery
-/*
-$(document).ready(function () {
-    $('.modal').modal();
-});
-*/
