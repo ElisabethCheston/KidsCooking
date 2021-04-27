@@ -63,14 +63,14 @@
             <p class="flow-text">{{ recipe.preparation }}</p><br>
 
             <h6 class="recipe-header">Instructions</h6>
-                    <ul>
-            {% for list in recipe.instructions.splitlines() %}
-            <li>
-                <p>{{list}}</p>
-            </li>
-            {% endfor %}
-        </ul>
-
+            <ul>
+                {% for list in recipe.instructions.splitlines() %}
+                <li>
+                    <p>{{list}}</p>
+                </li>
+                {% endfor %}
+            </ul>
+            <br>
             <h6 class="recipe-header">Tips</h6>
             <p class="flow-text">{{ recipe.tips }}</p><br>
         </div>

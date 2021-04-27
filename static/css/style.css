@@ -122,6 +122,12 @@ i.fas.fa-bars,
   color: black;
 }
 
+.modal1,
+.modal-content,
+.modal-footer {
+    background-color: rgba(250, 250, 250, 0.1) !important;
+}
+
 body {
     display: flex;
     min-height: 100vh;

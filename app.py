@@ -22,9 +22,11 @@ mongo = PyMongo(app)
 # ---- Home ----
 @app.route("/")
 # ---- Categories ----
-@app.route("/categories")
-def categories():
-    return render_template("categories.html")
+@app.route("/recipes", methods=["GET", "POST"])
+def recipes():
+    all_recipes = mongo.db.recipes.find({"category_name": "All Recipes"})
+    print(all_recipes)
+    return render_template("all_recipes.html", all_recipes=all_recipes, page='recipes')
     
 @app.route("/index")
 def index():
@@ -114,11 +116,9 @@ def profile(username):
 
 # ---- RECIPES ----
 # ---- Recipes ----
-@app.route("/recipes", methods=["GET", "POST"])
-def recipes():
-    all_recipes = mongo.db.recipes.find({"category_name": "All Recipes"})
-    print(all_recipes)
-    return render_template("all_recipes.html", all_recipes=all_recipes, page='recipes')
+@app.route("/categories")
+def categories():
+    return render_template("categories.html")
 
 @app.route("/get_recipes")
 def get_recipes():
@@ -190,9 +190,7 @@ def get_recipes_by_category(category):
     recipe = mongo.db.recipes.find({"category_name": category})
     return render_template("recipes.html", recipe=recipe) 
 
-
 # ---- CATEGORIES ----
-
 @app.route("/get_categories")
 def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
