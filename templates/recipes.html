@@ -45,7 +45,15 @@
         </div>
         <br>
         <h6 class="recipe-header">Ingredients</h6>
-        <p class="flow-text">{{ recipe.ingredients }}</p><br>
+
+        <ul>
+            {% for list in recipe.ingredients.splitlines() %}
+            <li>
+                <p>{{list}}</p>
+            </li>
+            {% endfor %}
+        </ul>
+
     </div>
 
     <!-- Right column -->
@@ -53,8 +61,16 @@
         <div class="recipe-info">
             <h6 class="recipe-header">Preparation</h6>
             <p class="flow-text">{{ recipe.preparation }}</p><br>
+
             <h6 class="recipe-header">Instructions</h6>
-            <p class="flow-text">{{ recipe.instructions }}</p><br>
+                    <ul>
+            {% for list in recipe.instructions.splitlines() %}
+            <li>
+                <p>{{list}}</p>
+            </li>
+            {% endfor %}
+        </ul>
+
             <h6 class="recipe-header">Tips</h6>
             <p class="flow-text">{{ recipe.tips }}</p><br>
         </div>
