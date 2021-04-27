@@ -190,9 +190,7 @@ def get_recipes_by_category(category):
     return render_template("recipes.html", recipe=recipe) 
 
 
-
 # ---- CATEGORIES ----
-
 
 @app.route("/get_categories")
 def get_categories():

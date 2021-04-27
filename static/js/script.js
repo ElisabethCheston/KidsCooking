@@ -6,7 +6,7 @@ $(document).ready(function () {
     $(".parallax").parallax();
     // $('.dropdown-trigger').dropdown();
     // $(".fixed-action-btn").floatingActionButton();
-     $(".modal").modal();
+    // $(".modal").modal();
 });
 
 
@@ -22,3 +22,9 @@ function addImage() {
 }
 
 
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.modal').modal();
+    $('#modal1').modal('open'); 
+  });

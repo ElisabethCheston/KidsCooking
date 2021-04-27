@@ -1,35 +1,62 @@
 {% extends "base.html" %}
 {% block content %}
 
+
+<!-- Modal Trigger -->
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal lime accent-3">
+    <div class="modal-content lime accent-3">
+        <h4 class="lime accent-3 purple-text text-accent-3 category-link center-align text-shadow">Welcome to Cooking with Kids!</h4>
+        <div>
+            <br>
+        <h6 class="welcome purple-text" href="">
+            Here you can get recipes of cool snacks for your party or fun food 
+            to eat for lunch or dinner.
+        </h6>
+            <br>
+            <h6 class="welcome purple-text" href="">
+            If you like to publish your own recipes to share with others, 
+            then Register for a profile and start creating those recipes!
+        </h6>
+        </div>
+    </div>
+    <div class="modal-footer lime accent-3">
+        <a href="#!" class="modal-close waves-effect waves-green purple lime-text text-accent-3 btn-flat">OK</a>
+    </div>
+</div>
+
+
 <!-- <h4 class="left-align purple-text text-shadow">Categories</h4> -->
 
 {% if session.user|lower == "admin"|lower %}
 <h3 class="purple-text text-accent-3 center-align">Manage Categories</h3>
 
-    <div class="row">
-        <div class="col s12 center-align">
-            <a href="{{ url_for('add_category') }}" class="btn-large lime accent-3 purple-text text-accent-3 text-shadow">
-                Add Category <i class="fas fa-plus-square right"></i>
-            </a>
+<div class="row">
+    <div class="col s12 center-align">
+        <a href="{{ url_for('add_category') }}" class="btn-large lime accent-3 purple-text text-accent-3 text-shadow">
+            Add Category <i class="fas fa-plus-square right"></i>
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    {% for category in categories %}
+    <div class="col s12 m3">
+        <div class="card purple accent-3 text-shadow center-align">
+            <div class="card-content lime-text text-accent-3">
+                <span class="card-title">{{ category.category_name }}</span>
+            </div>
+            <div class="card-action">
+                <a href="{{ url_for('edit_category', category_id=category._id) }}" class="btn green accent-4">Edit</a>
+                <a href="{{ url_for('delete_category', category_id=category._id) }}"
+                    class="btn light-blue lighten-1">Delete</a>
+            </div>
         </div>
     </div>
+    {% endfor %}
 
-    <div class="row">
-        {% for category in categories %}
-            <div class="col s12 m3">
-                <div class="card purple accent-3 text-shadow center-align">
-                    <div class="card-content lime-text text-accent-3">
-                        <span class="card-title">{{ category.category_name }}</span>
-                    </div>
-                    <div class="card-action">
-                        <a href="{{ url_for('edit_category', category_id=category._id) }}" class="btn green accent-4">Edit</a>
-                        <a href="{{ url_for('delete_category', category_id=category._id) }}" class="btn light-blue lighten-1">Delete</a>
-                    </div>
-                </div>
-            </div>
-        {% endfor %}
-        
-    </div>
+</div>
 {% else %}
 <div class="row center-align">
 
@@ -72,7 +99,7 @@
             <a href="{{ url_for('sweets') }}" class="category-link">SWEETS</a>
         </div>
     </div>
-    
+
     <div class="category-container col s12 m6">
         <img class="responsive-img" src="static/images/categories-img/party.jpg" alt="test">
         <!-- Party -->
