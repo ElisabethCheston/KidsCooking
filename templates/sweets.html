@@ -5,7 +5,6 @@
 
 {% for recipe in sweets_recipes %}
 
-<!-- Head banner -->
 <div class="row card-panel hoverable">
     <h6 class="purple-text accent-3 left-align col s6">{{ recipe.category_name }}</h6>
 
@@ -46,17 +45,33 @@
             </table>
         </div>
         <br>
-        <h6 class="recipe-header">Ingredients</h6>
-        <p class="flow-text">{{ recipe.ingredients }}</p><br>
+
+
+
     </div>
 
     <!-- Right column -->
     <div class="col s12 m6 l6">
         <div class="recipe-info">
-            <h6 class="recipe-header">Preparation</h6>
-            <p class="flow-text">{{ recipe.preparation }}</p><br>
+            <h6 class="recipe-header">Ingredients</h6>
+            <ul>
+                {% for list in recipe.ingredients.splitlines() %}
+                <li>
+                    <p>{{list}}</p>
+                </li>
+                {% endfor %}
+            </ul>
+            <br>
+
             <h6 class="recipe-header">Instructions</h6>
-            <p class="flow-text">{{ recipe.instructions }}</p><br>
+            <ul>
+                {% for list in recipe.instructions.splitlines() %}
+                <li>
+                    <p>{{list}}</p>
+                </li>
+                {% endfor %}
+            </ul>
+            <br>
             <h6 class="recipe-header">Tips</h6>
             <p class="flow-text">{{ recipe.tips }}</p><br>
         </div>

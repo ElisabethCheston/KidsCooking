@@ -9,6 +9,9 @@ $(document).ready(function () {
     // $(".modal").modal();
 });
 
+/*
+instance.getSelectedValues();
+*/
 
 /* --- URL IMAGES --- */
 
@@ -27,6 +30,4 @@ function addImage() {
   $(document).ready(function(){
     $('.modal').modal();
     $('#modal1').modal('open'); 
-    $('#modal1').modal('close'); 
-
   });

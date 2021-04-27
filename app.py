@@ -21,17 +21,11 @@ mongo = PyMongo(app)
 
 # ---- Home ----
 @app.route("/")
-# ---- Categories ----
-@app.route("/recipes", methods=["GET", "POST"])
-def recipes():
-    all_recipes = mongo.db.recipes.find({"category_name": "All Recipes"})
-    print(all_recipes)
-    return render_template("all_recipes.html", all_recipes=all_recipes, page='recipes')
-    
 @app.route("/index")
 def index():
     
     return render_template("index.html")
+
 
 # ---- Contact ----
 @app.route("/contact")
