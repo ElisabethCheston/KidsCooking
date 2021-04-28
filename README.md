@@ -195,7 +195,7 @@ If you like to delete your account, you should see a “Delete Profile” button
 
 **First Page** 
   
-  ![First Page](https://user-images.githubusercontent.com/70586630/116284959-f22a0700-a78d-11eb-9862-a5f7fc8f53ee.png)
+ ![First Page](https://user-images.githubusercontent.com/70586630/116284959-f22a0700-a78d-11eb-9862-a5f7fc8f53ee.png)
 
   
   **Login**
@@ -399,7 +399,7 @@ Clone to GitHub Desktop:
 
 ### Media<a name=”media”></a>
 
-
+Link to [Media.md](Media.md) information.
   
   
   
