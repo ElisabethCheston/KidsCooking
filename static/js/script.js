@@ -7,7 +7,9 @@ $(document).ready(function () {
     // $('.dropdown-trigger').dropdown();
     // $(".fixed-action-btn").floatingActionButton();
     // $(".modal").modal();
-});
+ //$('#multipleselect').append(<"Oven", "Stove", "Knife", "Microwave", "Mixer">)
+    $('#multipleselect').formSelect()
+    });
 
 document.addEventListener('DOMContentLoaded', function () {
     var elems = document.querySelectorAll('select');
@@ -19,13 +21,13 @@ instance.getSelectedValues();
 */
 
 document.addEventListener("DOMContentLoaded", function () {
-  const selects = document.querySelector("select");
-  const instances = M.FormSelect.init(selects, {});
-  const selectOption = document.querySelector("#multipleselect");
-    
+  var selects = document.querySelector("select");
+  var instances = M.FormSelect.init(selects, {});
+  var selectOption = document.querySelector("#multipleselect");
+
   selectOption.addEventListener("change", function () {
-    const instance = M.FormSelect.getInstance(selectOption);
-    const selectedValues = instance.getSelectedValues();
+    var instance = M.FormSelect.getInstance(selectOption);
+    var selectedValues = instance.getSelectedValues();
     console.log(selectedValues);
   });
 });
@@ -45,6 +47,6 @@ function addImage() {
 // Or with jQuery
 
 $(document).ready(function () {
-    $('.modal').modal();
+            $('.modal').modal();
     $('#modal1').modal('open');
 });
