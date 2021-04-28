@@ -1,15 +1,61 @@
 # Cooking With Kids
 Encourage your kids to become more active in the kitchen and give them a basic knowledge of how to prepare food them self!  
   
-*MongoDB database project stored in GitHub and deployed to Heroku.*
+*MongoDB database project stored in GitHub and deployed to Heroku.*  
+  
+# Table of contents
+  
+[The UX Framework (Strategy Plane)](strategyplane)  
+   [ -  Introduction](introduction) 
 
-## 1.	The UX Framework (Strategy Plane)
+[User Stories (Scope Plane)](ux)  
 
-### Introduction
+[Structure plane](structureplane)  
+   [ -  Typography](typography)  
+   [ -  Color](color)  
+   [ -  Interactiv Design & Informatiove Architecture](idandia)  
+
+ [Skeleton Plane](skeletonplane)  
+   [ -  The structure of the website](skeleton)  
+	 [ -  The database structure](database)  
+	 [ -  Recipe categories](recipecat)  
+	 [ -  Recipe information](recipeinfo)     
+  
+[Surface Plane](surfaceplane)  
+	 [ -  Wireframes](wireframes)  
+
+[Features](features)  
+	[ -  Existing Features](existingfeat)  
+	[ -  Features Left to Implement](featimpl)  
+
+[Technologies Used](usertech)  
+ 
+[Testing](testing)  
+	[ -  Manual](manual)  
+	[ -  Responsivness](responsivness)  
+	[ -  Browser](browser)  
+	[ -  Devices](device)  
+	[ -  User Stories](ustest)  
+	[ -  Validator](validator)  
+	[ -  Bugs](bugs)  
+
+[Deployment](deployment)  
+
+[Credits](credit)  
+	[ -  Content](content)   
+	[ -  Media](media)  
+	[ -  Acknowledgements](acknowled) 
+	[ -  Links](link)  
+    
+    
+## The UX Framework (Strategy Plane)<a name="StrategyPlane"></a>
+
+
+### Introduction<a name="introduction"></a>
 The idea of this website is to create meals and snacks by follow easy instructions. Target audience is primary the younger generation. Recipes can are displayed on website for free. An options to become a user to create users own recipes to share with other users.
-### Goal
+### Goal<a name="StrategyPlane"></a>
 Build a recipe webpage with HTML, CSS, JavaScript, Python, MongoDB, Flask technologies where users can manipulate CRUD functions (create, read, update and delete). The user will also be able to store data.  
-## 1.2 User Stories (Scope Plane)
+## User Stories (Scope Plane)<a name="ux"></a>
 
 The type of users for the website are kid (13 years old or younger), guest user, parents of kids, registered users, admin user. 
   
@@ -47,13 +93,14 @@ As an admin I want:
 * users to be able to contact me if something is wrong with the website.
 
 
-## 1.3 Structure plane
+## Structure plane<a name="structureplane"></a>
 
-### Typography
+### Typography<a name="typography"></a>
 
 Font style used for the website is Atma and Oswald. Atma for headers and logo and Oswald for all other text.
 
-### Color
+### Color<a name="color"></a>
+
 
 Except for black and white the 3 basic colors used through the website are:  
   
@@ -61,18 +108,23 @@ Except for black and white the 3 basic colors used through the website are:
 •	Purple  
 •	limegreen  
 
-### Interactiv Design & Informatiove Architecture
+### Interactiv Design & Informatiove Architecture<a name="idandia"></a>
+
   
-#### Recipes  
+#### Recipes
+  
 In the top navbar there is a dropdown button with all recipe categories open for public. Once I select one of them rows with recipes are shown in the body. To view the you click on the name or pic.
 
-#### Create an account  
+#### Create an account
+  
 For the first time user, the option to “Register” or “Sign In” on the first page. When choosing “Register” user have to fill in a username and a password. Then click “Create account” and the page automatically takes the user to their profile page. If user already has an account they just click on the “Sign In” button and fill in the username and password.
 
-#### Categories  
+#### Categories
+  
 When you’re a logged in user you will see a button in the top navbar called “Categories”. When clicked a dropdown list shows of all category options shows. Once I select one of them a list with all of those recipes should show in the main window.
 
-#### Create Recipe Posts  
+#### Create Recipe Posts
+  
 As a registered user you should see a button called “Create Recipes” in your profile. Once clicked it should clear how to fill in the fields. 
 
 #### Edit Recipe Post  
@@ -90,19 +142,19 @@ The “Sign Out” button in the top navbar should be clickable and log you out 
 #### Delete Account
 If you like to delete your account, you should see a “Delete Profile” button in your profile when logged in. Once you click on the “Delete Profile” button you will automatically be logged out from the profile page and get a confirmation message on screen.  
 
-## 1.4 Skeleton Plane
+## Skeleton Plane<a name="skeletonplane"></a>
 
-### The structure of the website:   
+### The structure of the website:<a name="skeleton"></a>   
 
 ![Skeleton](https://user-images.githubusercontent.com/70586630/115709898-075bfb80-a372-11eb-80aa-6ff07e7046c0.png)
 
-### The database structure:   
- 
-
+### The database structure:<a name="database"></a>   
+  
 <img width="687" alt="skeletoncooking" src="https://user-images.githubusercontent.com/70586630/114391610-fd7b1100-9b97-11eb-9e09-6957d0c69322.png">
 
 
- ### Recipe categories:    
+ ### Recipe categories:<a name="recipecat"></a>   
+     
 *	Snacks  
 *	Lunch  
 *	Dinner  
@@ -110,8 +162,8 @@ If you like to delete your account, you should see a “Delete Profile” button
 *	Sweets  
 *	Party  
 
-### Recipe information:   
-
+### Recipe information:<a name="recipeinfo"></a>   
+    
 *	Category  
 *	Name of the recipe  
 *	Created by user  
@@ -125,9 +177,11 @@ If you like to delete your account, you should see a “Delete Profile” button
 *	Cooking instructions    
 *	Tips on things to think about or to improve the recipe  
 
-## 1.5	Surface Plane
+## Surface Plane:<a name="surfaceplane"></a>   
+ 
 
-### Wireframes
+### Wireframes:<a name="wireframes"></a>   
+ 
 
 **First Page** 
   
@@ -167,9 +221,11 @@ If you like to delete your account, you should see a “Delete Profile” button
 
 
 
-## Features
+## Features:<a name="features"></a>   
+ 
 
-### Existing Features
+### Existing Features:<a name="existingfeat"></a>   
+
 
 **Top Navbar:** [From Materialized](https://materializecss.com/navbar.html) Navbar with links aligned to the right for recipes, login, register. As a user you will have access to links create recipes and delete recipes.  
   
@@ -191,20 +247,20 @@ If you like to delete your account, you should see a “Delete Profile” button
 
 **Add Image to recipes** Code from [Gazza J MS3](https://github.com/GazzaJ/CI-MS3-W3Recipes/blob/main/templates/add_recipe.html)
   
-**Flash messages:** Vertification to users when creating, editing or deleting post or deleting account.  
+**Flash messages:** Vertification to users when creating, editing or deleting post or deleting account. 
   
 **Buttons:** In the top right coner of every recipe that profile user has created is an option to edit the recipe or delete it. When register an account or login there is a comfirmation button at the end. And in the top right corner there is a x-mark if user want to close the window without register or login.  
 
 **Footer** [From Materialized](https://materializecss.com/footer.html) Repitition links at the bottom from the navbars, copyright information, and a back to top button.
   
 
-### Features Left to Implement
-
+### Features Left to Implement:<a name="featimpl"></a>   
+ 
 **Subscription** Could be added of weekly updates.  
 **Categories** More categories could be added if needed.   
 
-## Technologies Used
-
+## Technologies Used:<a name="usertech"></a>   
+ 
 **Text Editor:**
   * [GitPod](https://gitpod.com/) – the editor to build, commit, and push data to GitHub.  
   
@@ -243,11 +299,12 @@ If you like to delete your account, you should see a “Delete Profile” button
   *	Jshint](https://jshint.com/) - Validate JavaScript
   *	[PEP8](https://www.datacamp.com/community/tutorials/pep8-tutorial-python-code?utm_source=adwords_ppc&utm_campaignid=898687156&utm_adgroupid=48947256715&utm_device=c&utm_keyword=&utm_matchtype=b&utm_network=g&utm_adpostion=&utm_creative=229765585183&utm_targetid=aud-392016246653:dsa-429603003980&utm_loc_interest_ms=&utm_loc_physical_ms=1012697&gclid=Cj0KCQjwsLWDBhCmARIsAPSL3_2C6LOJLPqHUShlkvBE9h1MLyob2wlSsid-Apq1nfjIaiqkO6zEWvkaAoPvEALw_wcB) – for validate the Python code.  
   
-## Testing
-
+## Testing<a name="testing"></a>
+ <a name="structureplane"></a><a name="typography"></a><a name="color"></a><a name="idandia"></a><a name="skeletonplane"></a><a name="skeleton"></a><a name="database"></a><a name="recipecat"></a><a name="recipeinfo"></a><a name="surfaceplane"></a><a name="wireframes"></a><a name="existingfeat"></a><a name="featimpl"></a><a name="usertech"></a><a name="testing"></a><a name="manual"></a>
 Make a separate .md file and link it (Idea from https://github.com/juanstelling/MS3_breaktasty/blob/master/TESTING.md )
 
-### Manual 
+### Manual<a name="manual"></a>  
+  
 **Dev Tools**  
   
 **Error:** <img width="356" alt="Skärmavbild 2021-04-14 kl  11 11 35" src="https://user-images.githubusercontent.com/70586630/115026318-a4c2b580-9ec2-11eb-845a-648e8c6bea5f.png">  
@@ -265,7 +322,6 @@ Make a separate .md file and link it (Idea from https://github.com/juanstelling/
   
   
 **Error:** <img width="572" alt="Skärmavbild 2021-04-23 kl  09 34 20" src="https://user-images.githubusercontent.com/70586630/115863246-7e0dfd00-a435-11eb-8d67-9bed8c52f6a6.png">
-
   
 **Description:** Unable to open the gitpod project and run python3 app.py to open webpage.  
   
@@ -281,20 +337,20 @@ Make a separate .md file and link it (Idea from https://github.com/juanstelling/
 <img width="516" alt="Skärmavbild 2021-04-23 kl  13 19 46" src="https://user-images.githubusercontent.com/70586630/115864141-c679ea80-a436-11eb-9ad4-2d9ff5fd4ed6.png">
   
   
-### Responsivness
+### Responsivness<a name="responsivness"></a>
 
-### Browser
+### Browser<a name="browser"></a>
 
-### Devices
+### Devices<a name="device"></a>
 
-### User Stories
+### User Stories<a name="ustest"></a>
 
-### Validator
+### Validator<a name="validator"></a>
 
-### Bugs
+### Bugs<a name="bugs"></a>
 
 
-## Deployment
+## Deployment<a name="deployment"></a>
 Deployment for this GitHub repository project is done through Heroku through the following steps;
 
 **1. Heroku**
@@ -353,11 +409,11 @@ Clone to GitHub Desktop:
 *	Click on the “Open with GitHub Desktop.  
 *	Then follow the prompts GitHub Desktop instructions to complete the clone.  
 
-## Credits
+## Credits<a name="credit"></a>
   
-### Content
+### Content<a name="content"></a>
   
-### Media
+### Media<a name="media"></a>
 
 Banner  
 Header background  
@@ -451,7 +507,7 @@ Recipe: https://www.tasteofhome.com/recipes/chocolate-raspberry-fondue/
   
   
   
-### Acknowledgements
+### Acknowledgements<a name="acknowled"></a>
 •	I received inspiration for this project from X
 
-### LINKS:
+### LINKS:<a name="link"></a>
