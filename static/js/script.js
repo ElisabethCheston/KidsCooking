@@ -9,9 +9,26 @@ $(document).ready(function () {
     // $(".modal").modal();
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, options);
+});
 /*
+var instance = M.FormSelect.getInstance(elem);
 instance.getSelectedValues();
 */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const selects = document.querySelector("select");
+  const instances = M.FormSelect.init(selects, {});
+  const selectOption = document.querySelector("#multipleselect");
+    
+  selectOption.addEventListener("change", function () {
+    const instance = M.FormSelect.getInstance(selectOption);
+    const selectedValues = instance.getSelectedValues();
+    console.log(selectedValues);
+  });
+});
 
 /* --- URL IMAGES --- */
 
@@ -25,9 +42,9 @@ function addImage() {
 }
 
 
-  // Or with jQuery
+// Or with jQuery
 
-  $(document).ready(function(){
+$(document).ready(function () {
     $('.modal').modal();
-    $('#modal1').modal('open'); 
-  });
+    $('#modal1').modal('open');
+});

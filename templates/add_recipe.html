@@ -98,7 +98,7 @@
 
             <!-- Cooking Tools Dropdown -->
             <div class="input-field col s12 m6 l6">
-                <select name="cooking_material" multiple>
+                <select name="cooking_material" id="multipleselect" multiple>
                     <option value="" disabled selected>Tools:</option>
                     <option value="Oven">Oven</option>
                     <option value="Stove">Stove</option>
@@ -143,20 +143,13 @@
         </div>
         <br>
 
-        <!-- Recipe Preparation Input -->
-        <div class="input-field text-field">
-            <i class="fas fa-book-open prefix" aria-hidden="true"></i>
-            <textarea id="preparation" name="preparation" class="materialize-textarea validate" data-position="bottom"
-                placeholder="Change row for each step." minlength="4" required></textarea>
-            <label for="preparation">Recipe Preparation</label>
-            <a class=""></a>
-        </div>
+
 
         <!-- Recipe Ingredients Input -->
         <div class="input-field text-field">
             <i class="fas fa-list-ul prefix" aria-hidden="true"></i>
             <textarea id="ingredients" name="ingredients" class="materialize-textarea validate" data-position="bottom"
-                data-tooltip="Please add one ingredient on each line." placeholder="One recipe ingredients per line."
+                data-tooltip="Please add one ingredient on each line." placeholder="Change row for each ingredients."
                 minlength="4" required></textarea>
             <label for="ingredients">Recipe Ingredients</label>
             <a class=""></a>
@@ -166,7 +159,7 @@
         <div class="input-field text-field">
             <i class="fas fa-file-alt prefix" aria-hidden="true"></i>
             <textarea id="instructions" name="instructions" class="materialize-textarea validate"
-                placeholder="Change row for each step." minlength="10" maxlength="700" required></textarea>
+                placeholder="Change row for each instruction step." minlength="10" maxlength="700" required></textarea>
             <label for="instructions">Recipe Instructions</label>
         </div>
 
