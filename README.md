@@ -6,48 +6,48 @@ Encourage your kids to become more active in the kitchen and give them a basic k
 # Table of contents
   
 [The UX Framework (Strategy Plane)](#strategyplane)  
-  [Introduction](#introduction)  
-  [Goal](#goal) 
+  * [Introduction](#introduction)  
+  * [Goal](#goal) 
 
 [User Stories (Scope Plane)](#ux) 
 
 [Structure plane](#structureplane)  
-  [Typography](#typography)  
-  [Color](#color)  
-  [Interactiv Design & Informatiove Architecture](#idandia)  
+  * [Typography](#typography)  
+  * [Color](#color)  
+  * [Interactiv Design & Informatiove Architecture](#idandia)  
 
 
 [Skeleton Plane](#skeletonplane)  
-  [The structure of the website](#skeleton)  
-  [The database structure](#database)  
-  [Recipe categories](#recipecat)  
-  [Recipe information](#recipeinfo) 
+  * [The structure of the website](#skeleton)  
+  * [The database structure](#database)  
+  * [Recipe categories](#recipecat)  
+  * [Recipe information](#recipeinfo) 
   
 [Surface Plane](#surfaceplane)  
-  [Wireframes](#wireframes)  
+  * [Wireframes](#wireframes)  
   
 [Features](#features)  
-  [Existing Features](#existingfeat)  
-  [Features Left to Implement](#featimpl)  
+  * [Existing Features](#existingfeat)  
+  * [Features Left to Implement](#featimpl)  
   
 [Technologies Used](#usertech)  
 
 [Testing](#testing)  
-  [Manual](#manual)  
-  [Responsivness](#responsivness)  
-  [Browser](#browser)  
-  [Devices](#device)  
-  [User Stories](#ustest)  
-  [Validator](#validator)  
-  [Bugs](#bugs)  
+  * [Manual](#manual)  
+  * [Responsivness](#responsivness)  
+  * [Browser](#browser)  
+  * [Devices](#device)  
+  * [User Stories](#ustest)  
+  * [Validator](#validator)  
+  * [Bugs](#bugs)  
 
 [Deployment](#deployment)  
 
 [Credits](#credit)  
-  [Content](#content)  
-  [Media](#media)  
-  [Acknowledgements](#Acknowledgements)  
-  [Links](#link)    
+  * [Content](#content)  
+  * [Media](#media)  
+  * [Acknowledgements](#Acknowledgements)  
+  * [Links](#link)    
     
 
 ## The UX Framework (Strategy Plane)<a name="strategyplane"></a>
