@@ -5,56 +5,60 @@ Encourage your kids to become more active in the kitchen and give them a basic k
   
 # Table of contents
   
-[The UX Framework (Strategy Plane)](strategyplane)  
-   [ -  Introduction](introduction) 
+[The UX Framework (Strategy Plane)](#strategyplane)  
+  [Introduction](#introduction)  
+  [Goal](#goal) 
 
-[User Stories (Scope Plane)](ux)  
+[User Stories (Scope Plane)](#ux) 
 
-[Structure plane](structureplane)  
-   [ -  Typography](typography)  
-   [ -  Color](color)  
-   [ -  Interactiv Design & Informatiove Architecture](idandia)  
+[Structure plane](#structureplane)  
+  [Typography](#typography)  
+  [Color](#color)  
+  [Interactiv Design & Informatiove Architecture](#idandia)  
 
- [Skeleton Plane](skeletonplane)  
-   [ -  The structure of the website](skeleton)  
-	 [ -  The database structure](database)  
-	 [ -  Recipe categories](recipecat)  
-	 [ -  Recipe information](recipeinfo)     
+
+[Skeleton Plane](#skeletonplane)  
+  [The structure of the website](#skeleton)  
+  [The database structure](#database)  
+  [Recipe categories](#recipecat)  
+  [Recipe information](#recipeinfo) 
   
-[Surface Plane](surfaceplane)  
-	 [ -  Wireframes](wireframes)  
+[Surface Plane](#surfaceplane)  
+  [Wireframes](#wireframes)  
+  
+[Features](#features)  
+  [Existing Features](#existingfeat)  
+  [Features Left to Implement](#featimpl)  
+  
+[Technologies Used](#usertech)  
 
-[Features](features)  
-	[ -  Existing Features](existingfeat)  
-	[ -  Features Left to Implement](featimpl)  
+[Testing](#testing)  
+  [Manual](#manual)  
+  [Responsivness](#responsivness)  
+  [Browser](#browser)  
+  [Devices](#device)  
+  [User Stories](#ustest)  
+  [Validator](#validator)  
+  [Bugs](#bugs)  
 
-[Technologies Used](usertech)  
- 
-[Testing](testing)  
-	[ -  Manual](manual)  
-	[ -  Responsivness](responsivness)  
-	[ -  Browser](browser)  
-	[ -  Devices](device)  
-	[ -  User Stories](ustest)  
-	[ -  Validator](validator)  
-	[ -  Bugs](bugs)  
+[Deployment](#deployment)  
 
-[Deployment](deployment)  
-
-[Credits](credit)  
-	[ -  Content](content)   
-	[ -  Media](media)  
-	[ -  Acknowledgements](acknowled) 
-	[ -  Links](link)  
+[Credits](#credit)  
+  [Content](#content)  
+  [Media](#media)  
+  [Acknowledgements](#Acknowledgements)  
+  [Links](#link)    
     
-    
-## The UX Framework (Strategy Plane)<a name="StrategyPlane"></a>
+
+## The UX Framework (Strategy Plane)<a name="strategyplane"></a>
 
 
 ### Introduction<a name="introduction"></a>
-The idea of this website is to create meals and snacks by follow easy instructions. Target audience is primary the younger generation. Recipes can are displayed on website for free. An options to become a user to create users own recipes to share with other users.
-### Goal<a name="StrategyPlane"></a>
-Build a recipe webpage with HTML, CSS, JavaScript, Python, MongoDB, Flask technologies where users can manipulate CRUD functions (create, read, update and delete). The user will also be able to store data.  
+The idea of this website is to create meals and snacks by follow easy instructions. Target audience is primary the younger generation. Recipes can are displayed on website for free. An options to become a user to create users own recipes to share with other users.  
+  
+### Goal<a name="goal"></a>
+Build a recipe webpage with HTML, CSS, JavaScript, Python, MongoDB, Flask technologies where users can manipulate CRUD functions (create, read, update and delete). The user will also be able to store data. 
+
 ## User Stories (Scope Plane)<a name="ux"></a>
 
 The type of users for the website are kid (13 years old or younger), guest user, parents of kids, registered users, admin user. 
@@ -95,9 +99,11 @@ As an admin I want:
 
 ## Structure plane<a name="structureplane"></a>
 
+
 ### Typography<a name="typography"></a>
 
-Font style used for the website is Atma and Oswald. Atma for headers and logo and Oswald for all other text.
+Font style used for the website is Atma and Oswald. Atma for headers and logo and Oswald for all other text.  
+
 
 ### Color<a name="color"></a>
 
@@ -107,6 +113,7 @@ Except for black and white the 3 basic colors used through the website are:
 •	Light gray    
 •	Purple  
 •	limegreen  
+
 
 ### Interactiv Design & Informatiove Architecture<a name="idandia"></a>
 
@@ -142,16 +149,17 @@ The “Sign Out” button in the top navbar should be clickable and log you out 
 #### Delete Account
 If you like to delete your account, you should see a “Delete Profile” button in your profile when logged in. Once you click on the “Delete Profile” button you will automatically be logged out from the profile page and get a confirmation message on screen.  
 
+
 ## Skeleton Plane<a name="skeletonplane"></a>
 
 ### The structure of the website:<a name="skeleton"></a>   
 
 ![Skeleton](https://user-images.githubusercontent.com/70586630/115709898-075bfb80-a372-11eb-80aa-6ff07e7046c0.png)
 
+
 ### The database structure:<a name="database"></a>   
   
 <img width="687" alt="skeletoncooking" src="https://user-images.githubusercontent.com/70586630/114391610-fd7b1100-9b97-11eb-9e09-6957d0c69322.png">
-
 
  ### Recipe categories:<a name="recipecat"></a>   
      
@@ -161,6 +169,7 @@ If you like to delete your account, you should see a “Delete Profile” button
 *	Healthy  
 *	Sweets  
 *	Party  
+
 
 ### Recipe information:<a name="recipeinfo"></a>   
     
@@ -176,6 +185,7 @@ If you like to delete your account, you should see a “Delete Profile” button
 *	Ingredients need  
 *	Cooking instructions    
 *	Tips on things to think about or to improve the recipe  
+
 
 ## Surface Plane:<a name="surfaceplane"></a>   
  
@@ -299,14 +309,16 @@ If you like to delete your account, you should see a “Delete Profile” button
   *	Jshint](https://jshint.com/) - Validate JavaScript
   *	[PEP8](https://www.datacamp.com/community/tutorials/pep8-tutorial-python-code?utm_source=adwords_ppc&utm_campaignid=898687156&utm_adgroupid=48947256715&utm_device=c&utm_keyword=&utm_matchtype=b&utm_network=g&utm_adpostion=&utm_creative=229765585183&utm_targetid=aud-392016246653:dsa-429603003980&utm_loc_interest_ms=&utm_loc_physical_ms=1012697&gclid=Cj0KCQjwsLWDBhCmARIsAPSL3_2C6LOJLPqHUShlkvBE9h1MLyob2wlSsid-Apq1nfjIaiqkO6zEWvkaAoPvEALw_wcB) – for validate the Python code.  
   
+
 ## Testing<a name="testing"></a>  
   
 [Testing.md](Testing.md)  
   
   Includes:  
     
+
 ### Manual<a name="manual"></a>   
-    
+ 
 ### Responsivness<a name="responsivness"></a>
 
 ### Browser<a name="browser"></a>
@@ -319,7 +331,6 @@ If you like to delete your account, you should see a “Delete Profile” button
 
 ### Bugs<a name="bugs"></a>
     
-
 
 ## Deployment<a name="deployment"></a>
 Deployment for this GitHub repository project is done through Heroku through the following steps;
@@ -380,11 +391,13 @@ Clone to GitHub Desktop:
 *	Click on the “Open with GitHub Desktop.  
 *	Then follow the prompts GitHub Desktop instructions to complete the clone.  
 
-## Credits<a name="credit"></a>
-  
-### Content<a name="content"></a>
-  
-### Media<a name="media"></a>
+## Credits<a name=”credit”></a>
+
+ 
+### Content<a name=”content”></a>
+
+
+### Media<a name=”media”></a>
 
 Banner  
 Header background  
@@ -478,7 +491,8 @@ Recipe: https://www.tasteofhome.com/recipes/chocolate-raspberry-fondue/
   
   
   
-### Acknowledgements<a name="acknowled"></a>
+### Acknowledgements<a name=””>acknowled</a>
 •	I received inspiration for this project from X
 
-### LINKS:<a name="link"></a>
+
+### LINKS:<a name=”link”></a>
