@@ -299,44 +299,14 @@ If you like to delete your account, you should see a “Delete Profile” button
   *	Jshint](https://jshint.com/) - Validate JavaScript
   *	[PEP8](https://www.datacamp.com/community/tutorials/pep8-tutorial-python-code?utm_source=adwords_ppc&utm_campaignid=898687156&utm_adgroupid=48947256715&utm_device=c&utm_keyword=&utm_matchtype=b&utm_network=g&utm_adpostion=&utm_creative=229765585183&utm_targetid=aud-392016246653:dsa-429603003980&utm_loc_interest_ms=&utm_loc_physical_ms=1012697&gclid=Cj0KCQjwsLWDBhCmARIsAPSL3_2C6LOJLPqHUShlkvBE9h1MLyob2wlSsid-Apq1nfjIaiqkO6zEWvkaAoPvEALw_wcB) – for validate the Python code.  
   
-## Testing<a name="testing"></a>
- <a name="structureplane"></a><a name="typography"></a><a name="color"></a><a name="idandia"></a><a name="skeletonplane"></a><a name="skeleton"></a><a name="database"></a><a name="recipecat"></a><a name="recipeinfo"></a><a name="surfaceplane"></a><a name="wireframes"></a><a name="existingfeat"></a><a name="featimpl"></a><a name="usertech"></a><a name="testing"></a><a name="manual"></a>
-Make a separate .md file and link it (Idea from https://github.com/juanstelling/MS3_breaktasty/blob/master/TESTING.md )
-
-### Manual<a name="manual"></a>  
+## Testing<a name="testing"></a>  
   
-**Dev Tools**  
+[Testing.md](Testing.md)  
   
-**Error:** <img width="356" alt="Skärmavbild 2021-04-14 kl  11 11 35" src="https://user-images.githubusercontent.com/70586630/115026318-a4c2b580-9ec2-11eb-845a-648e8c6bea5f.png">  
-  
-**Description:** The logo and background image doesn't show in the profile and edit window throughts a 404 error.  
-  
-**Solution:** With hint from tutors of the static files, to edit the images source, since the pages where the logo doesn't show are 2nd sources from the base.html.
-  
-  
-**Error:** <img width="329" alt="Skärmavbild 2021-04-14 kl  15 27 16" src="https://user-images.githubusercontent.com/70586630/115026150-71802680-9ec2-11eb-9126-fe4e0b920acd.png">
-  
-**Description:** Cookie error after deleting session cookies in the dev tools. 
-   
-**Solution:** Had to contact tutor that went in and did something so I could login. Not sure what he did.
-  
-  
-**Error:** <img width="572" alt="Skärmavbild 2021-04-23 kl  09 34 20" src="https://user-images.githubusercontent.com/70586630/115863246-7e0dfd00-a435-11eb-8d67-9bed8c52f6a6.png">
-  
-**Description:** Unable to open the gitpod project and run python3 app.py to open webpage.  
-  
-**Solution:** Had to contact tutor that told me to go in to the project workspace and reopen the project. After that everything worked fine.  
-  
-  
-**Error:** Unable to use the add_recipe link. 
-
-**Description:** The add_recipe link redirects to the get_recipes page.   
-  
-**Solution:** Indentation was incorrect in the app.py file.  
-<img width="511" alt="Skärmavbild 2021-04-23 kl  13 20 10" src="https://user-images.githubusercontent.com/70586630/115864135-c24dcd00-a436-11eb-9ddc-a12cc529cd50.png">
-<img width="516" alt="Skärmavbild 2021-04-23 kl  13 19 46" src="https://user-images.githubusercontent.com/70586630/115864141-c679ea80-a436-11eb-9ad4-2d9ff5fd4ed6.png">
-  
-  
+  Includes:  
+    
+### Manual<a name="manual"></a>   
+    
 ### Responsivness<a name="responsivness"></a>
 
 ### Browser<a name="browser"></a>
@@ -348,6 +318,7 @@ Make a separate .md file and link it (Idea from https://github.com/juanstelling/
 ### Validator<a name="validator"></a>
 
 ### Bugs<a name="bugs"></a>
+    
 
 
 ## Deployment<a name="deployment"></a>
