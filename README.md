@@ -196,7 +196,8 @@ The “Sign Out” button in the top navbar should be clickable and log you out 
   
   **Login**
     
-![Login](https://user-images.githubusercontent.com/70586630/113860258-1b1a3600-97a6-![Uploading First Page.png…]()
+![Login](https://user-images.githubusercontent.com/70586630/116579177-6b526700-a912-11eb-8de6-63625b99f421.png)
+
   
   **Register**  
     
@@ -221,7 +222,6 @@ The “Sign Out” button in the top navbar should be clickable and log you out 
 ![Categories](https://user-images.githubusercontent.com/70586630/116575513-ffbaca80-a90e-11eb-8c96-f44c2646a7ac.png)
 
 
-
   **Unregistered User**  
     
 ![Unregister user](https://user-images.githubusercontent.com/70586630/116575496-fb8ead00-a90e-11eb-8a16-caa0c1f585bf.png)
@@ -235,7 +235,8 @@ The “Sign Out” button in the top navbar should be clickable and log you out 
 
   **Recipe Layout**  
     
-![Recipe Layout](https://user-images.githubusercontent.com/70586630/116575451-f0d41800-a90e-11eb-8fec-6ef1c02e0abf.png)
+![Recipe Layout](https://user-images.githubusercontent.com/70586630/116590234-cc336c80-a91d-11eb-9062-64531dd69af5.png)
+
 
 
 
@@ -244,34 +245,76 @@ The “Sign Out” button in the top navbar should be clickable and log you out 
  
 
 ### Existing Features:<a name="existingfeat"></a>   
+  
+**Popup window First Page:** [From Materialized](https://materializecss.com/modals.html)  
+  
+As using The Category layout as First Page layout, a popup show for welcoming and explaining short the page perpose.  
 
+**Top Navbar:** [From Materialized](https://materializecss.com/navbar.html) 
 
-**Top Navbar:** [From Materialized](https://materializecss.com/navbar.html) Navbar with links aligned to the right for recipes, login, register. As a user you will have access to links create recipes and delete recipes.  
+Navbar with links aligned to the right for recipes, login, register. As a user you will have access to links create recipes and delete recipes.  
   
-**Bottom Navbar:** [From Materialized](https://materializecss.com/navbar.html) Toggler with categories inspiration, nutrition.  
+**Bottom Navbar:** [From Materialized](https://materializecss.com/navbar.html) 
+
+Toggler with categories inspiration, nutrition.  
   
-**Register Form:** [From TravelTim at CI ](https://github.com/Code-Institute-Solutions/TaskManagerAuth/tree/main/02-UserAuthenticationAndAuthorization) User create a username and password that has to be retyped for verification.  
+**Register Form:** [From TravelTim at CI ](https://github.com/Code-Institute-Solutions/TaskManagerAuth/tree/main/02-UserAuthenticationAndAuthorization) 
+
+User create a username and password that get stored in the database under user.
   
-**Login Form:** [From TravelTim at CI ](https://github.com/Code-Institute-Solutions/TaskManagerAuth/tree/main/02-UserAuthenticationAndAuthorization) With username and password.   
+**Login Form:** [From TravelTim at CI ](https://github.com/Code-Institute-Solutions/TaskManagerAuth/tree/main/02-UserAuthenticationAndAuthorization) 
+
+Login with username and password.   
   
 **Logout Function:** [From TravelTim at CI ](https://github.com/Code-Institute-Solutions/TaskManagerAuth/tree/main/02-UserAuthenticationAndAuthorization)  
   
-**Profile Page setup:** [From TravelTim at CI ](https://github.com/Code-Institute-Solutions/TaskManagerAuth/tree/main/02-UserAuthenticationAndAuthorization) Personalized profile page for logged in user. 
-  
-**Links:** Responsive links to recipes, forms, profile, add recipes, categories and contact.  
-  
-**Recipe Form:**  Includes input fields for name, ingredients, instruction, and additional notes. A dropdown menu for cooking time, difficulty options, categories, portions, cooking material, and if the recipe is free from any allergic effects.
-  
-**Images:** All images are taken from internet and box sized to fit the recipes pages.  
+  When user logout it brings them back to the login site.
 
-**Add Image to recipes** Code from [Gazza J MS3](https://github.com/GazzaJ/CI-MS3-W3Recipes/blob/main/templates/add_recipe.html)
   
-**Flash messages:** Vertification to users when creating, editing or deleting post or deleting account. 
-  
-**Buttons:** In the top right coner of every recipe that profile user has created is an option to edit the recipe or delete it. When register an account or login there is a comfirmation button at the end. And in the top right corner there is a x-mark if user want to close the window without register or login.  
+**Profile Page setup:** [From TravelTim at CI ](https://github.com/Code-Institute-Solutions/TaskManagerAuth/tree/main/02-UserAuthenticationAndAuthorization) 
 
-**Footer** [From Materialized](https://materializecss.com/footer.html) Repitition links at the bottom from the navbars, copyright information, and a back to top button.
+Personalized profile page for logged in user. If you have created any recipes then they will show here.
   
+  Admin's profile is a little different. It will give access to editing categories.  
+    
+  
+**Links:** 
+Responsive links to recipes, forms, profile, add recipes, categories and contact.  
+  
+**Recipe Form:**  
+
+Includes input fields for name, ingredients, instruction, and additional notes. A dropdown menu for cooking time, difficulty options, categories, portions. The information saved in  database.  
+  
+**Edit/delete Recipe:**  
+
+If user wants to edit recipe it will call for selected recipe and open it in the add recipe layout. If user choose to delet recipe it will bring them back to category site.  
+  
+**Images:** 
+
+All images are taken from internet and box sized to fit the recipes pages, except for the logo and categoriy pictures. They are save in the project with reference under media.  
+  
+
+**Add Image to recipes** Code from [Gazza J MS3](https://github.com/GazzaJ/CI-MS3-W3Recipes/blob/main/templates/add_recipe.html)  
+
+With help from Gazza's project, I used the funtion of adding url to the database recipe and display it.
+  
+**Flash messages:** 
+
+Vertification to users when creating, editing or deleting post or deleting account. 
+  
+**Recipe Buttons:** 
+
+In the top right coner of every recipe that profile user has created is an option to edit the recipe or delete it. When register an account or login there is a comfirmation button at the end.    
+
+**Footer** [From Materialized](https://materializecss.com/footer.html) 
+
+Repitition links at the bottom from the navbars, copyright information, and a back to top button.
+  
+  **Bring to Top Button :**  
+  
+  [Icon](https://fontawesome.com/icons/chevron-up) used. Code from [w3s](https://www.w3schools.com/icons/tryit.asp?filename=tryicons_fa-chevron-up).
+
+
 
 ### Features Left to Implement:<a name="featimpl"></a>   
  
