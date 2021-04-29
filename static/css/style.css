@@ -43,7 +43,7 @@ nav {
 /* LINKS */
 /* 1st navbar links */
 .headlinks {
-    color: #9d0ab1;
+    color: #9c27b0;
     font-size: 18px;
     font-family: "Oswald";
     font-weight: 600;
@@ -59,7 +59,7 @@ nav {
 
 /* 2nd navbar links */
 .navlink  {
-    color: #9d0ab1;
+    color: #9c27b0;
     font-weight: 600;
     text-decoration: none;
     font-family: "Oswald";
@@ -98,7 +98,7 @@ i.fas.fa-bars,
     background-color: rgba(250, 250, 250, 0.8);
 }
 .mobilelink {
-    color: #9d0ab1 !important;
+    color: #9c27b0 !important;
     text-decoration: none;
     font-family: "Oswald";
     font-size: 18px !important;
@@ -179,7 +179,7 @@ main {
 }
 /* Category Links */
 .category-link {
-    color: #a80dbd;
+    color: #9c27b0;
     font-family: "Atma";
     font-size: xx-large;
     background-color: rgba(250, 250, 250, 0.8);
@@ -197,7 +197,7 @@ main {
 
 /* Icon & Button Style */
 .btn-large {
-    color: #9d0ab1;
+    color: #9c27b0;
     background-color: rgba(250, 250, 250, 0.4);
     font-size: large;
 }
@@ -205,10 +205,18 @@ button {
     background-color: rgba(178, 252, 59, 0.9)!important;
 }
 
-/* CATEGORIES */
+/* PROFILE PAGE */
 
+.profile-links {
+    margin: 0 20px 20px 20px;
+}
+.profile-link {
+    font-size: 18px;
+}
+
+/* CATEGORIES */
 .category-link {
-    color: #a80dbd;
+    color: #9c27b0;
     font-family: "Atma";
     font-size: xx-large;
     background-color: rgba(250, 250, 250, 0.8);
@@ -221,7 +229,6 @@ button {
 .help-text {
     padding-left: 46px;
 }
-
 
 p,
 h4 {
@@ -239,7 +246,7 @@ td {
     box-sizing: border-box;
     font-size: 12px;
     background-color: rgba(178, 252, 59, 0.9)!important;
-    color: #9d0ab1;
+    color: #9c27b0;
     font-weight: 600;
 
 }
@@ -256,7 +263,7 @@ td {
 /* Recipie Style */
 .recipe-header {
     font-family: "Atma";
-    color: #9d0ab1;
+    color: #9c27b0;
     font-weight: 600;
 }
 .flow-text {
@@ -275,12 +282,12 @@ td {
 .cancelbutton {
     background-color: rgba(184, 253, 71, 0.99);
     margin: 3px;
-    color: #9d0ab1;
+    color: #9c27b0;
     font-weight: 600;
     font-size: 14px;
 }
 .submitbutton {
-    background-color: #9d0ab1 !important;
+    background-color: #9c27b0 !important;
     margin: 3px;
     color: #c6ff00;
     font-weight: 600;
@@ -290,12 +297,12 @@ td {
 /* FOOTER */
 /* footer links */
 footer {
-    background-color: #9d0ab1;
+    background-color: #9c27b0;
     color: #c6ff00 !important;
     font-weight: 400;
 }
 .page-footer {
-    background-color: #9d0ab1;
+    background-color: #9c27b0;
     color: #c6ff00 !important;
     font-weight: 500;
 }

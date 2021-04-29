@@ -8,131 +8,104 @@
     </h4>
 
     {% for recipe in user_recipes %}
+        <!-- Show all of users recipes -->
+    <div class="row card-panel hoverable">
+        <h6 class="purple-text accent-3 left-align col s6">{{ recipe.category_name }}</h6>
 
-<div class="row card-panel hoverable">
-    <h6 class="purple-text accent-3 left-align col s6">{{ recipe.category_name }}</h6>
-
-    <div class="col s6 text-shadow">
-        {% if session.user|lower == recipe.created_by|lower %}
-        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small editbutton right">Edit</a>
-        <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small editbutton right">Delete</a>
-        {% endif %}
-    </div>
-
-    <!-- Left column -->
-    <h5 class="col s12 purple-text accent-3 left-align">{{ recipe.title }}</h5>
-    <p><em>by: {{ recipe.created_by }}</em></p>
-
-    <div class="col s12 m6 l6">
-        <div class="list-img">
-            <img class="responsive-img box center-align" src="{{ recipe.url_img }}" alt="Dinner Image">
-
-            <!-- Recipe info banner under image -->
-            <table class="info-table">
-                <thead>
-                    <tr>
-                        <th>Time:</th>
-                        <th>Portions:</th>
-                        <th>Difficulty:</th>
-                        <th>Tools:</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>{{ recipe.cooking_time }}</td>
-                        <td>{{ recipe.portions }}</td>
-                        <td>{{ recipe.difficulty_level }}</td>
-                        <td>{{ recipe.cooking_material }}</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="col s6 text-shadow">
+            {% if session.user|lower == recipe.created_by|lower %}
+            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small editbutton right">Edit</a>
+            <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small editbutton right">Delete</a>
+            {% endif %}
         </div>
-        <br>
 
+        <!-- Left column -->
+        <h5 class="col s12 purple-text accent-3 left-align">{{ recipe.title }}</h5>
+        <p><em>by: {{ recipe.created_by }}</em></p>
 
+        <div class="col s12 m6 l6">
+            <div class="list-img">
+                <img class="responsive-img box center-align" src="{{ recipe.url_img }}" alt="Dinner Image">
 
-    </div>
+                <!-- Recipe info banner under image -->
+                <table class="info-table">
+                    <thead>
+                        <tr>
+                            <th>Time:</th>
+                            <th>Portions:</th>
+                            <th>Difficulty:</th>
+                            <th>Tools:</th>
+                        </tr>
+                    </thead>
 
-    <!-- Right column -->
-    <div class="col s12 m6 l6">
-        <div class="recipe-info">
-            <h6 class="recipe-header">Ingredients</h6>
-            <ul>
-                {% for list in recipe.ingredients.splitlines() %}
-                <li>
-                    <p>{{list}}</p>
-                </li>
-                {% endfor %}
-            </ul>
+                    <tbody>
+                        <tr>
+                            <td>{{ recipe.cooking_time }}</td>
+                            <td>{{ recipe.portions }}</td>
+                            <td>{{ recipe.difficulty_level }}</td>
+                            <td>{{ recipe.cooking_material }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <br>
 
-            <h6 class="recipe-header">Instructions</h6>
-            <ul>
-                {% for list in recipe.instructions.splitlines() %}
-                <li>
-                    <p>{{list}}</p>
-                </li>
-                {% endfor %}
-            </ul>
-            <br>
-            <h6 class="recipe-header">Tips</h6>
-            <p class="flow-text">{{ recipe.tips }}</p><br>
+
+
+        </div>
+
+        <!-- Right column -->
+        <div class="col s12 m6 l6">
+            <div class="recipe-info">
+                <h6 class="recipe-header">Ingredients</h6>
+                <ul>
+                    {% for list in recipe.ingredients.splitlines() %}
+                    <li>
+                        <p>{{list}}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <br>
+
+                <h6 class="recipe-header">Instructions</h6>
+                <ul>
+                    {% for list in recipe.instructions.splitlines() %}
+                    <li>
+                        <p>{{list}}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <br>
+                <h6 class="recipe-header">Tips</h6>
+                <p class="flow-text">{{ recipe.tips }}</p><br>
+            </div>
         </div>
     </div>
-</div>
-{% endfor %}
+    {% endfor %}
 
     <div class="col s12 card-panel hoverable">
 
-
-        <div class="col s6">
             {% if session.user %}
 
-            <h5 class="purple-text align-left">My Recipes</h5>
-            <ul>
+        <div class="col s12">
+            <h5 class="purple-text align-left">Links:</h5>
+            <ul class="profile-links">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('snacks', username=session.user) }}">Snacks</a>
+                    <a class="profile-link" href="{{url_for ('contact') }}">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="{{url_for('lunch') }}">Lunch</a>
+                    <a class="profile-link" href="{{url_for ('add_recipe') }}">Add Recipe</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="{{url_for ('dinner') }}">Dinner</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="{{url_for ('healthy') }}">Healthy</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="{{ url_for('sweets') }}">Sweets</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('party') }}">Party</a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="col s6">
-            <h5 class="purple-text align-left">Other</h5>
-            <ul>
-                <li class="nav-item">
-                    <a class="nav-link " href="{{url_for ('contact') }}">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="{{url_for ('add_recipe') }}">Add Recipe</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="{{url_for ('logout') }}">Logout</a>
+                    <a class="profile-link" href="{{url_for ('logout') }}">Logout</a>
                 </li>
                 {% if session.user|lower == "admin"|lower %}
+
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">Users</a>
+                    <a class="profile-link" href="{{ url_for('add_category') }}">Add Categories</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('add_category') }}">Add Categories</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('get_categories') }}">Edit Categories</a>
+                    <a class="profile-link" href="{{ url_for('get_categories') }}">Edit Categories</a>
                 </li>
                 {% endif %}
 
