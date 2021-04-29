@@ -273,11 +273,18 @@ td {
     font-size: 16px;    
 }
 .editbutton {
-    background-color: rgba(114, 3, 114, 0.726);
+    background-color: #9c27b0;
     margin: 3px;
-    color: rgba(184, 253, 71, 0.99);
+    color: #c6ff00 !important;
     font-weight: 600;
     font-size: 14px;
+}
+.editbutton:hover {
+    background-color: #d500f9;
+    margin: 3px;
+    color: #eeff41 !important;
+    font-weight: 600;
+    font-size: 15px;
 }
 .cancelbutton {
     background-color: rgba(184, 253, 71, 0.99);
