@@ -8,7 +8,7 @@
     </h4>
 
     {% for recipe in user_recipes %}
-        <!-- Show all of users recipes -->
+    <!-- Show all of users recipes -->
     <div class="row card-panel hoverable">
         <h6 class="purple-text accent-3 left-align col s6">{{ recipe.category_name }}</h6>
 
@@ -85,7 +85,7 @@
 
     <div class="col s12 card-panel hoverable">
 
-            {% if session.user %}
+        {% if session.user %}
 
         <div class="col s12">
             <h5 class="purple-text align-left">Links:</h5>
@@ -95,6 +95,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="profile-link" href="{{url_for ('add_recipe') }}">Add Recipe</a>
+                </li>
+                <li class="nav-item">
+                    <a class="profile-link" href="{{url_for ('logout') }}">Delete Profile</a>
                 </li>
                 <li class="nav-item">
                     <a class="profile-link" href="{{url_for ('logout') }}">Logout</a>
@@ -115,8 +118,10 @@
                 </li>
                 {% endif %}
             </ul>
+
         </div>
 
+        
     </div>
 </div>
 
