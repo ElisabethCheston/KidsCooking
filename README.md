@@ -152,7 +152,7 @@ The “Sign Out” button in the top navbar should be clickable and log you out 
 
 ### The structure of the website:<a name="skeleton"></a>   
 
-![Skeleton](https://user-images.githubusercontent.com/70586630/115709898-075bfb80-a372-11eb-80aa-6ff07e7046c0.png)
+![Skeleton](https://user-images.githubusercontent.com/70586630/116575146-abafe600-a90e-11eb-9f2f-34dedb006980.png)
 
 
 ### The database structure:<a name="database"></a>   
@@ -191,12 +191,12 @@ The “Sign Out” button in the top navbar should be clickable and log you out 
 
 **First Page** 
   
- ![First Page](https://user-images.githubusercontent.com/70586630/116284959-f22a0700-a78d-11eb-9862-a5f7fc8f53ee.png)
+![First Page](https://user-images.githubusercontent.com/70586630/116575261-c4200080-a90e-11eb-8606-5b5d5c304977.png)
 
   
   **Login**
     
-![Login](https://user-images.githubusercontent.com/70586630/113860258-1b1a3600-97a6-11eb-85ae-7a2c5c8fddad.png)
+![Login](https://user-images.githubusercontent.com/70586630/113860258-1b1a3600-97a6-![Uploading First Page.png…]()
   
   **Register**  
     
@@ -205,25 +205,30 @@ The “Sign Out” button in the top navbar should be clickable and log you out 
   
   **Profile**  
     
+![Admin Profile](https://user-images.githubusercontent.com/70586630/116575541-047f7e80-a90f-11eb-89a1-d4119d731c58.png)
 
   
   **Categories**  
     
-![Categories](https://user-images.githubusercontent.com/70586630/116285011-0241e680-a78e-11eb-815e-11190d83eab8.png)
+![Categories](https://user-images.githubusercontent.com/70586630/116575513-ffbaca80-a90e-11eb-8c96-f44c2646a7ac.png)
+
 
 
   **Unregistered User**  
     
-![Unregister user](https://user-images.githubusercontent.com/70586630/116285489-6d8bb880-a78e-11eb-8a96-05b1cbc04d37.png)
+![Unregister user](https://user-images.githubusercontent.com/70586630/116575496-fb8ead00-a90e-11eb-8a16-caa0c1f585bf.png)
+
 
   
   **Create Recipes**  
   
-![Create Recipes](https://user-images.githubusercontent.com/70586630/116285066-0ec63f00-a78e-11eb-9ab2-a5e5acf17dba.png)
+![Create Recipes](https://user-images.githubusercontent.com/70586630/116575478-f6c9f900-a90e-11eb-907d-d44156eea0a0.png)
+
 
   **Recipe Layout**  
     
-![Recipe Layout](https://user-images.githubusercontent.com/70586630/116285092-15ed4d00-a78e-11eb-903c-d826c8c0244c.png)
+![Recipe Layout](https://user-images.githubusercontent.com/70586630/116575451-f0d41800-a90e-11eb-8fec-6ef1c02e0abf.png)
+
 
 
 
