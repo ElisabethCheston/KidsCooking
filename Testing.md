@@ -15,13 +15,13 @@
   * [Contact Form](#contact)  
   * [Contact Submit](#contactsub)  
   
-* [Recipes] (#recipes)  
-  * [Add Recipes] (#add)  
-  * [Edit Recipes] (#edit)  
-  * [Delete Recipes] (#delete)  
+* [Recipes](#recipes)  
+  * [Add Recipes](#add)  
+  * [Edit Recipes](#edit)  
+  * [Delete Recipes](#delete)  
   
 * [Diffrent Users](#difux)  
-  * [User with recipes (#uwr)  
+  * [User with recipes](#uwr)  
   * [Admin Profile](#adminp)  
   * [Contact Form](#contact)  
   * [Contact Submit](#contactsub)  
@@ -44,7 +44,7 @@
 * [HTML](#html)  
 * [CSS](#css)  
 * [JavaScript](#javascript)  
-* [Python] (#python)  
+* [Python](#python)  
 
 ### [Compatible](compatible)
   
@@ -59,54 +59,54 @@
 ### Manual Testing<a name="manual"></a>  
   
 
-* [Navigation]<a name="navbar"></a>  
-  * [Navlinks - Top Navbar]<a name="nav1"></a>  
-  * [Navlinks - Bottom Navbar]<a name="nav2"></a>  
-  * [Responsive Footer Links]<a name="footer"></a>  
+* Navigation<a name="navbar"></a>  
+  * Navlinks - Top Navbar<a name="nav1"></a>  
+  * Navlinks - Bottom Navbar<a name="nav2"></a>  
+  * Responsive Footer Links<a name="footer"></a>  
   
-* [Basic](basic)  
-  * [Home Popup]<a name="homepop"></a>  
-  * [Register]<a name="register"></a>   
-  * [Login]<a name="login"></a>   
-  * [Logout]<a name="logout"></a>   
-  * [Filling Contact Form]<a name="contactfill"></a>   
-  * [Contact Submit]<a name="contactsub"></a>   
+* Basic<a name="basic"></a>  
+  * Home Popu<a name="homepop"></a>  
+  * Register<a name="register"></a>   
+  * Login<a name="login"></a>   
+  * Logout<a name="logout"></a>   
+  * Filling out Contact Form]<a name="contactfill"></a>   
+  * Contact Submit<a name="contactsub"></a>   
     
-* [Recipes]<a name="recipes"></a>  
-  * [Add Recipes] <a name="add"></a>  
-  * [Edit Recipes] <a name="edit"></a>  
-  * [Delete Recipes] <a name="delete"></a>  
+* Recipes<a name="recipes"></a>  
+  * Add Recipes<a name="add"></a>  
+  * Edit Recipes<a name="edit"></a>  
+  * Delete Recipes<a name="delete"></a>  
     
-* [Diffrent Users]<a name="difux"></a>  
-  * [User with recipes]<a name="uwr"></a>  
-  * [Admin Profile]<a name="adminp"></a>  
-  * [Contact Form]<a name="contact"></a>  
-  * [Contact Submit]<a name="contactsub"></a>  
-  * [User with recipes]<a name="uwr"></a>  
+* Diffrent Users<a name="difux"></a>  
+  * User with recipes<a name="uwr"></a>  
+  * Admin Profile<a name="adminp"></a>  
+  * Contact Form<a name="contact"></a>  
+  * Contact Submit<a name="contactsub"></a>  
+  * User with recipes<a name="uwr"></a>  
     
-* [Admin Fuctions]<a name="admin"></a>  
-  * [Admin Profile]<a name="adminp"></a>  
-  * [Add Category]<a name="addcat"></a>  
-  * [Edit Categories]<a name="editcat"></a>  
-  * [Delete Categories]<a name="deletecat"></a>  
+* Admin Fuctions<a name="admin"></a>  
+  * Admin Profile<a name="adminp"></a>  
+  * Add Category<a name="addcat"></a>  
+  * Edit Categories<a name="editcat"></a>  
+  * Delete Categories<a name="deletecat"></a>  
   
 
-### [User Stories]<a name="ustest"></a>  
-* [Unregistered User]<a name="uu"></a>    
-* [Parents]<a name="parents"></a>    
-* [Login User]<a name="lg"></a>    
-* [Admin]<a name="admin"></a>    
+### User Stories<a name="ustest"></a>  
+* Unregistered User<a name="uu"></a>    
+* Parents<a name="parents"></a>    
+* Login User<a name="lg"></a>    
+* Admin<a name="admin"></a>    
    
-### [Validator]<a name="validator"></a>  
-* [HTML]<a name="html"></a>    
-* [CSS]<a name="css"></a>    
-* [JavaScript]<a name="javascript"></a>     
-* [Python]<a name="python"></a>    
+### Validator<a name="validator"></a>  
+* HTML<a name="html"></a>    
+* CSS<a name="css"></a>    
+* JavaScript<a name="javascript"></a>     
+* Python<a name="python"></a>    
  
 
 ### Compatible<a name="compatible"></a>  
-* [Divices]<a name="divides"></a>  
-* [Screens]<a name="screens"></a>  
+* Divices<a name="divides"></a>  
+* Screens<a name="screens"></a>  
   
   
 ### Errors<a name="errors"></a>
