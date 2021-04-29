@@ -203,9 +203,17 @@ The “Sign Out” button in the top navbar should be clickable and log you out 
 ![Register](https://user-images.githubusercontent.com/70586630/116284979-f9e9ab80-a78d-11eb-98a1-05dd7b17aed0.png)
 
   
-  **Profile**  
+  **Admin Profile**  
     
-![Admin Profile](https://user-images.githubusercontent.com/70586630/116575541-047f7e80-a90f-11eb-89a1-d4119d731c58.png)
+![Admin Profile](https://user-images.githubusercontent.com/70586630/116575541-047f7e80-a90f-11eb-89a1-d4119d731c58.png)  
+
+  **Add Category**  
+    
+  ![Add Category](https://user-images.githubusercontent.com/70586630/116578591-dd767c00-a911-11eb-80d3-041d4ee41e5c.png)  
+  
+  **Manage Categories**  
+  
+  ![Managing Categories](https://user-images.githubusercontent.com/70586630/116578567-d5b6d780-a911-11eb-993b-72e9f3f160c4.png)  
 
   
   **Categories**  
