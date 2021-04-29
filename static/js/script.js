@@ -11,15 +11,13 @@ $(document).ready(function () {
     $('#multipleselect').formSelect()
     });
 
-document.addEventListener('DOMContentLoaded', function () {
-    var elems = document.querySelectorAll('select');
-    var instances = M.FormSelect.init(elems, options);
-});
+
 /*
 var instance = M.FormSelect.getInstance(elem);
 instance.getSelectedValues();
 */
 
+/*
 document.addEventListener("DOMContentLoaded", function () {
   var selects = document.querySelector("select");
   var instances = M.FormSelect.init(selects, {});
@@ -31,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(selectedValues);
   });
 });
+*/
 
 /* --- URL IMAGES --- */
 

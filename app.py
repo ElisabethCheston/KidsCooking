@@ -102,8 +102,13 @@ def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     # if user cookie is true return to profile
-    if session["user"]:
-        return render_template("profile.html", username=username)    
+    if "user" in session.keys():
+        if session["user"] == username:
+            user_recipes = list(
+                mongo.db.recipes.find({"created_by": username.lower()}))
+        
+    return render_template("profile.html", user_recipes=user_recipes, username=username) 
+
     # if user cookie is untrue return to login
     return redirect(url_for("login"))
 
@@ -225,6 +230,7 @@ def delete_category(category_id):
     return redirect(url_for("get_categories"))
 
 # ---- Category names ----
+
 @app.route("/snacks", methods=["GET", "POST"])
 def snacks():
     snacks_recipes = mongo.db.recipes.find({"category_name": "Snacks"})
