@@ -61,7 +61,7 @@ Build a recipe webpage with HTML, CSS, JavaScript, Python, MongoDB, Flask techno
 
 ## User Stories (Scope Plane)<a name="ux"></a>
 
-The type of users for the website are kid (13 years old or younger), guest user, parents of kids, registered users, admin user. 
+The type of users for the website are kid, guest user, parents of kids, registered users, admin user. 
   
 **Kids goals**  
 As a kid I want:  
@@ -78,22 +78,19 @@ As a guest user I want:
 
 **Parent goals:**  
 As a parent I want:  
-* the recipes to inform if spcial material (stove, oven, microwave, etc) is needed, so my child know when to ask for my help.
 * the only communication possible is through posts that are public, to prevent unsupervised contact with predators or bad influences.
 
 **Registered user goals**  
 As a registered user I want:  
-* to see inspiring pictures of recipes, so I would like to try to make it.
-* recipes to be easy to follow, so I won’t be discouraged and quit.
 * to share my own recipes, so others can try them.
 * to know how advance the recipes are, so I can consider if I can or want to make it.
-* to give feedback on recipes, to let the creator and other users know.
-* to be able to delete my account, in case I like to cancel my registration.
+* to be able to delete my recipes, if I don't want to display it.  
+* to be able to edit my recipes, if want to change something with it.  
 
 **Admin and Goals**  
 As an admin I want:  
-* to have access all content and activity on the website.
-* to have the possibility to delete users and posts if needed.
+* to be able to create new categories, if it's needed.  
+* to be able to edit or delete categories, if it's needed. 
 * users to be able to contact me if something is wrong with the website.
 
 
@@ -129,6 +126,9 @@ For the first time user, the option to “Register” or “Sign In” on the fi
 #### Categories
   
 When you’re a logged in user you will see a button in the top navbar called “Categories”. When clicked a dropdown list shows of all category options shows. Once I select one of them a list with all of those recipes should show in the main window.
+  
+For Admin, the categories link in top navbar gives access to add/edit/delete the categories.
+
 
 #### Create Recipe Posts
   
@@ -145,9 +145,7 @@ In the top navbar the “Sign In” button should be displayed if your an unregi
 
 #### Sign Out
 The “Sign Out” button in the top navbar should be clickable and log you out of your account. You will get a confirmation popup message that you've been logged out.
-
-#### Delete Account
-If you like to delete your account, you should see a “Delete Profile” button in your profile when logged in. Once you click on the “Delete Profile” button you will automatically be logged out from the profile page and get a confirmation message on screen.  
+  
 
 
 ## Skeleton Plane<a name="skeletonplane"></a>
@@ -176,12 +174,10 @@ If you like to delete your account, you should see a “Delete Profile” button
 *	Category  
 *	Name of the recipe  
 *	Created by user  
-*	image  
+*	Recipe Image  
 *	Cooking Time  
 *	Portion size  
 *	Difficult level  
-*	Cooking materials needed   
-*	Preparation  
 *	Ingredients need  
 *	Cooking instructions    
 *	Tips on things to think about or to improve the recipe  
@@ -267,7 +263,8 @@ If you like to delete your account, you should see a “Delete Profile” button
 ### Features Left to Implement:<a name="featimpl"></a>   
  
 **Subscription** Could be added of weekly updates.  
-**Categories** More categories could be added if needed.   
+**Categories** More categories could be added if needed.  
+**Delete** Delete account function, either for Admin or user.
 
 ## Technologies Used:<a name="usertech"></a>   
  
