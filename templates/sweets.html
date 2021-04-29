@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h6 class="left-align purple-text text-shadow">SWEETS RECIPES</h6>
+<h5 class="left-align purple-text text-shadow">SWEETS RECIPES</h5>
 
 {% for recipe in sweets_recipes %}
 
 <div class="row card-panel hoverable">
-    <h6 class="purple-text accent-3 left-align col s6">{{ recipe.category_name }}</h6>
+    <h6 class="purple-text left-align col s6">{{ recipe.category_name }}</h6>
 
     <div class="col s6 text-shadow">
         {% if session.user|lower == recipe.created_by|lower %}
@@ -16,7 +16,7 @@
     </div>
 
     <!-- Left column -->
-    <h5 class="col s12 purple-text accent-3 left-align">{{ recipe.title }}</h5>
+    <h5 class="col s12 purple-text left-align">{{ recipe.title }}</h5>
     <p><em>by: {{ recipe.created_by }}</em></p>
 
     <div class="col s12 m6 l6">
