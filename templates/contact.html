@@ -6,7 +6,7 @@
 
 
 <div class="row card-panel grey lighten-5 col s12 7m">
-    <form onsubmit="return sendMail(this);">
+    <form onsubmit="return sendMail(this);" class="contactform">
 
         <div class="row">
             <div class="contactform input-field col s6">
@@ -34,7 +34,7 @@
         </div>
         <div class="modal-footer right-align">
             <a href="{{ url_for('get_categories') }}" class="btn-brown">Close</a>
-            <button type="submit" class="btn submitbutton center-block">Submit</button>
+            <button type="submit" value="send" class="btn submitbutton center-block">Submit</button>
         </div>
 <br>
     </form>
