@@ -1,6 +1,6 @@
 ## Testing Cooking with Kids
   
-### [Manual](manual)  
+### [Manual Testing](manual)  
 
 * [Navigation](navbar)  
   * [Navlinks - Top Navbar](nav1)  
@@ -32,12 +32,7 @@
   * [Add Category](addcat) 
   * [Edit Categories](editcat)  
   * [Delete Categories ](deletecat)  
-  
-   
-### [Compatible](compatible)  
-* [Divices](divides)  
-* [Screens](screens)  
-   
+    
 
 ### [User Stories](ustest)  
 * [Unregistered User](uu)  
@@ -51,7 +46,7 @@
 * [JavaScript](javascript)  
 * [Python](python)  
 
-### Compatible(compatible)
+### [Compatible](compatible)
   
 * [Divices](divides)  
 * [Screens](screens) 
@@ -61,68 +56,67 @@
 ### [Bugs](bugs)  
   
   
-### Manual<a name="manual"></a>  
+### Manual Testing<a name="manual"></a>  
   
 
-* [Navigation](navbar)  
-  * [Navlinks - Top Navbar](nav1)  
-  * [Navlinks - Bottom Navbar](nav2)  
-  * [Responsive Footer Links](footer)  
-
+* [Navigation]<a name="navbar"></a>  
+  * [Navlinks - Top Navbar]<a name="nav1"></a>  
+  * [Navlinks - Bottom Navbar]<a name="nav2"></a>  
+  * [Responsive Footer Links]<a name="footer"></a>  
+  
 * [Basic](basic)  
-  * [Home Popup ]<a name="homepop"></a>  
-  * [Register](register)  
-  * [Login](login)  
-  * [Logout](logout)  
-  * [Contact Form](contact)  
-  * [Contact Submit](contactsub)  
-  
+  * [Home Popup]<a name="homepop"></a>  
+  * [Register]<a name="register"></a>   
+  * [Login]<a name="login"></a>   
+  * [Logout]<a name="logout"></a>   
+  * [Filling Contact Form]<a name="contactfill"></a>   
+  * [Contact Submit]<a name="contactsub"></a>   
+    
 * [Recipes]<a name="recipes"></a>  
-  * [Add Recipes](add)  
-  * [Edit Recipes](edit)  
-  * [Delete Recipes](delete)  
-  
+  * [Add Recipes](add)<a name="recipes"></a>  
+  * [Edit Recipes](edit)<a name="recipes"></a>  
+  * [Delete Recipes](delete)<a name="recipes"></a>  
+    
 * [Diffrent Users]<a name="difux"></a>  
-  * [User with recipes](uwr)  
-  * [Admin Profile](adminp)  
-  * [Contact Form](contact)  
-  * [Contact Submit](contactsub)  
-  * [User with recipes](uwr)
-  
+  * [User with recipes]<a name="uwr"></a>  
+  * [Admin Profile]<a name="adminp"></a>  
+  * [Contact Form]<a name="contact"></a>  
+  * [Contact Submit]<a name="contactsub"></a>  
+  * [User with recipes]<a name="uwr"></a>  
+    
 * [Admin Fuctions]<a name="admin"></a>  
-  * [Admin Profile](adminp)  
-  * [Add Category](addcat) 
-  * [Edit Categories](editcat)  
-  * [Delete Categories ](deletecat)  
+  * [Admin Profile]<a name="adminp"></a>  
+  * [Add Category]<a name="addcat"></a>  
+  * [Edit Categories]<a name="editcat"></a>  
+  * [Delete Categories ]<a name="deletecat"></a>  
   
-### Responsivness<a name="responsivness"></a>
 
-### Compatible<a name="compatible"></a>
   
+  
+### [User Stories]<a name="ustest"></a>  
+* [Unregistered User]<a name="uu"></a>    
+* [Parents]<a name="parents"></a>    
+* [Login User]<a name="lg"></a>    
+* [Admin]<a name="admin"></a>    
+   
+### [Validator]<a name="validator"></a>  
+* [HTML]<a name="html"></a>    
+* [CSS]<a name="css"></a>    
+* [JavaScript]<a name="javascript"></a>     
+* [Python]<a name="python"></a>    
+ 
+
+### Compatible<a name="compatible"></a>  
 * [Divices]<a name="divides"></a>  
 * [Screens]<a name="screens"></a>  
   
   
-### [User Stories]<a name="ustest"></a>  
-* [Unregistered User](uu)  
-* [Parents](parents)  
-* [Login User](lg)  
-* [Admin](admin)  
-   
-### [Validator]<a name="validator"></a>  
-* [HTML](html)  
-* [CSS](css)  
-* [JavaScript](javascript)  
-* [Python](python)  
- 
-
-  
 ### Errors<a name="errors"></a>
-**Error:**  
-  
+
   
 **Dev Tools**  
   
+**Error:**    
 <img width="356" alt="Skärmavbild 2021-04-14 kl  11 11 35" src="https://user-images.githubusercontent.com/70586630/115026318-a4c2b580-9ec2-11eb-845a-648e8c6bea5f.png">  
   
 **Description:** The logo and background image doesn't show in the profile and edit window throughts a 404 error.  
