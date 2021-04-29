@@ -23,7 +23,6 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/index")
 def index():
-    
     return render_template("index.html")
 
 
@@ -114,11 +113,6 @@ def profile(username):
 
 
 # ---- RECIPES ----
-# ---- Recipes ----
-@app.route("/categories")
-def categories():
-    return render_template("categories.html")
-
 @app.route("/get_recipes")
 def get_recipes():
     recipes = mongo.db.recipes.find()
@@ -189,7 +183,12 @@ def get_recipes_by_category(category):
     recipe = mongo.db.recipes.find({"category_name": category})
     return render_template("recipes.html", recipe=recipe) 
 
+
 # ---- CATEGORIES ----
+@app.route("/categories")
+def categories():
+    return render_template("categories.html")
+
 @app.route("/get_categories")
 def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
@@ -230,7 +229,6 @@ def delete_category(category_id):
     return redirect(url_for("get_categories"))
 
 # ---- Category names ----
-
 @app.route("/snacks", methods=["GET", "POST"])
 def snacks():
     snacks_recipes = mongo.db.recipes.find({"category_name": "Snacks"})
