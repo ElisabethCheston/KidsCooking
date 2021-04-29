@@ -31,7 +31,7 @@
   * [Admin Profile](adminp)  
   * [Add Category](addcat) 
   * [Edit Categories](editcat)  
-  * [Delete Categories ](deletecat)  
+  * [Delete Categories](deletecat)  
     
 
 ### [User Stories](ustest)  
@@ -73,9 +73,9 @@
   * [Contact Submit]<a name="contactsub"></a>   
     
 * [Recipes]<a name="recipes"></a>  
-  * [Add Recipes](add)<a name="recipes"></a>  
-  * [Edit Recipes](edit)<a name="recipes"></a>  
-  * [Delete Recipes](delete)<a name="recipes"></a>  
+  * [Add Recipes] <a name="add"></a>  
+  * [Edit Recipes] <a name="edit"></a>  
+  * [Delete Recipes] <a name="delete"></a>  
     
 * [Diffrent Users]<a name="difux"></a>  
   * [User with recipes]<a name="uwr"></a>  
@@ -88,11 +88,9 @@
   * [Admin Profile]<a name="adminp"></a>  
   * [Add Category]<a name="addcat"></a>  
   * [Edit Categories]<a name="editcat"></a>  
-  * [Delete Categories ]<a name="deletecat"></a>  
+  * [Delete Categories]<a name="deletecat"></a>  
   
 
-  
-  
 ### [User Stories]<a name="ustest"></a>  
 * [Unregistered User]<a name="uu"></a>    
 * [Parents]<a name="parents"></a>    
