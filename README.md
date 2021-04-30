@@ -33,13 +33,6 @@ Encourage your kids to become more active in the kitchen and give them a basic k
 [Technologies Used](#usertech)  
 
 [Testing](#testing)  
-  * [Manual](#manual)  
-  * [Responsivness](#responsivness)  
-  * [Browser](#browser)  
-  * [Devices](#device)  
-  * [User Stories](#ustest)  
-  * [Validator](#validator)  
-  * [Bugs](#bugs)  
 
 [Deployment](#deployment)  
 
