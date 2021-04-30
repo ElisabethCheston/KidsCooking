@@ -9,7 +9,6 @@
 nav {
     height: 35px;
     background-color: transparent;
-    box-sizing: none;
     box-shadow: none;
 }
 /* Line divider */
@@ -70,7 +69,6 @@ nav {
     color: #e040fb;
     font-weight: 700;
     text-decoration: none !important;
-    text-shadow: rgba(0, 0, 0, 0.4);
     background-color: transparent;
     font-family: "Oswald";
     font-size: 22px;
@@ -110,7 +108,6 @@ i.fas.fa-bars,
 /* Logo Size */
 .logo {
     width: 75vw;
-    position: center;
 }
 /* Container Layout */
 .img-container,
@@ -170,16 +167,7 @@ body {
 main {
     flex: 1 0 auto;
 }
-/* Category Links */
-.category-link {
-    color: #9c27b0;
-    font-family: "Atma";
-    font-size: xx-large;
-    background-color: rgba(250, 250, 250, 0.8);
-    padding: 0 15px 0 15px;
-    font-weight: 700;
-    text-shadow: rgba(44, 43, 43, 0.5);
-}
+
 
 /* FORMS (Singin & Register) */
 
@@ -187,13 +175,6 @@ main {
 .flashes h4 {
     line-height: 2;
 }
-
-/* Icon & Button Style */
-
-.btn {
-    box-shadow: rgba(44, 43, 43, 0.5);
-}
-
 
 /* PROFILE PAGE */
 
@@ -212,18 +193,6 @@ main {
     background-color: rgba(250, 250, 250, 0.8);
     padding: 0 15px 0 15px;
     font-weight: 700;
-    text-shadow: rgba(44, 43, 43, 0.5);
-}
-
-/* Add recipe page */
-.help-text {
-    padding-left: 46px;
-}
-
-p,
-h4 {
-    margin: 15px;
-    border: 5px;
 }
 
 /* RECIPE PAGE */
@@ -238,10 +207,16 @@ td {
     background-color: rgba(178, 252, 59, 0.9)!important;
     color: #9c27b0;
     font-weight: 600;
-
 }
-/* RECIPE LAYOUT */
-
+/* Add recipe page */
+.help-text {
+    padding-left: 46px;
+}
+p,
+h4 {
+    margin: 15px;
+    border: 5px;
+}
 .list-img {
     width: 100%;
     height: 100%;
@@ -249,7 +224,6 @@ td {
 .box {
     object-fit: cover;
 }
-
 /* Recipie Style */
 .recipe-header {
     font-family: "Atma";
@@ -324,7 +298,6 @@ a.footerlink {
 a.footerlink:hover {
     color: #76ff03 !important;
     font-size: 15px;
-
 }
 
 /* BACK TO TOP */
@@ -332,7 +305,6 @@ a.footerlink:hover {
 /* back to top */
 .fa-chevron-up {
     color: rgba(44, 43, 43, 0.918);
-    size: 36px;
     background-color: rgba(250, 250, 250, 0.1);
     font-weight: 900;
     line-height: 1;
