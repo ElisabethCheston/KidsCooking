@@ -15,6 +15,10 @@
     {% block styles %}
     {% endblock %}
     <title>Base</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="static/images/logoicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/logoicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/images/logoicons/favicon-16x16.png">
+    <link rel="manifest" href="static/images/logoicons/site.webmanifest">
 </head>
 
 <body>
@@ -34,7 +38,7 @@
                     <a href="{{ url_for('add_recipe') }}" class="small-link headlinks">ADD RECIPE</a>
                     <a href="{{ url_for('logout') }}" class="small-link headlinks">LOGOUT</a>
                     {% else %}
-                   <!-- <a href="{{ url_for('index') }}" class="small-link headlinks">HOME</a> -->
+                    <!-- <a href="{{ url_for('index') }}" class="small-link headlinks">HOME</a> -->
                     <a href="{{ url_for('get_categories') }}" class="small-link headlinks">CATEGORIES</a>
                     <a href="{{ url_for('login') }}" class="small-link headlinks">LOGIN</a>
                     <a href="{{ url_for('register') }}" class="small-link headlinks">REGISTER</a>
@@ -60,7 +64,7 @@
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger">
                         <i class="fas fa-bars small purple-text accent-3"></i>
                     </a>
-                </div> 
+                </div>
                 <ul class="bottomnav link-shadow hide-on-med-and-down">
                     <li><a href="{{ url_for('snacks') }}" class="navlink">SNACKS</a></li>
                     <li><a href="{{ url_for('lunch') }}" class="navlink">LUNCH</a></li>
