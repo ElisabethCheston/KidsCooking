@@ -11,14 +11,14 @@
         <!-- Recipe Category -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+                <i class="fas fa-folder-open prefix purple-text text-darken-1"></i>
                 <input id="category_name" value="{{ category.category_name }}" name="category_name" minlength="3"
                     maxlength="25" type="text" class="validate" required>
                 <label for="category_name">Category Name</label>
             </div>
         </div>
 
-        <!-- Submit Recipe Button -->
+        <!-- Submit & Cancle Recipe Button -->
         <div class="col s12 center-align">
             <a href="{{ url_for('get_categories') }}" class="btn-large cancelbutton">
                 Cancel <i class="fas fa-times-circle right"></i>

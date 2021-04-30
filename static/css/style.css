@@ -189,14 +189,11 @@ main {
 }
 
 /* Icon & Button Style */
-.btn-large {
-    color: #9c27b0;
-    background-color: rgba(250, 250, 250, 0.4);
-    font-size: large;
+
+.btn {
+    box-shadow: rgba(44, 43, 43, 0.5);
 }
-button {
-    background-color: rgba(178, 252, 59, 0.9)!important;
-}
+
 
 /* PROFILE PAGE */
 
@@ -286,11 +283,25 @@ td {
     font-weight: 600;
     font-size: 14px;
 }
+.cancelbutton:hover {
+    background-color:#aeea00;
+    margin: 3px;
+    color: #9c27b0;
+    font-weight: 600;
+    font-size: 14px;
+}
 .submitbutton {
     background-color: #9c27b0 !important;
     margin: 3px;
     color: #c6ff00;
     font-weight: 600;
+    font-size: 14px;
+}
+.submitbutton:hover {
+    background-color: #e040fb !important;
+    margin: 3px;
+    color: #c6ff00;
+    font-weight: 700;
     font-size: 14px;
 }
 
