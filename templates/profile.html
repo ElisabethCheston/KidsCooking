@@ -3,9 +3,9 @@
 
 <div class="row">
 
-    <h4 class="purple-text align-left">
+    <h5 class="purple-text align-left">
         {{ username }}'s Profile
-    </h4>
+    </h5>
 
     {% for recipe in user_recipes %}
     <!-- Show all of users recipes -->
@@ -34,24 +34,18 @@
                             <th>Time:</th>
                             <th>Portions:</th>
                             <th>Difficulty:</th>
-                            <th>Tools:</th>
                         </tr>
                     </thead>
-
                     <tbody>
                         <tr>
                             <td>{{ recipe.cooking_time }}</td>
                             <td>{{ recipe.portions }}</td>
                             <td>{{ recipe.difficulty_level }}</td>
-                            <td>{{ recipe.cooking_material }}</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <br>
-
-
-
         </div>
 
         <!-- Right column -->

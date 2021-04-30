@@ -53,23 +53,24 @@ def register():
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
         return redirect(url_for("profile", username=session["user"]))
-        
+
     return render_template("register.html")
 
 # ---- Login ----
-@app.route("/login", methods=["GET", "POST"])
+@app.route("/login", methods=['GET', 'POST'])
 def login():
     if request.method == "POST":
         # check if username exists in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
-
         if existing_user:
                     # ensure hashed password matches user input
                     if check_password_hash(
-                            existing_user["password"], request.form.get("password")):
-                                session["user"] = request.form.get("username").lower()
+                            existing_user["password"],
+                            request.form.get("password")):
+                                session["user"] = request.form.get
+                                ("username").lower()
                                 flash("Welcome, {}".format(
                                     request.form.get("username")))
                                 return redirect(url_for(
@@ -105,8 +106,8 @@ def profile(username):
         if session["user"] == username:
             user_recipes = list(
                 mongo.db.recipes.find({"created_by": username.lower()}))
-        
-    return render_template("profile.html", user_recipes=user_recipes, username=username) 
+
+    return render_template("profile.html", user_recipes=user_recipes, username=username)
 
     # if user cookie is untrue return to login
     return redirect(url_for("login"))
@@ -122,19 +123,18 @@ def get_recipes():
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
-        
         recipe = {
             "category_name": request.form.get("category_name"),
             "title": request.form.get("title"),
             "url_img": request.form.get("url_img"),
             "cooking_time": request.form.get("cooking_time"),
-            "portions": request.form.get("portions"),                      
-            "difficulty_level": request.form.get("difficulty_level"),
-            "cooking_material": request.form.getlist("cooking_material"),            
-            "preparation": request.form.get("preparation"),         
-            "ingredients": request.form.get("ingredients"), 
-            "instructions": request.form.get("instructions"),
-            "tips": request.form.get("tips"), 
+            "portions": request.form.get("portions"), 
+            "difficulty_level": request.form.get("difficulty_level"), 
+            "cooking_material": request.form.getlist("cooking_material"),
+            "preparation": request.form.get("preparation"),
+            "ingredients": request.form.get("ingredients"),
+            "instructions": request.form.get("instructions"), 
+            "tips": request.form.get("tips"),
             "created_by": session["user"]
         }
         mongo.db.recipes.insert_one(recipe)
@@ -153,7 +153,7 @@ def edit_recipe(recipe_id):
             "title": request.form.get("title"),
             "url_img": request.form.get("url_img"),
             "cooking_time": request.form.get("cooking_time"),
-            "portions": request.form.get("portions"),                      
+            "portions": request.form.get("portions"),          
             "difficulty_level": request.form.get("difficulty_level"),
             "cooking_material": request.form.getlist("cooking_material"),            
             "preparation": request.form.get("preparation"),         
