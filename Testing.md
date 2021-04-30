@@ -45,7 +45,7 @@
 * [JavaScript](#javascript)  
 * [Python](#python)  
 
-### [Compatible](compatible)
+### [Compatible](#compatible)
   
 * [Divices](#divides)  
 * [Screens](#screens) 
