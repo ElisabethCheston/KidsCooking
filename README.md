@@ -367,22 +367,6 @@ Repitition links at the bottom from the navbars, copyright information, and a ba
   
 [Testing.md](Testing.md)  
   
-  Includes:  
-    
-
-### Manual<a name="manual"></a>   
- 
-### Responsivness<a name="responsivness"></a>
-
-### Browser<a name="browser"></a>
-
-### Devices<a name="device"></a>
-
-### User Stories<a name="ustest"></a>
-
-### Validator<a name="validator"></a>
-
-### Bugs<a name="bugs"></a>
     
 
 ## Deployment<a name="deployment"></a>
