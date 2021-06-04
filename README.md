@@ -1,5 +1,8 @@
 # Cooking With Kids
-Encourage your kids to become more active in the kitchen and give them a basic knowledge of how to prepare food them self!  
+Encourage your kids to become more active in the kitchen and give them a basic knowledge of how to prepare food them self! 
+
+
+Webpage: https://cookingkids.herokuapp.com/  
   
 *MongoDB database project stored in GitHub and deployed to Heroku.*  
   
@@ -14,7 +17,7 @@ Encourage your kids to become more active in the kitchen and give them a basic k
 [Structure plane](#structureplane)  
   * [Typography](#typography)  
   * [Color](#color)  
-  * [Interactiv Design & Informatiove Architecture](#idandia)  
+  * [Interactive Design & Informative Architecture](#idandia)  
 
 
 [Skeleton Plane](#skeletonplane)  
@@ -105,7 +108,7 @@ Except for black and white the 3 basic colors used through the website are:
 •	limegreen  
 
 
-### Interactive Design & Information Architecture<a name="idandia"></a>
+### Interactive Design & Informative Architecture<a name="idandia"></a>
 
   
 #### Recipes
@@ -284,24 +287,24 @@ If user wants to edit recipe it will call for selected recipe and open it in the
   
 **Images:** 
 
-All images are taken from internet and box sized to fit the recipes pages, except for the logo and categoriy pictures. They are save in the project with reference under media.  
+All images are taken from internet and box sized to fit the recipes pages, except for the logo and category pictures. They are save in the project with reference under media.  
   
 
 **Add Image to recipes** Code from [Gazza J MS3](https://github.com/GazzaJ/CI-MS3-W3Recipes/blob/main/templates/add_recipe.html)  
 
-With help from Gazza's project, I used the funtion of adding url to the database recipe and display it.
+With help from Gazza's project, I used the function of adding url to the database recipe and display it.
   
 **Flash messages:** 
 
-Vertification to users when creating, editing or deleting post or deleting account. 
+Verification to users when creating, editing or deleting post or deleting account. 
   
 **Recipe Buttons:** 
 
-In the top right coner of every recipe that profile user has created is an option to edit the recipe or delete it. When register an account or login there is a comfirmation button at the end.    
+In the top right corner of every recipe that profile user has created is an option to edit the recipe or delete it. When register an account or login there is a confirmation button at the end.    
 
 **Footer** [From Materialized](https://materializecss.com/footer.html) 
 
-Repitition links at the bottom from the navbars, copyright information, and a back to top button.
+Repetition links at the bottom from the navbars, copyright information, and a back to top button.
   
   **Bring to Top Button :**  
   
@@ -335,7 +338,7 @@ Repitition links at the bottom from the navbars, copyright information, and a ba
 **Languages:**
   * [HTML](https://sv.wikipedia.org/wiki/HTML) – for the basic structure of the project.
   * [CSS](https://sv.wikipedia.org/wiki/Cascading_Style_Sheets) –for the overall style of website.
-  * [JavaScript](https://developer.mozilla.org/sv-SE/docs/Web/JavaScript) - used to activate fuctions
+  * [JavaScript](https://developer.mozilla.org/sv-SE/docs/Web/JavaScript) - used to activate functions
   *	[jQuery](https://jquery.com/) – used as the main JavaScript function.
   *	[Python](https://www.python.org/) – for the backend of project.  
   
@@ -433,7 +436,7 @@ Link to [Media.md](Media.md) information.
   
   
   
-### Acknowledgements<a name=””>acknowled</a>
+### Acknowledgements<a name=”acknowled”></a>
 •	I received inspiration for this project from X
 
 
