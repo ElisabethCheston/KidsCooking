@@ -105,7 +105,7 @@ Except for black and white the 3 basic colors used through the website are:
 •	limegreen  
 
 
-### Interactiv Design & Informatiove Architecture<a name="idandia"></a>
+### Interactive Design & Information Architecture<a name="idandia"></a>
 
   
 #### Recipes
